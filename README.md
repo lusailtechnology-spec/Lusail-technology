@@ -1,6 +1,6 @@
 # Lusail Digital Edge
 
-Premium Website Prompt for Lovable AI
+Premium Website Prompt
 
 Project Overview
 
@@ -697,16 +697,6 @@ The website should feel custom-designed by an award-winning UI/UX agency.
 All service pages and product pages must be interconnected with related content and include clear "Request a Quote" and "Contact Us" calls to action.
 
 The final result should be a visually stunning, premium, high-performance corporate website that builds trust and reflects Lusail Technology as one of Qatar's leading IT solutions providers.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0bf2bd9c-cbe5-47d6-a081-f67ad48c7ee8).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
