@@ -573,19 +573,16 @@ function Testimonials() {
     {
       quote:
         "Lusail transformed our datacenter operations. Uptime jumped to 99.99% within a quarter — their engineers feel like part of our team.",
-      name: "Ahmed Al-Kuwari",
       role: "CIO, National Retailer",
     },
     {
       quote:
         "The cybersecurity overhaul was flawless. Zero-trust rolled out across 12 sites with no downtime and clear reporting throughout.",
-      name: "Sara Mansour",
       role: "Head of IT, Finance Group",
     },
     {
       quote:
         "From strategy to code, they behave like a modern product company — rare in the region and exactly what we needed.",
-      name: "Dr. Fahad Al-Naimi",
       role: "Director, Healthcare Network",
     },
   ];
@@ -594,7 +591,7 @@ function Testimonials() {
       <div className="grid gap-10 lg:grid-cols-3">
         {items.map((t, i) => (
           <div
-            key={t.name}
+            key={i}
             className={`relative overflow-hidden rounded-3xl border border-ink/10 p-8 ${
               i === 1 ? "bg-ink text-white lg:-translate-y-6" : "bg-white text-ink"
             }`}
@@ -602,7 +599,6 @@ function Testimonials() {
             <Quote className={`h-8 w-8 ${i === 1 ? "text-teal" : "text-royal"}`} />
             <p className="mt-6 text-lg leading-relaxed">"{t.quote}"</p>
             <div className="mt-8 border-t border-current/10 pt-4">
-              <div className="font-semibold">{t.name}</div>
               <div className={`text-sm ${i === 1 ? "text-white/60" : "text-muted-foreground"}`}>
                 {t.role}
               </div>
