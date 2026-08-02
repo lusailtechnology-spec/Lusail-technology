@@ -83,10 +83,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Lusail Technology" },
       { property: "og:site_name", content: "Lusail Technology" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://lusailtechnology.com/Logo.png?v=2" },
+      { property: "og:image", content: "https://www.lusailtechnology.com/Logo.png?v=2" },
       { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://lusailtechnology.com/Logo.png?v=2" },
+      { name: "twitter:image", content: "https://www.lusailtechnology.com/Logo.png?v=2" },
       { name: "google-site-verification", content: "DpqOIxN_K3Ct5WLszCWtrNkowEVDrac3fqYU_fJTH5Y" },
     ],
     links: [

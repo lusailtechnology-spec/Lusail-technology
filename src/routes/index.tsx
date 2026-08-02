@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://www.lusailtechnology.com/" }],
   }),
   component: Home,
 });

@@ -23,7 +23,7 @@ export const Route = createFileRoute("/products/")({
       },
       { property: "og:url", content: "/products" },
     ],
-    links: [{ rel: "canonical", href: "/products" }],
+    links: [{ rel: "canonical", href: "https://www.lusailtechnology.com/products" }],
   }),
   component: ProductsPage,
 });

@@ -23,7 +23,7 @@ export const Route = createFileRoute("/services/")({
       },
       { property: "og:url", content: "/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://www.lusailtechnology.com/services" }],
   }),
   component: ServicesPage,
 });

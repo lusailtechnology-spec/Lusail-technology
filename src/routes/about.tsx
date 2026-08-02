@@ -27,7 +27,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: "Qatar's enterprise IT partner engineering trust into every layer." },
       { property: "og:url", content: "/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://www.lusailtechnology.com/about" }],
   }),
   component: About,
 });

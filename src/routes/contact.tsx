@@ -32,7 +32,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:description", content: "Reach our Doha-based enterprise IT team." },
       { property: "og:url", content: "/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://www.lusailtechnology.com/contact" }],
   }),
   component: ContactPage,
 });

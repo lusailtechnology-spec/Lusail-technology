@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Static Pages -->
   <url>
-    <loc>https://lusailtechnology.com/</loc>
+    <loc>https://www.lusailtechnology.com/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/about</loc>
+    <loc>https://www.lusailtechnology.com/about</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/contact</loc>
+    <loc>https://www.lusailtechnology.com/contact</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products</loc>
+    <loc>https://www.lusailtechnology.com/products</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services</loc>
+    <loc>https://www.lusailtechnology.com/services</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -34,49 +34,49 @@
 
   <!-- Product Pages -->
   <url>
-    <loc>https://lusailtechnology.com/products/business-laptops-desktops</loc>
+    <loc>https://www.lusailtechnology.com/products/business-laptops-desktops</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products/server-storage-solutions</loc>
+    <loc>https://www.lusailtechnology.com/products/server-storage-solutions</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products/it-accessories-peripherals</loc>
+    <loc>https://www.lusailtechnology.com/products/it-accessories-peripherals</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products/enterprise-software-hardware</loc>
+    <loc>https://www.lusailtechnology.com/products/enterprise-software-hardware</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products/networking-infrastructure</loc>
+    <loc>https://www.lusailtechnology.com/products/networking-infrastructure</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products/storage-data-management</loc>
+    <loc>https://www.lusailtechnology.com/products/storage-data-management</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products/document-solutions</loc>
+    <loc>https://www.lusailtechnology.com/products/document-solutions</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/products/ups-power-protection</loc>
+    <loc>https://www.lusailtechnology.com/products/ups-power-protection</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -84,73 +84,73 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://lusailtechnology.com/services/it-support</loc>
+    <loc>https://www.lusailtechnology.com/services/it-support</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/network-solutions</loc>
+    <loc>https://www.lusailtechnology.com/services/network-solutions</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/cctv-installation</loc>
+    <loc>https://www.lusailtechnology.com/services/cctv-installation</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/cybersecurity</loc>
+    <loc>https://www.lusailtechnology.com/services/cybersecurity</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/cloud-services</loc>
+    <loc>https://www.lusailtechnology.com/services/cloud-services</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/software-development</loc>
+    <loc>https://www.lusailtechnology.com/services/software-development</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/web-design</loc>
+    <loc>https://www.lusailtechnology.com/services/web-design</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/android-app-development</loc>
+    <loc>https://www.lusailtechnology.com/services/android-app-development</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/ios-app-development</loc>
+    <loc>https://www.lusailtechnology.com/services/ios-app-development</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/website-maintenance</loc>
+    <loc>https://www.lusailtechnology.com/services/website-maintenance</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/application-maintenance</loc>
+    <loc>https://www.lusailtechnology.com/services/application-maintenance</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lusailtechnology.com/services/social-media-management</loc>
+    <loc>https://www.lusailtechnology.com/services/social-media-management</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

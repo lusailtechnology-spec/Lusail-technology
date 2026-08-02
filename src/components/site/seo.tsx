@@ -1,4 +1,4 @@
-const SITE = "https://lusailtechnology.qa";
+const SITE = "https://www.lusailtechnology.com";
 
 export function absUrl(path: string) {
   return `${SITE}${path}`;
