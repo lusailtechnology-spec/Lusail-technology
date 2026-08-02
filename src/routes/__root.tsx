@@ -87,6 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "https://lusailtechnology.com/Logo.png?v=2" },
+      { name: "google-site-verification", content: "DpqOIxN_K3Ct5WLszCWtrNkowEVDrac3fqYU_fJTH5Y" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
