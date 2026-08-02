@@ -4,6 +4,8 @@ import { ArrowUpRight, Sparkles, Search } from "lucide-react";
 import { products, productCategories } from "@/data/products";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useTranslatedProducts } from "@/i18n/useTranslatedProducts";
 
 export const Route = createFileRoute("/products/")({
   head: () => ({
@@ -27,18 +29,26 @@ export const Route = createFileRoute("/products/")({
 });
 
 function ProductsPage() {
+  const { t, i18n } = useTranslation();
+  const translatedProducts = useTranslatedProducts();
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
 
+  // Get unique translated categories from products
+  const uniqueCategories = useMemo(() => {
+    const cats = new Set(translatedProducts.map(p => p.category));
+    return ["All", ...Array.from(cats)];
+  }, [translatedProducts]);
+
   const filtered = useMemo(
     () =>
-      products.filter(
+      translatedProducts.filter(
         (p) =>
           (category === "All" || p.category === category) &&
           (p.title.toLowerCase().includes(query.toLowerCase()) ||
             p.short.toLowerCase().includes(query.toLowerCase())),
       ),
-    [category, query],
+    [category, query, translatedProducts],
   );
 
   return (
@@ -46,18 +56,17 @@ function ProductsPage() {
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 aurora" />
         <div className="container-x relative py-12 sm:py-16 lg:py-20">
-          <Breadcrumbs items={[{ label: "Products" }]} />
+          <Breadcrumbs items={[{ label: t("nav.products") }]} />
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-end">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs font-medium">
-                Enterprise catalog
+                {t("products.index.catalogBadge", "Enterprise catalog")}
               </div>
               <h1 className="mt-6 font-display display-1 font-bold text-ink">
-                Products <span className="text-gradient">engineered for scale.</span>
+                {t("nav.products")} <span className="text-gradient">{t("products.index.titleHighlight")}</span>
               </h1>
               <p className="mt-5 max-w-xl text-lg text-muted-foreground">
-                Business-grade hardware and software from HP, Dell, Cisco, Microsoft,
-                APC and more — delivered, configured and supported by our Doha team.
+                {t("products.index.description")}
               </p>
             </div>
             <label className="flex items-center gap-3 rounded-full border border-ink/10 bg-white p-2 pl-5 shadow-[var(--shadow-soft)]">
@@ -65,7 +74,7 @@ function ProductsPage() {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search products..."
+                placeholder={t("products.index.searchPlaceholder")}
                 className="min-w-0 flex-1 bg-transparent py-2 text-sm outline-none"
               />
               <span className="rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-white">
@@ -75,7 +84,7 @@ function ProductsPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-2">
-            {productCategories.map((c) => (
+            {uniqueCategories.map((c) => (
               <button
                 key={c}
                 onClick={() => setCategory(c)}
@@ -163,17 +172,17 @@ function ProductsPage() {
           <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
               <div className="font-display display-3 font-bold">
-                Need volume pricing or a custom BOM?
+                {t("products.index.ctaTitle")}
               </div>
               <div className="mt-3 max-w-lg text-white/80">
-                Send us your requirements — we'll return a tailored quote within 24 hours.
+                {t("products.index.ctaDescription")}
               </div>
             </div>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 self-start rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink lg:justify-self-end"
             >
-              Request a Quote <ArrowUpRight className="h-4 w-4" />
+              {t("nav.getQuote")} <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

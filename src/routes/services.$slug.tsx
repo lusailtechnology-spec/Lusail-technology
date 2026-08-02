@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import * as Icons from "lucide-react";
 import {
   ArrowRight,
@@ -10,6 +11,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { services, type Service } from "@/data/services";
+import { useTranslatedServices } from "@/i18n/useTranslatedServices";
 import {
   Accordion,
   AccordionContent,
@@ -78,29 +80,39 @@ function serviceSchema(s: Service) {
 }
 
 function ServiceDetail() {
+  const { t } = useTranslation();
+  const translatedServices = useTranslatedServices();
   const { service, index } = Route.useLoaderData() as { service: Service; index: number };
-  const Icon = (Icons as any)[service.icon] ?? Sparkles;
-  const related = services
-    .filter((s) => s.slug !== service.slug)
+
+  // Get the translated version of the current service
+  const translatedService = translatedServices.find((s) => s.slug === service.slug) || service;
+
+  const Icon = (Icons as any)[translatedService.icon] ?? Sparkles;
+  const related = translatedServices
+    .filter((s) => s.slug !== translatedService.slug)
     .slice(index, index + 3)
-    .concat(services.slice(0, 3))
-    .filter((s) => s.slug !== service.slug)
+    .concat(translatedServices.slice(0, 3))
+    .filter((s) => s.slug !== translatedService.slug)
     .slice(0, 3);
-  const prev = services[(index - 1 + services.length) % services.length];
-  const next = services[(index + 1) % services.length];
+  const prev =
+    translatedServices[(index - 1 + translatedServices.length) % translatedServices.length];
+  const next = translatedServices[(index + 1) % translatedServices.length];
 
   const Visual = ({ className = "" }: { className?: string }) => (
     <div className={`relative ${className}`}>
       <div className="absolute -inset-6 -z-10 rounded-full bg-gradient-royal opacity-25 blur-3xl" />
       <div className="grid aspect-square w-full place-items-center rounded-[28px] bg-ink text-white shadow-[var(--shadow-glow)] sm:rounded-[36px] overflow-hidden">
-        {service.image ? (
+        {translatedService.image ? (
           <img
-            src={service.image}
-            alt={service.title}
+            src={translatedService.image}
+            alt={translatedService.title}
             className="h-full w-full object-contain p-8"
           />
         ) : (
-          <Icon className="h-24 w-24 text-white/80 sm:h-32 sm:w-32 lg:h-40 lg:w-40" strokeWidth={1} />
+          <Icon
+            className="h-24 w-24 text-white/80 sm:h-32 sm:w-32 lg:h-40 lg:w-40"
+            strokeWidth={1}
+          />
         )}
       </div>
     </div>
@@ -110,12 +122,12 @@ function ServiceDetail() {
     <>
       <JsonLd
         data={[
-          serviceSchema(service),
-          faqSchema(service.faq),
+          serviceSchema(translatedService),
+          faqSchema(translatedService.faq),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Services", path: "/services" },
-            { name: service.title, path: `/services/${service.slug}` },
+            { name: translatedService.title, path: `/services/${translatedService.slug}` },
           ]),
         ]}
       />
@@ -125,23 +137,22 @@ function ServiceDetail() {
         <div className="pointer-events-none absolute inset-0 aurora" />
         <div className="container-x relative py-12 sm:py-16 lg:py-20">
           <Breadcrumbs
-            items={[
-              { label: "Services", to: "/services" },
-              { label: service.title },
-            ]}
+            items={[{ label: "Services", to: "/services" }, { label: translatedService.title }]}
           />
           <div className="mt-8 grid gap-10 lg:items-center lg:gap-14 lg:grid-cols-[1.2fr_1fr]">
             <div className="animate-reveal">
-              <h1 className="font-display display-1 font-bold text-ink">{service.title}</h1>
+              <h1 className="font-display display-1 font-bold text-ink">
+                {translatedService.title}
+              </h1>
               <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
-                {service.overview}
+                {translatedService.overview}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/contact" className="btn-royal btn-royal-hover">
-                  Request a Quote <ArrowRight className="h-4 w-4" />
+                  {t("serviceDetail.requestQuote")} <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link to="/products" className="btn-ghost-ink btn-ghost-ink-hover">
-                  Explore products
+                  {t("serviceDetail.exploreProducts")}
                 </Link>
               </div>
             </div>
@@ -154,12 +165,12 @@ function ServiceDetail() {
       <section className="container-x py-12 sm:py-16">
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
           <div className="rounded-[24px] bg-ivory p-6 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-royal">Business benefits</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.businessBenefits")}</p>
             <h2 className="mt-3 font-display display-3 font-semibold text-ink">
-              Why teams choose {service.title}
+              {t("serviceDetail.whyChoose")} {translatedService.title}
             </h2>
             <ul className="mt-6 space-y-3">
-              {service.benefits.map((b) => (
+              {translatedService.benefits.map((b) => (
                 <li key={b} className="flex items-start gap-3">
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-royal text-white">
                     <Check className="h-3.5 w-3.5" aria-hidden="true" />
@@ -170,10 +181,10 @@ function ServiceDetail() {
             </ul>
           </div>
           <div className="rounded-[24px] border border-ink/10 p-6 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-royal">Key features</p>
-            <h2 className="mt-3 font-display display-3 font-semibold text-ink">What's included</h2>
+            <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.keyFeatures")}</p>
+            <h2 className="mt-3 font-display display-3 font-semibold text-ink">{t("serviceDetail.whatsIncluded")}</h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              {service.features.map((f) => (
+              {translatedService.features.map((f) => (
                 <div key={f} className="flex items-start gap-2 rounded-2xl bg-white p-3">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
                   <span className="text-sm text-ink">{f}</span>
@@ -188,14 +199,14 @@ function ServiceDetail() {
       <section className="bg-ink py-14 text-white sm:py-20">
         <div className="container-x">
           <div className="max-w-xl">
-            <p className="text-xs uppercase tracking-[0.25em] text-teal">Our process</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-teal">{t("serviceDetail.ourProcess")}</p>
             <h2 className="mt-3 font-display display-2 font-bold">
-              A clear, four-step engagement.
+              {t("serviceDetail.processTitle")}
             </h2>
           </div>
 
           <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
-            {service.process.map((step, i) => (
+            {translatedService.process.map((step, i) => (
               <div
                 key={step.step}
                 className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur sm:p-6"
@@ -215,12 +226,12 @@ function ServiceDetail() {
       <section className="container-x py-14 sm:py-20">
         <div className="grid gap-8 lg:gap-10 lg:grid-cols-2">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-royal">Industries served</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.industriesLabel")}</p>
             <h2 className="mt-3 font-display display-3 font-bold text-ink">
-              Built for regulated &amp; complex environments
+              {t("serviceDetail.industriesTitle")}
             </h2>
             <div className="mt-6 flex flex-wrap gap-2">
-              {service.industries.map((i) => (
+              {translatedService.industries.map((i) => (
                 <span
                   key={i}
                   className="rounded-full bg-ivory px-4 py-2 text-sm font-medium text-ink"
@@ -231,12 +242,12 @@ function ServiceDetail() {
             </div>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-royal">Technologies used</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.technologiesLabel")}</p>
             <h2 className="mt-3 font-display display-3 font-bold text-ink">
-              Vendor-neutral by design
+              {t("serviceDetail.technologiesTitle")}
             </h2>
             <div className="mt-6 flex flex-wrap gap-2">
-              {service.technologies.map((t) => (
+              {translatedService.technologies.map((t) => (
                 <span
                   key={t}
                   className="rounded-full border border-ink/10 px-4 py-2 text-sm font-medium text-ink"
@@ -250,17 +261,15 @@ function ServiceDetail() {
       </section>
 
       {/* ---------------- CUSTOM SECTIONS ---------------- */}
-      {service.customSections && service.customSections.length > 0 && (
+      {translatedService.customSections && translatedService.customSections.length > 0 && (
         <>
-          {service.customSections.map((section, idx) => (
+          {translatedService.customSections.map((section, idx) => (
             <section
               key={section.title}
               className={`container-x py-14 sm:py-20 ${idx % 2 === 0 ? "" : "bg-ivory"}`}
             >
               <div className="max-w-4xl">
-                <p className="text-xs uppercase tracking-[0.25em] text-royal">
-                  {section.title}
-                </p>
+                <p className="text-xs uppercase tracking-[0.25em] text-royal">{section.title}</p>
                 <h2 className="mt-3 font-display display-3 font-bold text-ink">
                   {section.content}
                 </h2>
@@ -277,7 +286,10 @@ function ServiceDetail() {
                 {section.type === "stats" && section.stats && (
                   <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     {section.stats.map((stat) => (
-                      <div key={stat.label} className="rounded-2xl border border-ink/10 bg-white p-5">
+                      <div
+                        key={stat.label}
+                        className="rounded-2xl border border-ink/10 bg-white p-5"
+                      >
                         <div className="font-display text-2xl font-bold text-ink sm:text-3xl">
                           {stat.value}
                         </div>
@@ -303,29 +315,25 @@ function ServiceDetail() {
       <section className="container-x pb-14 sm:pb-20">
         <div className="grid gap-8 overflow-hidden rounded-[28px] bg-ivory p-6 sm:p-10 lg:grid-cols-[1.3fr_1fr]">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-royal">Case study</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.caseStudyLabel")}</p>
             <h2 className="mt-3 font-display display-3 font-bold text-ink">
-              {service.industries[0]} client, Doha
+              {t("serviceDetail.caseStudyTitle", { industry: translatedService.industries[0] })}
             </h2>
             <p className="mt-4 text-sm text-muted-foreground sm:text-base">
-              A {service.industries[0].toLowerCase()} organisation engaged Lusail Technology to
-              modernise {service.title.toLowerCase()}. We assessed the estate, designed a
-              fit-for-purpose model and delivered it with zero unplanned downtime — then handed
-              over documentation, dashboards and a 12-month roadmap.
+              {t("serviceDetail.caseStudyDescription", { industry: translatedService.industries[0], service: translatedService.title })}
             </p>
             <blockquote className="mt-6 flex gap-3 rounded-2xl bg-white p-5">
               <Quote className="h-5 w-5 shrink-0 text-royal" aria-hidden="true" />
               <p className="text-sm italic text-ink">
-                “Lusail delivered on time and stayed accountable long after go-live. The reporting
-                alone changed how our board sees IT.”
+                {t("serviceDetail.caseStudyQuote")}
               </p>
             </blockquote>
           </div>
           <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
             {[
-              { k: "-62%", v: "Incident volume" },
-              { k: "99.98%", v: "Availability" },
-              { k: "6 weeks", v: "Time to value" },
+              { k: "-62%", v: t("serviceDetail.stat1Label") },
+              { k: "99.98%", v: t("serviceDetail.stat2Label") },
+              { k: "6 weeks", v: t("serviceDetail.stat3Label") },
             ].map((m) => (
               <div key={m.v} className="rounded-2xl bg-white p-5">
                 <div className="flex items-center gap-2 font-display text-2xl font-bold text-ink sm:text-3xl">
@@ -345,20 +353,20 @@ function ServiceDetail() {
       <section className="py-14 sm:py-20">
         <div className="container-x grid gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-royal">Why Lusail Technology</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.whyLusailLabel")}</p>
             <h2 className="mt-3 font-display display-3 font-bold text-ink">
-              An engineering partner, not just a vendor.
+              {t("serviceDetail.whyLusailTitle")}
             </h2>
             <p className="mt-4 text-sm text-muted-foreground sm:text-base">
-              Certified engineers, 24/7 support and product-grade delivery — all from our Doha HQ.
+              {t("serviceDetail.certifiedEngineers")}
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              "SLA-backed 24/7 support",
-              "Local Doha delivery team",
-              "Product-grade engineering",
-              "Transparent reporting",
+              t("serviceDetail.benefit1"),
+              t("serviceDetail.benefit2"),
+              t("serviceDetail.benefit3"),
+              t("serviceDetail.benefit4"),
             ].map((v) => (
               <div
                 key={v}
@@ -375,12 +383,12 @@ function ServiceDetail() {
       {/* ---------------- FAQ ---------------- */}
       <section className="container-x py-14 sm:py-20">
         <div className="mx-auto max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-royal">FAQ</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.faqLabel")}</p>
           <h2 className="mt-3 font-display display-3 font-bold text-ink">
-            Frequently asked questions
+            {t("serviceDetail.faqTitle")}
           </h2>
           <Accordion type="single" collapsible className="mt-8">
-            {service.faq.map((f, i) => (
+            {translatedService.faq.map((f, i) => (
               <AccordionItem key={f.q} value={`item-${i}`} className="border-ink/10">
                 <AccordionTrigger className="min-h-[56px] text-left font-display text-base font-semibold text-ink sm:text-lg">
                   {f.q}
@@ -396,7 +404,7 @@ function ServiceDetail() {
 
       {/* ---------------- RELATED ---------------- */}
       <section className="container-x pb-12 sm:pb-16">
-        <p className="text-xs uppercase tracking-[0.25em] text-royal">Related services</p>
+        <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.relatedServices")}</p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {related.map((r) => {
             const RIcon = (Icons as any)[r.icon] ?? Sparkles;
@@ -425,14 +433,14 @@ function ServiceDetail() {
 
       {/* ---------------- CTA ---------------- */}
       <section className="container-x pb-20 sm:pb-24">
-        <div
-          className="rounded-[28px] p-7 text-white sm:p-10 md:p-14 bg-ink"
-        >
+        <div className="rounded-[28px] p-7 text-white sm:p-10 md:p-14 bg-ink">
           <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
-              <h2 className="font-display display-2 font-bold">Ready to Transform Your Business?</h2>
+              <h2 className="font-display display-2 font-bold">
+                {t("serviceDetail.ctaTitle")}
+              </h2>
               <p className="mt-3 max-w-lg text-sm text-white/75 sm:text-base">
-                Our team can scope, price and mobilize {service.title.toLowerCase()} within days.
+                {t("serviceDetail.ctaDescription", { service: translatedService.title })}
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:justify-self-end">
@@ -440,13 +448,13 @@ function ServiceDetail() {
                 to="/contact"
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5"
               >
-                Request a Quote <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                {t("serviceDetail.requestQuote")} <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-white/40 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
-                Contact Us
+                {t("serviceDetail.ctaButton")}
               </Link>
             </div>
           </div>

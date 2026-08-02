@@ -9,11 +9,14 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { I18nextProvider } from "react-i18next";
+import i18n from "@/i18n";
 
 import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { FloatingActions, ScrollProgress } from "@/components/site/FloatingActions";
+import "@/i18n";
 
 function NotFoundComponent() {
   return (
@@ -123,16 +126,41 @@ function ScrollToTop() {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  // Language persistence
+  useEffect(() => {
+    const STORAGE_KEY = "app-language";
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored && stored !== i18n.language) {
+      i18n.changeLanguage(stored);
+    }
+
+    const apply = (lng: string) => {
+      localStorage.setItem(STORAGE_KEY, lng);
+      document.documentElement.lang = lng;
+      document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+    };
+
+    i18n.on("languageChanged", apply);
+    apply(i18n.language);
+
+    return () => {
+      i18n.off("languageChanged", apply);
+    };
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
-      <ScrollProgress />
-      <Navbar />
-      <ScrollToTop />
-      <main id="main" className="pt-20 sm:pt-24">
-        <Outlet />
-      </main>
-      <Footer />
-      <FloatingActions />
+      <I18nextProvider i18n={i18n}>
+        <ScrollProgress />
+        <Navbar />
+        <ScrollToTop />
+        <main id="main" className="pt-20 sm:pt-24">
+          <Outlet />
+        </main>
+        <Footer />
+        <FloatingActions />
+      </I18nextProvider>
     </QueryClientProvider>
   );
 }

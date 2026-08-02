@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
   Building2,
@@ -47,30 +48,28 @@ function About() {
 }
 
 function AboutHero() {
+  const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 aurora" />
       <div className="container-x relative grid gap-10 py-24 lg:grid-cols-[1.2fr_1fr] lg:items-end">
         <div className="animate-reveal">
           <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs font-medium">
-            About Lusail Technology
+            {t('aboutPage.hero.badge')}
           </div>
           <h1 className="mt-6 font-display display-1 font-bold text-ink">
-            Engineered in Doha.<br />
-            <span className="text-gradient">Trusted across Qatar.</span>
+            {t('aboutPage.hero.title')}
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            We are a Qatari technology company building the digital backbone of the
-            country's most ambitious enterprises. Our craft combines vendor expertise,
-            product-grade engineering and deep operational discipline.
+            {t('aboutPage.hero.description')}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3">
           {[
-            ["2011", "Founded"],
-            ["120+", "Enterprise clients"],
-            ["45+", "Certified engineers"],
-            ["8", "Industry verticals"],
+            ["2011", t('aboutPage.hero.founded')],
+            ["120+", t('aboutPage.hero.enterpriseClients')],
+            ["45+", t('aboutPage.hero.certifiedEngineers')],
+            ["8", t('aboutPage.hero.industryVerticals')],
           ].map(([k, v]) => (
             <div key={v} className="rounded-2xl bg-ink p-5 text-white">
               <div className="font-display text-3xl font-bold">{k}</div>
@@ -84,12 +83,13 @@ function AboutHero() {
 }
 
 function MissionVision() {
+  const { t } = useTranslation();
   return (
     <section className="container-x py-20">
       <div className="grid gap-6 lg:grid-cols-3">
-        <Card icon={Target} label="Mission" title="Innovate tomorrow's technology, today." body="Empower Qatar's enterprises with technology that is secure, elegant and built to last — from strategy to 24/7 operations." tone="royal" />
-        <Card icon={Eye} label="Vision" title="The most trusted IT partner in the GCC." body="A regional benchmark for engineering discipline, product craftsmanship, and long-term client outcomes." tone="ivory" />
-        <Card icon={Compass} label="Purpose" title="Turn IT into a competitive advantage." body="Every deployment we deliver should measurably increase resilience, speed or revenue." tone="ink" />
+        <Card icon={Target} label={t('aboutPage.mission.label')} title={t('aboutPage.mission.title')} body={t('aboutPage.mission.body')} tone="royal" />
+        <Card icon={Eye} label={t('aboutPage.vision.label')} title={t('aboutPage.vision.title')} body={t('aboutPage.vision.body')} tone="ivory" />
+        <Card icon={Compass} label={t('aboutPage.purpose.label')} title={t('aboutPage.purpose.title')} body={t('aboutPage.purpose.body')} tone="ink" />
       </div>
     </section>
   );
@@ -112,6 +112,7 @@ function Card({ icon: Icon, label, title, body, tone }: any) {
 }
 
 function Story() {
+  const { t } = useTranslation();
   return (
     <section className="bg-ivory py-24">
       <div className="container-x grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
@@ -120,51 +121,51 @@ function Story() {
             <div className="aspect-[3/4] rounded-3xl bg-ink p-6 flex flex-col justify-between">
               <ShieldCheck className="h-10 w-10 text-teal" />
               <div>
-                <div className="font-display text-2xl font-bold text-white">Security First</div>
-                <div className="mt-2 text-sm text-white/70">Zero-trust architecture protecting your business 24/7</div>
+                <div className="font-display text-2xl font-bold text-white">{t('aboutPage.story.securityFirst')}</div>
+                <div className="mt-2 text-sm text-white/70">{t('aboutPage.story.securityFirstDesc')}</div>
               </div>
             </div>
             <div className="mt-10 aspect-[3/4] rounded-3xl bg-gradient-royal p-6 flex flex-col justify-between">
               <Rocket className="h-10 w-10 text-white/80" />
               <div>
-                <div className="font-display text-2xl font-bold text-white">Fast Delivery</div>
-                <div className="mt-2 text-sm text-white/70">From pilot to production in weeks, not months</div>
+                <div className="font-display text-2xl font-bold text-white">{t('aboutPage.story.fastDelivery')}</div>
+                <div className="mt-2 text-sm text-white/70">{t('aboutPage.story.fastDeliveryDesc')}</div>
               </div>
             </div>
           </div>
           <div className="absolute bottom-6 left-6 rounded-2xl glass p-4">
-            <div className="text-xs uppercase tracking-widest text-royal">Doha HQ</div>
-            <div className="mt-1 font-display text-lg font-semibold text-ink">West Bay</div>
+            <div className="text-xs uppercase tracking-widest text-royal">{t('aboutPage.story.dohaHq')}</div>
+            <div className="mt-1 font-display text-lg font-semibold text-ink">{t('aboutPage.story.westBay')}</div>
           </div>
         </div>
         <div className="order-1 lg:order-2">
-          <div className="text-xs uppercase tracking-[0.25em] text-royal">Your Trusted IT Partner</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-royal">{t('aboutPage.story.label')}</div>
           <h2 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">
-            Seamless technology is the backbone of business success.
+            {t('aboutPage.story.title')}
           </h2>
           <p className="mt-5 text-muted-foreground">
-            At Lusail Information Technology & Digital Solutions, we understand that seamless technology is the backbone of business success. Our extensive portfolio of cutting-edge computer hardware, essential accessories, advanced software, and vital consumables is meticulously curated to ensure unmatched performance and reliability.
+            {t('aboutPage.story.description1')}
           </p>
           <p className="mt-4 text-muted-foreground">
-            Beyond products, we provide tailored IT solutions designed to integrate seamlessly with your existing infrastructure, address your unique business challenges, and optimize efficiency. Our highly skilled team delivers customized strategies that empower your business to excel in the digital age.
+            {t('aboutPage.story.description2')}
           </p>
           <div className="mt-6 rounded-2xl border border-ink/10 bg-white p-4">
-            <div className="text-xs uppercase tracking-widest text-royal">Contact Information</div>
+            <div className="text-xs uppercase tracking-widest text-royal">{t('aboutPage.story.contactInfo')}</div>
             <div className="mt-3 space-y-2 text-sm">
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-ink">TLF:</span>
+                <span className="font-semibold text-ink">{t('aboutPage.story.tlf')}:</span>
                 <span className="text-muted-foreground">+974 4479 1860</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-ink">FAX:</span>
+                <span className="font-semibold text-ink">{t('aboutPage.story.fax')}:</span>
                 <span className="text-muted-foreground">+974 4462 2407</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-ink">P.O Box:</span>
+                <span className="font-semibold text-ink">{t('aboutPage.story.poBox')}:</span>
                 <span className="text-muted-foreground">11401 Doha, Qatar</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-ink">Email:</span>
+                <span className="font-semibold text-ink">{t('aboutPage.story.email')}:</span>
                 <span className="text-muted-foreground">info@lusailtechnology.com</span>
               </div>
             </div>
@@ -176,20 +177,21 @@ function Story() {
 }
 
 function Timeline() {
+  const { t } = useTranslation();
   const items = [
-    { year: "2011", title: "Founded in Doha", body: "Small engineering team, first enterprise clients." },
-    { year: "2015", title: "24/7 NOC launched", body: "Round-the-clock managed services goes live." },
-    { year: "2018", title: "Cybersecurity practice", body: "SOC-as-a-Service and NCSA alignment." },
-    { year: "2021", title: "Cloud & product studio", body: "Multi-cloud & bespoke software delivery." },
-    { year: "2024", title: "AI & automation", body: "AI enablement, RPA and smart workplaces." },
-    { year: "2026", title: "Regional expansion", body: "Serving clients across the GCC from Doha HQ." },
+    { year: "2011", title: t('aboutPage.timeline.founded'), body: t('aboutPage.timeline.foundedDesc') },
+    { year: "2015", title: t('aboutPage.timeline.nocLaunched'), body: t('aboutPage.timeline.nocLaunchedDesc') },
+    { year: "2018", title: t('aboutPage.timeline.cybersecurity'), body: t('aboutPage.timeline.cybersecurityDesc') },
+    { year: "2021", title: t('aboutPage.timeline.cloud'), body: t('aboutPage.timeline.cloudDesc') },
+    { year: "2024", title: t('aboutPage.timeline.aiAutomation'), body: t('aboutPage.timeline.aiAutomationDesc') },
+    { year: "2026", title: t('aboutPage.timeline.regional'), body: t('aboutPage.timeline.regionalDesc') },
   ];
   return (
     <section className="container-x py-24">
       <div className="max-w-xl">
-        <div className="text-xs uppercase tracking-[0.25em] text-royal">Timeline</div>
+        <div className="text-xs uppercase tracking-[0.25em] text-royal">{t('aboutPage.timeline.title')}</div>
         <h2 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">
-          A decade of engineered trust.
+          {t('aboutPage.timeline.subtitle')}
         </h2>
       </div>
       <div className="relative mt-16">
@@ -216,32 +218,33 @@ function Timeline() {
 }
 
 function Values() {
+  const { t } = useTranslation();
   return (
     <section className="bg-ink py-24 text-white">
       <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:items-center">
         <div>
-          <div className="text-xs uppercase tracking-[0.25em] text-teal">Our Core Strengths</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-teal">{t('aboutPage.coreStrengths.title')}</div>
           <h2 className="mt-3 font-display display-2 font-bold">
-            We build and activate brands through cultural insight, strategic vision, and the power of emotion.
+            {t('aboutPage.coreStrengths.innovation')}
           </h2>
         </div>
         <div className="space-y-6">
           <div className="rounded-2xl bg-white/5 p-6">
-            <div className="font-display text-xl font-semibold text-teal">HR Consulting</div>
+            <div className="font-display text-xl font-semibold text-teal">{t('aboutPage.coreStrengths.expertise')}</div>
             <p className="mt-3 text-sm text-white/70">
-              The HR solution of Lusail Information Technology helps your organization equip its processes, systems and people to successfully meet challenges impacting its present and the future.
+              {t('aboutPage.coreStrengths.expertiseDesc')}
             </p>
-            <p className="mt-2 text-sm text-white/70">
-              Our Human Resource consultants work very closely with your senior management in identifying process gaps that need to be bridged and HR interventions that can positively impact the role that HR plays in helping the organization in meeting its business strategies.
+          </div>
+          <div className="rounded-2xl bg-white/5 p-6">
+            <div className="font-display text-xl font-semibold text-teal">{t('aboutPage.coreStrengths.reliability')}</div>
+            <p className="mt-3 text-sm text-white/70">
+              {t('aboutPage.coreStrengths.reliabilityDesc')}
             </p>
-            <p className="mt-2 text-sm text-white/70">
-              Once the need and nature of such interventions are clearly defined, we design and deliver customized HR solutions that will have a sustainable positive impact on talent acquisition, development, engagement and retention.
-            </p>
-            <p className="mt-2 text-sm text-white/70">
-              Our HR solutions are based on global best practices but highly "tailor-made" to ensure best-fit to your organizational culture and sensitivities.
-            </p>
-            <p className="mt-2 text-sm text-white/70">
-              We ensure the sustainability of our HR services by staying closely engaged with our clients during the implementation and operationalization of our solutions through "bridge teams."
+          </div>
+          <div className="rounded-2xl bg-white/5 p-6">
+            <div className="font-display text-xl font-semibold text-teal">{t('aboutPage.coreStrengths.support')}</div>
+            <p className="mt-3 text-sm text-white/70">
+              {t('aboutPage.coreStrengths.supportDesc')}
             </p>
           </div>
         </div>
@@ -251,11 +254,12 @@ function Values() {
 }
 
 function Stats() {
+  const { t } = useTranslation();
   const items = [
-    ["500+", "Projects Completed"],
-    ["120+", "Happy Clients"],
-    ["14+", "Years Experience"],
-    ["24/7", "Support Hours"],
+    ["14+", t('aboutPage.stats.yearsInBusiness')],
+    ["120+", t('aboutPage.stats.enterpriseClients')],
+    ["45+", t('aboutPage.stats.certifiedEngineers')],
+    ["8", t('aboutPage.stats.industriesServed')],
   ];
   return (
     <section className="container-x py-20">
@@ -272,35 +276,36 @@ function Stats() {
 }
 
 function Team() {
+  const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-ink via-ink/95 to-royal/20 py-20">
       <div className="pointer-events-none absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(600px 300px at 20% 20%, rgba(30,86,255,0.5), transparent 70%), radial-gradient(500px 260px at 80% 80%, rgba(15,194,192,0.4), transparent 70%)" }} />
       <div className="container-x relative">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
           <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-teal">CEO's Message</div>
+            <div className="text-xs uppercase tracking-[0.25em] text-teal">{t('aboutPage.ceoMessage.title')}</div>
             <h2 className="mt-3 font-display text-4xl font-bold text-white sm:text-5xl">
-              Welcome to Our Website
+              {t('aboutPage.ceoMessage.welcome')}
             </h2>
           </div>
           <div className="rounded-3xl bg-white/10 backdrop-blur-sm p-8 border border-white/10">
             <p className="text-white">
-              At Lusail Technology, we believe technology should simplify business, drive innovation, and create lasting value for our clients.
+              {t('aboutPage.ceoMessage.paragraph1')}
             </p>
             <p className="mt-4 text-white/80">
-              Since our inception, our mission has been to deliver reliable, innovative, and high-quality technology solutions that help businesses thrive in an ever-changing digital world. We are committed to excellence, customer satisfaction, and continuous improvement in everything we do.
+              {t('aboutPage.ceoMessage.paragraph2')}
             </p>
             <p className="mt-4 text-white/80">
-              Our success is built on the trust of our clients, the dedication of our team, and our passion for embracing new technologies. As we continue to grow, we remain focused on providing exceptional service, building long-term partnerships, and delivering solutions that make a meaningful impact.
+              {t('aboutPage.ceoMessage.paragraph3')}
             </p>
             <p className="mt-4 text-white/80">
-              Thank you for visiting our website and for considering Lusail Technology as your trusted technology partner. We look forward to supporting your success and growing together.
+              {t('aboutPage.ceoMessage.paragraph4')}
             </p>
             <div className="mt-6 border-t border-white/20 pt-4">
-              <div className="font-semibold text-white">Sincerely,</div>
-              <div className="mt-1 font-display text-lg font-semibold text-teal">Mansoor Al Marri</div>
-              <div className="text-sm text-white/70">Chief Executive Officer</div>
-              <div className="text-sm text-white/70">Lusail Technology</div>
+              <div className="font-semibold text-white">{t('aboutPage.ceoMessage.sincerely')}</div>
+              <div className="mt-1 font-display text-lg font-semibold text-teal">{t('aboutPage.ceoMessage.name')}</div>
+              <div className="text-sm text-white/70">{t('aboutPage.ceoMessage.role')}</div>
+              <div className="text-sm text-white/70">{t('aboutPage.ceoMessage.company')}</div>
             </div>
           </div>
         </div>
@@ -310,14 +315,15 @@ function Team() {
 }
 
 function CTA() {
+  const { t } = useTranslation();
   return (
     <section className="container-x py-20">
       <div className="rounded-[32px] bg-gradient-royal p-10 text-white md:p-14">
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-center">
           <div>
-            <div className="font-display display-2 font-bold">Work with the team.</div>
+            <div className="font-display display-2 font-bold">{t('aboutPage.cta.title')}</div>
             <div className="mt-3 max-w-lg text-white/80">
-              From assessment to 24/7 operations, we're ready to become an extension of yours.
+              {t('aboutPage.cta.description')}
             </div>
           </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
@@ -325,7 +331,7 @@ function CTA() {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink hover:bg-ivory"
             >
-              Contact Us <ArrowRight className="h-4 w-4" />
+              {t('aboutPage.cta.button')} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

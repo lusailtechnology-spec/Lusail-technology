@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   NavigationMenu,
@@ -18,16 +19,22 @@ import {
 import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 import { services } from "@/data/services";
 import { products } from "@/data/products";
+import { useTranslatedServices } from "@/i18n/useTranslatedServices";
+import { useTranslatedProducts } from "@/i18n/useTranslatedProducts";
+import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 
 const nav = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
-  { to: "/products", label: "Products" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", key: "home" },
+  { to: "/about", key: "about" },
+  { to: "/services", key: "services" },
+  { to: "/products", key: "products" },
+  { to: "/contact", key: "contact" },
 ] as const;
 
 export function Navbar() {
+  const { t } = useTranslation();
+  const translatedServices = useTranslatedServices();
+  const translatedProducts = useTranslatedProducts();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -83,7 +90,7 @@ export function Navbar() {
         >
           <Link
             to="/"
-            aria-label="Lusail Technology home"
+            aria-label={t("logo.name")}
             className="flex min-h-[44px] items-center gap-2 pl-1 sm:pl-2"
           >
             <img
@@ -94,24 +101,26 @@ export function Navbar() {
               }`}
             />
             <span className="font-display text-sm font-bold tracking-tight text-ink pt-0.5">
-              Lusail Technology
+              {t("logo.nameWithDot")}
+              <span className="text-teal">{t("logo.dot")}</span>
+              {t("logo.technology")}
             </span>
           </Link>
 
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               {nav.map((item) => {
-                if (item.label === "Services") {
+                if (item.key === "services") {
                   return (
-                    <NavigationMenuItem key={item.label}>
+                    <NavigationMenuItem key={item.key}>
                       <NavigationMenuTrigger
                         className={`bg-transparent text-sm ${isActive("/services") ? "text-royal" : ""}`}
                       >
-                        Services
+                        {t("nav.services")}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <div className="grid w-[min(720px,90vw)] grid-cols-2 gap-1 p-4">
-                          {services.slice(0, 12).map((s) => (
+                          {translatedServices.slice(0, 12).map((s) => (
                             <NavigationMenuLink asChild key={s.slug}>
                               <Link
                                 to="/services/$slug"
@@ -135,7 +144,7 @@ export function Navbar() {
                               to="/services"
                               className="col-span-2 mt-1 inline-flex items-center justify-between rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-white"
                             >
-                              View all services
+                              {t("nav.viewAll")}
                               <ArrowUpRight className="h-4 w-4" />
                             </Link>
                           </NavigationMenuLink>
@@ -144,17 +153,17 @@ export function Navbar() {
                     </NavigationMenuItem>
                   );
                 }
-                if (item.label === "Products") {
+                if (item.key === "products") {
                   return (
-                    <NavigationMenuItem key={item.label}>
+                    <NavigationMenuItem key={item.key}>
                       <NavigationMenuTrigger
                         className={`bg-transparent text-sm ${isActive("/products") ? "text-royal" : ""}`}
                       >
-                        Products
+                        {t("nav.products")}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <div className="grid w-[min(560px,90vw)] grid-cols-2 gap-1 p-4">
-                          {products.map((p) => (
+                          {translatedProducts.map((p) => (
                             <NavigationMenuLink asChild key={p.slug}>
                               <Link
                                 to="/products/$slug"
@@ -178,7 +187,7 @@ export function Navbar() {
                               to="/products"
                               className="col-span-2 mt-1 inline-flex items-center justify-between rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-white"
                             >
-                              Browse full catalog
+                              {t("nav.browseCatalog")}
                               <ArrowUpRight className="h-4 w-4" />
                             </Link>
                           </NavigationMenuLink>
@@ -188,14 +197,14 @@ export function Navbar() {
                   );
                 }
                 return (
-                  <NavigationMenuItem key={item.label}>
+                  <NavigationMenuItem key={item.key}>
                     <NavigationMenuLink asChild>
                       <Link
                         to={item.to}
                         activeOptions={{ exact: item.to === "/" }}
                         className="rounded-full px-4 py-2 text-sm font-medium text-ink/80 transition hover:text-ink data-[status=active]:text-royal"
                       >
-                        {item.label}
+                        {t(`nav.${item.key}`)}
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
@@ -205,22 +214,26 @@ export function Navbar() {
           </NavigationMenu>
 
           <div className="hidden items-center gap-2 lg:flex">
+            <LanguageSwitcher />
             <Link to="/contact" className="btn-royal btn-royal-hover text-sm">
-              Get a Quote
+              {t("nav.getQuote")}
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
-            className="grid h-11 w-11 shrink-0 place-items-center rounded-full hairline bg-white/70 text-ink transition active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-royal lg:hidden"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSwitcher />
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? t("nav.menuClose") : t("nav.menuOpen")}
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-full hairline bg-white/70 text-ink transition active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-royal"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -251,25 +264,25 @@ export function Navbar() {
                 <nav aria-label="Mobile" className="flex flex-col">
                   {nav.map((n) => (
                     <Link
-                      key={n.label}
+                      key={n.key}
                       to={n.to}
                       onClick={() => setOpen(false)}
                       className={`flex min-h-[48px] items-center rounded-2xl px-4 text-base font-semibold transition ${
                         isActive(n.to) ? "bg-ivory text-royal" : "text-ink hover:bg-ivory"
                       }`}
                     >
-                      {n.label}
+                      {t(`nav.${n.key}`)}
                     </Link>
                   ))}
 
                   <Accordion type="single" collapsible className="mt-1">
                     <AccordionItem value="services" className="border-ink/10">
                       <AccordionTrigger className="min-h-[48px] px-4 text-sm font-semibold uppercase tracking-widest text-muted-foreground hover:no-underline">
-                        All services
+                        {t("nav.allServices")}
                       </AccordionTrigger>
                       <AccordionContent className="pb-2">
                         <div className="flex flex-col">
-                          {services.map((s) => (
+                          {translatedServices.map((s) => (
                             <Link
                               key={s.slug}
                               to="/services/$slug"
@@ -285,11 +298,11 @@ export function Navbar() {
                     </AccordionItem>
                     <AccordionItem value="products" className="border-ink/10">
                       <AccordionTrigger className="min-h-[48px] px-4 text-sm font-semibold uppercase tracking-widest text-muted-foreground hover:no-underline">
-                        All products
+                        {t("nav.allProducts")}
                       </AccordionTrigger>
                       <AccordionContent className="pb-2">
                         <div className="flex flex-col">
-                          {products.map((p) => (
+                          {translatedProducts.map((p) => (
                             <Link
                               key={p.slug}
                               to="/products/$slug"
@@ -310,7 +323,7 @@ export function Navbar() {
                     onClick={() => setOpen(false)}
                     className="btn-royal btn-royal-hover mt-3 min-h-[48px] justify-center"
                   >
-                    Get a Quote <ArrowUpRight className="h-4 w-4" />
+                    {t("nav.getQuote")} <ArrowUpRight className="h-4 w-4" />
                   </Link>
                 </nav>
               </div>

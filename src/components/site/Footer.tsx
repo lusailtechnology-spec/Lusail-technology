@@ -1,6 +1,10 @@
 import { Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import { services } from "@/data/services";
 import { products } from "@/data/products";
+import { useTranslatedServices } from "@/i18n/useTranslatedServices";
+import { useTranslatedProducts } from "@/i18n/useTranslatedProducts";
 import {
   MapPin,
   Mail,
@@ -14,6 +18,11 @@ import {
 } from "lucide-react";
 
 export function Footer() {
+  const { t } = useTranslation();
+  const translatedServices = useTranslatedServices();
+  const translatedProducts = useTranslatedProducts();
+  const [subscribed, setSubscribed] = useState(false);
+  const [subscribing, setSubscribing] = useState(false);
   return (
     <footer className="relative mt-24 overflow-hidden bg-ink text-white">
       <div className="pointer-events-none absolute inset-0 aurora opacity-40" />
@@ -30,22 +39,22 @@ export function Footer() {
               />
               <div>
                 <div className="font-display text-xl font-bold">
-                  Lusail<span className="text-teal">.</span>Technology
+                  {t("logo.nameWithDot")}
+                  <span className="text-teal">{t("logo.dot")}</span>
+                  {t("logo.technology")}
                 </div>
                 <div className="text-xs uppercase tracking-[0.25em] text-white/60">
-                  Doha · Qatar
+                  {t("logo.location")}
                 </div>
               </div>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
-              Innovating tomorrow's technology today. Enterprise IT, cybersecurity,
-              cloud and software solutions built for Qatar's most demanding
-              organisations.
+              {t("footer.tagline")}
             </p>
             <div className="mt-6 flex flex-col gap-3 text-sm text-white/80">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
-                West Bay Business District, Doha, Qatar
+                {t("footer.address")}
               </div>
               <a href="tel:+97444791860" className="flex items-center gap-3 hover:text-teal">
                 <Phone className="h-4 w-4 shrink-0 text-teal" /> +974 4479 1860
@@ -58,21 +67,24 @@ export function Footer() {
                 <span className="text-xs uppercase tracking-wider text-white/60">P.O Box:</span>
                 <span className="text-white/80">11401 Doha, Qatar</span>
               </div>
-              <a href="mailto:info@lusailtechnology.com" className="flex items-center gap-3 hover:text-teal">
+              <a
+                href="mailto:info@lusailtechnology.com"
+                className="flex items-center gap-3 hover:text-teal"
+              >
                 <Mail className="h-4 w-4 shrink-0 text-teal" /> info@lusailtechnology.com
               </a>
             </div>
           </div>
 
-          <FooterCol title="Company">
-            <FLink to="/about">About Us</FLink>
-            <FLink to="/services">Services</FLink>
-            <FLink to="/products">Products</FLink>
-            <FLink to="/contact">Contact</FLink>
+          <FooterCol title={t("footer.company")}>
+            <FLink to="/about">{t("footerLinks.about")}</FLink>
+            <FLink to="/services">{t("footerLinks.services")}</FLink>
+            <FLink to="/products">{t("footerLinks.products")}</FLink>
+            <FLink to="/contact">{t("footerLinks.contact")}</FLink>
           </FooterCol>
 
-          <FooterCol title="Top Services">
-            {services.slice(0, 6).map((s) => (
+          <FooterCol title={t("footer.topServices")}>
+            {translatedServices.slice(0, 6).map((s) => (
               <Link
                 key={s.slug}
                 to="/services/$slug"
@@ -84,8 +96,8 @@ export function Footer() {
             ))}
           </FooterCol>
 
-          <FooterCol title="Featured Products">
-            {products.slice(0, 6).map((p) => (
+          <FooterCol title={t("footer.featuredProducts")}>
+            {translatedProducts.slice(0, 6).map((p) => (
               <Link
                 key={p.slug}
                 to="/products/$slug"
@@ -100,23 +112,57 @@ export function Footer() {
 
         <div className="mt-14 grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur lg:grid-cols-[1.4fr_1fr]">
           <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-teal">Newsletter</div>
+            <div className="text-xs uppercase tracking-[0.25em] text-teal">
+              {t("footer.newsletter")}
+            </div>
             <div className="mt-1 font-display text-2xl font-semibold">
-              Technology insights, delivered monthly.
+              {t("footer.newsletterTitle")}
             </div>
           </div>
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setSubscribing(true);
+
+              const formData = new FormData(e.target);
+              formData.append("access_key", "70c66e47-333e-4951-9da2-6df57728b8d9");
+              formData.append("subject", "Newsletter Subscription");
+
+              try {
+                await fetch("https://api.web3forms.com/submit", {
+                  method: "POST",
+                  body: formData
+                });
+                setSubscribed(true);
+              } catch (err) {
+                console.error("Subscription failed:", err);
+              } finally {
+                setSubscribing(false);
+              }
+            }}
             className="flex items-center gap-2 rounded-full bg-white/10 p-1.5"
           >
-            <input
-              type="email"
-              placeholder="you@company.com"
-              className="min-w-0 flex-1 bg-transparent px-4 py-2 text-sm text-white placeholder:text-white/50 outline-none"
-            />
-            <button className="btn-royal btn-royal-hover shrink-0 text-sm">
-              Subscribe <ArrowUpRight className="h-4 w-4" />
-            </button>
+            {subscribed ? (
+              <div className="flex-1 px-4 py-2 text-sm text-teal">
+                {t("footer.subscribed", "Subscribed!")}
+              </div>
+            ) : (
+              <>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder={t("footer.emailPlaceholder")}
+                  required
+                  className="min-w-0 flex-1 bg-transparent px-4 py-2 text-sm text-white placeholder:text-white/50 outline-none"
+                />
+                <button 
+                  className="btn-royal btn-royal-hover shrink-0 text-sm"
+                  disabled={subscribing}
+                >
+                  {subscribing ? "..." : t("footer.subscribe")} <ArrowUpRight className="h-4 w-4" />
+                </button>
+              </>
+            )}
           </form>
         </div>
 
@@ -130,7 +176,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center">
-          <div>© {new Date().getFullYear()} Lusail Technology. All rights reserved.</div>
+          <div>{t("footer.copyright", { year: new Date().getFullYear() })}</div>
           <div className="flex gap-2">
             {[Linkedin, Twitter, Instagram, Facebook].map((Icon, i) => (
               <a

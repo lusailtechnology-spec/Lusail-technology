@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -28,6 +29,8 @@ import {
 import * as Icons from "lucide-react";
 import { featuredServices, services } from "@/data/services";
 import { featuredProducts } from "@/data/products";
+import { useTranslatedServices } from "@/i18n/useTranslatedServices";
+import { useTranslatedProducts } from "@/i18n/useTranslatedProducts";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,6 +71,7 @@ function Home() {
 }
 
 function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 aurora" />
@@ -78,29 +82,26 @@ function Hero() {
             <span className="grid h-4 w-4 place-items-center rounded-full bg-teal">
               <Sparkles className="h-2.5 w-2.5 text-ink" />
             </span>
-            Trusted IT partner across Qatar
+            {t("home.hero.badge")}
           </div>
           <h1 className="mt-6 font-display display-1 font-bold text-ink">
-            Empowering Businesses with{" "}
-            <span className="text-gradient">Innovative IT</span> Solutions.
+            {t("home.hero.title")}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Lusail Technology delivers enterprise IT solutions, cybersecurity, networking,
-            cloud infrastructure, software development and digital transformation across
-            Qatar — designed and operated by certified engineers.
+            {t("home.hero.description")}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/services" className="btn-royal btn-royal-hover">
-              Explore Services <ArrowRight className="h-4 w-4" />
+              {t("home.hero.exploreServices")} <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/contact" className="btn-ghost-ink btn-ghost-ink-hover">
-              Contact Us <ArrowUpRight className="h-4 w-4" />
+              {t("home.hero.contactUs")} <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="mt-12 grid max-w-lg grid-cols-3 divide-x divide-ink/10 border-y border-ink/10 py-6">
-            <Stat kpi="500+" label="Projects delivered" />
-            <Stat kpi="14+" label="Years in Qatar" />
-            <Stat kpi="24/7" label="NOC & SOC" />
+            <Stat kpi="500+" label={t("home.hero.projectsDelivered")} />
+            <Stat kpi="14+" label={t("home.hero.yearsInQatar")} />
+            <Stat kpi="24/7" label={t("home.hero.nocSoc")} />
           </div>
         </div>
 
@@ -112,15 +113,15 @@ function Hero() {
               <div className="h-2.5 w-2.5 rounded-full bg-ink/10" />
               <div className="h-2.5 w-2.5 rounded-full bg-royal" />
               <div className="ml-3 text-xs text-muted-foreground">
-                lusail.tech / operations
+                {t("home.hero.browserUrl")}
               </div>
             </div>
             <div className="p-6">
               <div className="grid grid-cols-3 gap-3">
                 {[
-                  { label: "Uptime", value: "99.99%", tone: "text-teal" },
-                  { label: "Tickets", value: "0 open", tone: "text-royal" },
-                  { label: "Threats", value: "Blocked", tone: "text-ink" },
+                  { label: t("home.hero.uptime"), value: "99.99%", tone: "text-teal" },
+                  { label: t("home.hero.tickets"), value: "0 open", tone: "text-royal" },
+                  { label: t("home.hero.threats"), value: t("home.hero.blocked"), tone: "text-ink" },
                 ].map((k) => (
                   <div key={k.label} className="rounded-2xl bg-ivory p-4">
                     <div className="text-[11px] uppercase tracking-widest text-muted-foreground">
@@ -135,7 +136,7 @@ function Hero() {
               <div className="mt-4 rounded-2xl border border-ink/10 p-4">
                 <div className="mb-3 flex items-center justify-between">
                   <div className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                    Network Traffic
+                    {t("home.hero.networkTraffic")}
                   </div>
                   <div className="text-xs text-teal">▲ 12.4%</div>
                 </div>
@@ -161,10 +162,10 @@ function Hero() {
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <div className="rounded-2xl bg-ink p-4 text-white">
                   <div className="text-xs uppercase tracking-widest text-white/60">
-                    Cloud
+                    {t("home.hero.cloud")}
                   </div>
                   <div className="mt-1 font-display text-lg font-semibold">
-                    Multi-cloud healthy
+                    {t("home.hero.multiCloudHealthy")}
                   </div>
                 </div>
                 <div className="rounded-2xl bg-gradient-royal p-4 text-white">
@@ -172,7 +173,7 @@ function Hero() {
                     SOC
                   </div>
                   <div className="mt-1 font-display text-lg font-semibold">
-                    24/7 Monitoring
+                    {t("home.hero.monitoring")}
                   </div>
                 </div>
               </div>
@@ -180,12 +181,12 @@ function Hero() {
           </div>
           <div className="absolute -right-6 -top-6 hidden rotate-6 rounded-2xl bg-white p-3 shadow-[var(--shadow-soft)] md:block">
             <div className="flex items-center gap-2 text-xs font-semibold text-ink">
-              <ShieldCheck className="h-4 w-4 text-teal" /> Zero-trust enforced
+              <ShieldCheck className="h-4 w-4 text-teal" /> {t("home.hero.zeroTrust")}
             </div>
           </div>
           <div className="absolute -bottom-6 -left-6 hidden -rotate-3 rounded-2xl bg-white p-3 shadow-[var(--shadow-soft)] md:block">
             <div className="flex items-center gap-2 text-xs font-semibold text-ink">
-              <Zap className="h-4 w-4 text-royal" /> 12ms average latency
+              <Zap className="h-4 w-4 text-royal" /> {t("home.hero.latency")}
             </div>
           </div>
         </div>
@@ -204,12 +205,13 @@ function Stat({ kpi, label }: { kpi: string; label: string }) {
 }
 
 function TrustBar() {
+  const { t } = useTranslation();
   const logos = ["Cisco", "Microsoft", "Dell", "HP", "Lenovo", "Fortinet", "Ubiquiti", "VMware", "AWS", "Google Cloud", "Adobe", "SonicWall"];
   return (
     <section className="border-y border-ink/10 bg-ivory/60 py-6">
       <div className="container-x flex items-center gap-6 overflow-hidden">
         <div className="shrink-0 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          Certified partners
+          {t("home.trustBar.certifiedPartners")}
         </div>
         <div className="relative flex flex-1 overflow-hidden">
           <div className="animate-marquee flex shrink-0 gap-12 pr-12">
@@ -229,6 +231,8 @@ function TrustBar() {
 }
 
 function WhoWeAre() {
+  const { t } = useTranslation();
+  const whyUsItems = t("home.whyUs.items", { returnObjects: true }) as Array<{ label: string; description: string }>;
   return (
     <section className="container-x py-24">
       <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
@@ -236,33 +240,33 @@ function WhoWeAre() {
           <div className="grid grid-cols-6 gap-3 max-[400px]:grid-cols-1">
             <div className="col-span-4 aspect-[4/5] rounded-[32px] bg-gradient-royal p-8 text-white shadow-[var(--shadow-glow)] max-[400px]:col-span-1 max-[400px]:aspect-auto max-[400px]:min-h-[200px]">
               <div className="text-xs uppercase tracking-[0.25em] text-white/70">
-                Est. 2011
+                {t("home.whoWeAre.established")}
               </div>
               <div className="mt-auto flex h-full flex-col justify-end">
                 <div className="font-display text-4xl font-bold leading-tight max-[400px]:text-2xl">
-                  Engineering trust into every layer of IT.
+                  {t("home.whoWeAre.tagline")}
                 </div>
               </div>
             </div>
             <div className="col-span-2 flex flex-col gap-3 max-[400px]:col-span-1 max-[400px]:flex-row">
               <div className="aspect-square rounded-2xl bg-ink p-4 text-white max-[400px]:aspect-auto max-[400px]:flex-1">
                 <BadgeCheck className="h-5 w-5 text-teal" />
-                <div className="mt-6 font-display text-2xl font-bold max-[400px]:text-xl">ISO 27001</div>
-                <div className="text-xs text-white/60">Certified</div>
+                <div className="mt-6 font-display text-2xl font-bold max-[400px]:text-xl">{t("home.whoWeAre.iso27001")}</div>
+                <div className="text-xs text-white/60">{t("home.whoWeAre.certified")}</div>
               </div>
               <div className="flex-1 rounded-2xl bg-ivory p-4 max-[400px]:flex-1">
                 <Handshake className="h-5 w-5 text-royal" />
                 <div className="mt-4 font-display text-xl font-bold text-ink break-words max-[400px]:text-lg">
-                  Long-term partnerships
+                  {whyUsItems[5]?.label}
                 </div>
               </div>
             </div>
             <div className="col-span-6 rounded-2xl border border-ink/10 p-5 max-[400px]:col-span-1">
               <div className="grid grid-cols-3 gap-4 max-[400px]:grid-cols-1">
                 {[
-                  ["500+", "Projects"],
-                  ["120+", "Enterprises"],
-                  ["98%", "Retention"],
+                  [t("home.whoWeAre.statProjects"), t("home.whoWeAre.statProjectsLabel")],
+                  [t("home.whoWeAre.statExperience"), t("home.whoWeAre.statExperienceLabel")],
+                  [t("home.whoWeAre.statSatisfaction"), t("home.whoWeAre.statSatisfactionLabel")],
                 ].map(([k, v]) => (
                   <div key={v}>
                     <div className="font-display text-2xl font-bold text-ink max-[400px]:text-xl">{k}</div>
@@ -277,21 +281,19 @@ function WhoWeAre() {
         </div>
 
         <div>
-          <div className="text-xs uppercase tracking-[0.25em] text-royal">Who we are</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.whoWeAre.label")}</div>
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            A Qatari IT partner engineered like a modern product company.
+            {t("home.whoWeAre.subtitle")}
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            From Doha, we design, deploy and operate the systems that keep enterprises
-            resilient — spanning cybersecurity, cloud, networking, and bespoke software.
-            Our engineers combine deep vendor expertise with product-grade craftsmanship.
+            {t("home.whoWeAre.description")}
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {[
-              { icon: ShieldCheck, t: "Security-first", d: "Zero-trust by default." },
-              { icon: Zap, t: "Fast execution", d: "Pilot to production in weeks." },
-              { icon: Cpu, t: "Deep expertise", d: "Certified across 20+ vendors." },
-              { icon: Handshake, t: "Local presence", d: "Doha-based, GCC coverage." },
+              { icon: ShieldCheck, t: whyUsItems[0]?.label, d: whyUsItems[0]?.description },
+              { icon: Zap, t: whyUsItems[1]?.label, d: whyUsItems[1]?.description },
+              { icon: Cpu, t: whyUsItems[3]?.label, d: whyUsItems[3]?.description },
+              { icon: Handshake, t: whyUsItems[5]?.label, d: whyUsItems[5]?.description },
             ].map((f) => (
               <div key={f.t} className="rounded-2xl border border-ink/10 p-4">
                 <f.icon className="h-5 w-5 text-royal" />
@@ -301,7 +303,7 @@ function WhoWeAre() {
             ))}
           </div>
           <Link to="/about" className="mt-8 inline-flex items-center gap-2 font-semibold text-royal hover:gap-3 transition-all">
-            Read our story <ArrowRight className="h-4 w-4" />
+            {t("home.whoWeAre.learnMore")} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>
@@ -310,14 +312,15 @@ function WhoWeAre() {
 }
 
 function WhyUs() {
+  const { t } = useTranslation();
+  const whyUsItems = t("home.whyUs.items", { returnObjects: true }) as Array<{ label: string; description: string }>;
   const items = [
-    { icon: BadgeCheck, t: "Certified Professionals", d: "Engineers certified across Cisco, Microsoft, Fortinet, AWS and more." },
-    { icon: Award, t: "Global Certifications", d: "ISO 27001, ISO 9001 and industry-leading security standards." },
-    { icon: Zap, t: "Fast Response", d: "SLA-backed response in under 15 minutes for critical incidents." },
-    { icon: Clock, t: "24/7 Support", d: "Round-the-clock NOC & SOC operating from Doha." },
-    { icon: Cpu, t: "Customized Solutions", d: "Every deployment tailored to your workflows and risk profile." },
-    { icon: Lock, t: "Enterprise Security", d: "Zero-trust architectures and continuous monitoring." },
-    { icon: Handshake, t: "Trusted Partner", d: "Long-term engagements with Qatar's most demanding enterprises." },
+    { icon: ShieldCheck, t: whyUsItems[0]?.label, d: whyUsItems[0]?.description },
+    { icon: Zap, t: whyUsItems[1]?.label, d: whyUsItems[1]?.description },
+    { icon: Clock, t: whyUsItems[2]?.label, d: whyUsItems[2]?.description },
+    { icon: Cpu, t: whyUsItems[3]?.label, d: whyUsItems[3]?.description },
+    { icon: Lock, t: whyUsItems[4]?.label, d: whyUsItems[4]?.description },
+    { icon: Handshake, t: whyUsItems[5]?.label, d: whyUsItems[5]?.description },
   ];
   return (
     <section className="relative overflow-hidden bg-ink py-24 text-white">
@@ -325,9 +328,9 @@ function WhyUs() {
       <div className="container-x relative">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.5fr]">
           <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-teal">Why Lusail</div>
+            <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("home.whyUs.label")}</div>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-              A partner engineered for the enterprises that can't afford downtime.
+              {t("home.whyUs.title")}
             </h2>
           </div>
           <div className="grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2">
@@ -357,22 +360,25 @@ function WhyUs() {
 }
 
 function FeaturedServices() {
+  const { t } = useTranslation();
+  const translatedServices = useTranslatedServices();
+  const featuredTranslatedServices = translatedServices.filter((s) => s.featured);
   return (
     <section className="container-x py-24">
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div className="max-w-xl">
-          <div className="text-xs uppercase tracking-[0.25em] text-royal">Featured services</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.featuredServices.title")}</div>
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Solutions that scale with your ambition.
+            {t("home.featuredServices.subtitle")}
           </h2>
         </div>
         <Link to="/services" className="btn-ghost-ink btn-ghost-ink-hover self-start">
-          All services <ArrowUpRight className="h-4 w-4" />
+          {t("home.featuredServices.viewAll")} <ArrowUpRight className="h-4 w-4" />
         </Link>
       </div>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-12">
-        {featuredServices.map((s, i) => {
+        {featuredTranslatedServices.map((s, i) => {
           const Icon = (Icons as any)[s.icon] ?? Sparkles;
           const spans = ["lg:col-span-7", "lg:col-span-5", "lg:col-span-5", "lg:col-span-7"];
           const tall = i === 0 || i === 3;
@@ -415,7 +421,10 @@ function FeaturedServices() {
 }
 
 function FeaturedProducts() {
+  const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const translatedProducts = useTranslatedProducts();
+  const featuredTranslatedProducts = translatedProducts.filter((p) => p.featured);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -432,28 +441,28 @@ function FeaturedProducts() {
       <div className="container-x">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-royal">Featured products</div>
+            <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.featuredProducts.title")}</div>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-              Enterprise-grade hardware & software.
+              {t("home.featuredProducts.subtitle")}
             </h2>
           </div>
           <div className="flex items-center gap-3">
             <button
               onClick={() => scroll("left")}
               className="hidden lg:grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink transition hover:bg-ink hover:text-white"
-              aria-label="Scroll left"
+              aria-label={t("accessibility.scrollLeft")}
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={() => scroll("right")}
               className="hidden lg:grid h-10 w-10 place-items-center rounded-full border border-ink/10 bg-white text-ink transition hover:bg-ink hover:text-white"
-              aria-label="Scroll right"
+              aria-label={t("accessibility.scrollRight")}
             >
               <ChevronRight className="h-5 w-5" />
             </button>
             <Link to="/products" className="btn-ghost-ink btn-ghost-ink-hover hidden md:inline-flex">
-              Browse catalog <ArrowUpRight className="h-4 w-4" />
+              {t("home.featuredProducts.viewAll")} <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -462,7 +471,7 @@ function FeaturedProducts() {
           ref={scrollRef}
           className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {featuredProducts.concat(featuredProducts).map((p, i) => {
+          {featuredTranslatedProducts.concat(featuredTranslatedProducts).map((p, i) => {
             const Icon = (Icons as any)[p.icon] ?? Sparkles;
             return (
               <Link
@@ -500,27 +509,27 @@ function FeaturedProducts() {
 }
 
 function Industries() {
+  const { t } = useTranslation();
   const items = [
-    { icon: Stethoscope, name: "Healthcare" },
-    { icon: GraduationCap, name: "Education" },
-    { icon: Landmark, name: "Government" },
-    { icon: HardHat, name: "Construction" },
-    { icon: ShoppingBag, name: "Retail" },
-    { icon: Hotel, name: "Hospitality" },
-    { icon: Banknote, name: "Finance" },
-    { icon: Fuel, name: "Oil & Gas" },
+    { icon: Stethoscope, name: t("industries.healthcare") },
+    { icon: GraduationCap, name: t("industries.education") },
+    { icon: Landmark, name: t("industries.government") },
+    { icon: HardHat, name: t("industries.construction") },
+    { icon: ShoppingBag, name: t("industries.retail") },
+    { icon: Hotel, name: t("industries.hospitality") },
+    { icon: Banknote, name: t("industries.finance") },
+    { icon: Fuel, name: t("industries.oilGas") },
   ];
   return (
     <section className="container-x py-24">
       <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center">
         <div>
-          <div className="text-xs uppercase tracking-[0.25em] text-royal">Industries</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.industries.title")}</div>
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            Sector-specific expertise, from clinical systems to trading floors.
+            {t("home.industries.subtitle")}
           </h2>
           <p className="mt-5 text-muted-foreground">
-            Every industry brings unique regulations, workloads and risk. Our teams
-            combine domain fluency with technology depth to deliver outcomes that fit.
+            {t("industries.subtitle")}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -533,7 +542,7 @@ function Industries() {
             >
               <i.icon className="h-6 w-6 text-royal transition group-hover:scale-110" />
               <div className="mt-6 font-semibold text-ink">{i.name}</div>
-              <div className="mt-1 text-xs text-muted-foreground">Enterprise-ready</div>
+              <div className="mt-1 text-xs text-muted-foreground">{t("industries.enterpriseReady")}</div>
             </div>
           ))}
         </div>
@@ -543,14 +552,15 @@ function Industries() {
 }
 
 function Partners() {
+  const { t } = useTranslation();
   const logos = ["Cisco", "Microsoft", "Dell", "HP", "Lenovo", "Fortinet", "Ubiquiti", "VMware", "AWS", "Google Cloud", "Adobe", "SonicWall"];
   return (
     <section className="border-y border-ink/10 bg-ivory py-16">
       <div className="container-x">
         <div className="mx-auto max-w-xl text-center">
-          <div className="text-xs uppercase tracking-[0.25em] text-royal">Technology partners</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.partners.title")}</div>
           <h3 className="mt-3 font-display text-2xl font-bold text-ink">
-            Certified & authorized across the world's leading vendors
+            {t("home.partners.subtitle")}
           </h3>
         </div>
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-ink/10 sm:grid-cols-3 lg:grid-cols-6">
@@ -569,25 +579,29 @@ function Partners() {
 }
 
 function Testimonials() {
+  const { t } = useTranslation();
   const items = [
     {
-      quote:
-        "Lusail transformed our datacenter operations. Uptime jumped to 99.99% within a quarter — their engineers feel like part of our team.",
-      role: "CIO, National Retailer",
+      quote: t("home.testimonials.quote1"),
+      role: t("home.testimonials.role1"),
     },
     {
-      quote:
-        "The cybersecurity overhaul was flawless. Zero-trust rolled out across 12 sites with no downtime and clear reporting throughout.",
-      role: "Head of IT, Finance Group",
+      quote: t("home.testimonials.quote2"),
+      role: t("home.testimonials.role2"),
     },
     {
-      quote:
-        "From strategy to code, they behave like a modern product company — rare in the region and exactly what we needed.",
-      role: "Director, Healthcare Network",
+      quote: t("home.testimonials.quote3"),
+      role: t("home.testimonials.role3"),
     },
   ];
   return (
     <section className="container-x py-24">
+      <div className="mb-10 text-center">
+        <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.testimonials.title")}</div>
+        <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+          {t("home.testimonials.subtitle")}
+        </h2>
+      </div>
       <div className="grid gap-10 lg:grid-cols-3">
         {items.map((t, i) => (
           <div
@@ -611,30 +625,30 @@ function Testimonials() {
 }
 
 function FinalCTA() {
+  const { t } = useTranslation();
   return (
     <section className="container-x py-24">
       <div className="relative overflow-hidden rounded-[40px] bg-ink p-10 text-white shadow-[var(--shadow-glow)] md:p-16">
         <div className="pointer-events-none absolute inset-0 opacity-60" style={{ backgroundImage: "radial-gradient(600px 300px at 90% 10%, rgba(30,86,255,0.55), transparent 60%), radial-gradient(500px 260px at 0% 100%, rgba(15,194,192,0.35), transparent 60%)" }} />
         <div className="relative grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
           <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-teal">Let's build</div>
+            <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("home.finalCTA.label")}</div>
             <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-6xl">
-              Let's build your digital future together.
+              {t("home.finalCTA.title")}
             </h2>
             <p className="mt-5 max-w-xl text-white/70">
-              Book a discovery call with our Doha team. We'll assess your current stack,
-              identify quick wins, and outline a roadmap tailored to your business.
+              {t("home.finalCTA.description")}
             </p>
           </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
             <Link to="/contact" className="btn-royal btn-royal-hover">
-              Request a Quote <ArrowRight className="h-4 w-4" />
+              {t("home.finalCTA.getStarted")} <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/services"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
             >
-              Explore services <ArrowUpRight className="h-4 w-4" />
+              {t("home.finalCTA.schedule")} <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

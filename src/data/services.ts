@@ -56,6 +56,9 @@ export const services: Service[] = [
     faq: [
       { q: "Do you offer 24/7 support?", a: "Yes, our NOC operates 24/7/365 across Qatar with multilingual engineers." },
       { q: "Can you support hybrid workforces?", a: "Absolutely — we cover remote endpoints, VPN, and cloud identity end-to-end." },
+      { q: "What pricing models are available?", a: "We offer flexible pricing models based on the number of users or devices, or a flat rate model for SMEs." },
+      { q: "How long does service setup take?", a: "Basic service can be deployed within 48 hours, while complex deployments take 2-4 weeks depending on infrastructure size." },
+      { q: "Do you offer monthly performance reports?", a: "Yes, we provide comprehensive reports including response times, ticket counts, incident resolution, and improvement recommendations." },
     ],
     customSections: [
       {
@@ -116,7 +119,12 @@ export const services: Service[] = [
     ],
     industries: ["Hospitality", "Retail", "Education", "Construction"],
     technologies: ["Cisco Catalyst", "Meraki", "Fortinet", "Ubiquiti", "Aruba"],
-    faq: [{ q: "Do you offer wireless heatmaps?", a: "Yes, using Ekahau surveys for accurate RF planning." }],
+    faq: [
+      { q: "Do you offer wireless heatmaps?", a: "Yes, using Ekahau surveys for accurate RF planning." },
+      { q: "What is the expected timeline for a network project?", a: "Timeline ranges from two weeks for small networks to 3 months for enterprise-level projects, including testing and deployment." },
+      { q: "Do you support existing networks?", a: "Yes, we can integrate new solutions with existing infrastructure or upgrade gradually to minimize downtime." },
+      { q: "What warranties are offered on network equipment?", a: "We offer warranties up to 5 years on equipment from authorized vendors with contract extension options." },
+    ],
     customSections: [
       {
         title: "Network Architecture Types",
@@ -169,7 +177,13 @@ export const services: Service[] = [
     ],
     industries: ["Retail", "Government", "Construction", "Hospitality"],
     technologies: ["Hikvision", "Dahua", "Axis", "Milestone"],
-    faq: [{ q: "Do you handle MOI approvals?", a: "Yes, we manage the full compliance and approval process." }],
+    faq: [
+      { q: "Do you handle MOI approvals?", a: "Yes, we manage the full compliance and approval process." },
+      { q: "What is the video retention period?", a: "We offer storage options from 30 days to 90 days or more, depending on your business requirements and regulations." },
+      { q: "Can I access cameras from my phone?", a: "Yes, we provide secure mobile apps for accessing live video and archives from anywhere." },
+      { q: "How long does system installation take?", a: "Typical installation takes 3-7 days depending on the number of cameras and site size." },
+      { q: "Do you offer periodic maintenance?", a: "Yes, we offer monthly or quarterly maintenance contracts including health checks, cleaning, and software updates." },
+    ],
     customSections: [
       {
         title: "Camera Types & Applications",
@@ -221,7 +235,13 @@ export const services: Service[] = [
     ],
     industries: ["Finance", "Government", "Healthcare", "Oil & Gas"],
     technologies: ["Fortinet", "Palo Alto", "CrowdStrike", "Microsoft Sentinel"],
-    faq: [{ q: "Can you help with NCSA compliance?", a: "Yes, we align controls with Qatar NCSA and NIA frameworks." }],
+    faq: [
+      { q: "Can you help with NCSA compliance?", a: "Yes, we align controls with Qatar NCSA and NIA frameworks." },
+      { q: "What is your incident response?", a: "We offer 24/7 incident response with a specialized team that can be on-site within 4 hours for critical incidents." },
+      { q: "Do you offer security training for employees?", a: "Yes, we offer security awareness training programs including phishing simulation and social engineering tests." },
+      { q: "How much does SOC service cost?", a: "Pricing depends on infrastructure size and number of endpoints, with flexible monthly or annual subscription models." },
+      { q: "Do you support security assessments?", a: "Yes, we provide penetration testing, vulnerability assessments, and regular security audits." },
+    ],
     customSections: [
       {
         title: "Security Layers",
@@ -275,7 +295,13 @@ export const services: Service[] = [
     ],
     industries: ["Finance", "Retail", "Healthcare", "Education"],
     technologies: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Terraform"],
-    faq: [{ q: "Do you support hybrid cloud?", a: "Yes — from Azure Stack to on-prem OpenShift and everything between." }],
+    faq: [
+      { q: "Do you support hybrid cloud?", a: "Yes — from Azure Stack to on-prem OpenShift and everything between." },
+      { q: "How long does cloud migration take?", a: "Timeline ranges from two weeks for simple applications to 6 months for complex enterprises, with phased migration strategies." },
+      { q: "Can you help us reduce cloud costs?", a: "Yes, we offer FinOps services to optimize resource usage, identify unused resources, and implement cost policies." },
+      { q: "What cloud platforms do you support?", a: "We are certified in AWS, Azure, and Google Cloud, with expertise in multi-cloud environments." },
+      { q: "Do you offer post-migration support?", a: "Yes, we provide ongoing cloud management including monitoring, patching, optimization, and 24/7 support." },
+    ],
     customSections: [
       {
         title: "Cloud Migration Strategies",
@@ -328,7 +354,13 @@ export const services: Service[] = [
     ],
     industries: ["Government", "Finance", "Healthcare", "Retail"],
     technologies: ["TypeScript", "React", ".NET", "Node.js", "Postgres"],
-    faq: [{ q: "Do you provide dedicated teams?", a: "Yes, from squad-based delivery to embedded engineers." }],
+    faq: [
+      { q: "Do you provide dedicated teams?", a: "Yes, from squad-based delivery to embedded engineers." },
+      { q: "What development methodology do you use?", a: "We use agile development with two-week sprints, allowing continuous delivery and rapid adaptation to requirements." },
+      { q: "How long does it take to develop a custom application?", a: "Timeline ranges from 2-3 months for simple applications to 6-12 months for complex projects, with iterative delivery phases." },
+      { q: "Do you offer post-launch support?", a: "Yes, we offer maintenance contracts including bug fixes, updates, and ongoing technical support." },
+      { q: "Can you integrate existing systems?", a: "Yes, we have extensive experience integrating with existing ERP, CRM, and database systems." },
+    ],
     customSections: [
       {
         title: "Development Methodologies",
@@ -379,7 +411,13 @@ export const services: Service[] = [
     ],
     industries: ["Hospitality", "Retail", "Finance", "Education"],
     technologies: ["Next.js", "Figma", "Sanity", "Contentful"],
-    faq: [{ q: "Do you offer bilingual sites?", a: "Yes, we deliver Arabic/English sites with full RTL support." }],
+    faq: [
+      { q: "Do you offer bilingual sites?", a: "Yes, we deliver Arabic/English sites with full RTL support." },
+      { q: "How long does it take to design a website?", a: "A typical project takes 4-8 weeks from research to launch, depending on complexity and required features." },
+      { q: "Do you offer SEO services?", a: "Yes, we optimize all websites for search engines with technical, content, and local keyword optimization." },
+      { q: "What CMS platforms do you use?", a: "We use headless platforms like Sanity and Contentful, as well as WordPress depending on project requirements." },
+      { q: "Do you offer hosting and maintenance?", a: "Yes, we offer comprehensive hosting and maintenance plans including backups, security updates, and 24/7 support." },
+    ],
     customSections: [
       {
         title: "Design Deliverables",
@@ -430,7 +468,13 @@ export const services: Service[] = [
     ],
     industries: ["Retail", "Healthcare", "Finance", "Hospitality"],
     technologies: ["Kotlin", "Jetpack Compose", "Firebase"],
-    faq: [{ q: "Do you support wearables?", a: "Yes, we build for Wear OS and tablets." }],
+    faq: [
+      { q: "Do you support wearables?", a: "Yes, we build for Wear OS and tablets." },
+      { q: "How long does Android app development take?", a: "Typical development takes 3-6 months from concept to launch, with weekly beta releases." },
+      { q: "Do you offer Play Store deployment services?", a: "Yes, we manage the full submission process including store setup, reviews, and future updates." },
+      { q: "What technologies do you use?", a: "We use Kotlin and Jetpack Compose to build modern native applications with optimized performance and smooth user experience." },
+      { q: "Can you update an existing app?", a: "Yes, we can modernize legacy applications, refactor code, and add new features while maintaining stability." },
+    ],
     customSections: [
       {
         title: "App Features",
@@ -481,7 +525,13 @@ export const services: Service[] = [
     ],
     industries: ["Finance", "Hospitality", "Retail", "Healthcare"],
     technologies: ["Swift", "SwiftUI", "Xcode Cloud"],
-    faq: [{ q: "Do you handle App Store review?", a: "Yes, we manage submissions and appeals end-to-end." }],
+    faq: [
+      { q: "Do you handle App Store review?", a: "Yes, we manage submissions and appeals end-to-end." },
+      { q: "How long does iOS app development take?", a: "Typical development takes 3-6 months from concept to launch, with regular TestFlight releases." },
+      { q: "Do you offer support for different devices?", a: "Yes, we build apps compatible with iPhone, iPad, and Apple Watch with responsive designs." },
+      { q: "What programming languages do you use?", a: "We use Swift and SwiftUI to build modern native applications with optimized performance and smooth user experience." },
+      { q: "Can you integrate Apple Pay?", a: "Yes, we implement Apple Pay integration and other Apple ecosystem features like Siri and Widgets." },
+    ],
     customSections: [
       {
         title: "iOS Capabilities",
@@ -532,7 +582,13 @@ export const services: Service[] = [
     ],
     industries: ["Retail", "Hospitality", "Education", "Finance"],
     technologies: ["WordPress", "Next.js", "Cloudflare", "Sentry"],
-    faq: [{ q: "Do you cover custom-built sites?", a: "Yes — any stack, we can maintain it." }],
+    faq: [
+      { q: "Do you cover custom-built sites?", a: "Yes — any stack, we can maintain it." },
+      { q: "What maintenance plans are available?", a: "We offer monthly, quarterly, and annual plans including updates, backups, and technical support." },
+      { q: "How long does it take to respond to issues?", a: "We offer 2-hour response for critical issues and 24 hours for routine issues, with 24/7 emergency support." },
+      { q: "Does maintenance include backups?", a: "Yes, we create daily or weekly backups with restoration testing to ensure data integrity." },
+      { q: "Can you optimize website performance?", a: "Yes, we optimize images, tune databases, and implement caching to improve website speed." },
+    ],
     customSections: [
       {
         title: "Maintenance Activities",
@@ -583,7 +639,13 @@ export const services: Service[] = [
     ],
     industries: ["Finance", "Government", "Healthcare", "Oil & Gas"],
     technologies: ["Java", ".NET", "Oracle", "SAP"],
-    faq: [{ q: "Do you work with legacy stacks?", a: "Yes, including mainframe modernization." }],
+    faq: [
+      { q: "Do you work with legacy stacks?", a: "Yes, including mainframe modernization." },
+      { q: "What support levels do you offer?", a: "We offer L1, L2, and L3 support with different response times depending on incident priority." },
+      { q: "Can you help us with application migration?", a: "Yes, we assist in migrating applications to the cloud or modernizing legacy technologies with minimal downtime." },
+      { q: "How long does the transition to AMS take?", a: "Typical transition takes 2-4 weeks, including knowledge transfer and process stabilization." },
+      { q: "Do you offer monthly performance reports?", a: "Yes, we provide comprehensive reports including system availability, response times, and incident resolution." },
+    ],
     customSections: [
       {
         title: "Support Levels",
@@ -633,7 +695,13 @@ export const services: Service[] = [
     ],
     industries: ["Retail", "Hospitality", "Government", "Education"],
     technologies: ["Meta Suite", "TikTok Ads", "Sprinklr"],
-    faq: [{ q: "Do you produce Arabic content?", a: "Yes, bilingual studios serving GCC markets." }],
+    faq: [
+      { q: "Do you produce Arabic content?", a: "Yes, bilingual studios serving GCC markets." },
+      { q: "What platforms do you manage?", a: "We manage Instagram, Facebook, Twitter, LinkedIn, TikTok, and Snapchat, plus regional platforms." },
+      { q: "How long to see results?", a: "Initial results appear within 4-6 weeks, with gradual improvement in engagement and reach over time." },
+      { q: "Do you offer paid advertising?", a: "Yes, we manage paid ad campaigns across all platforms with continuous ROI optimization." },
+      { q: "Can you create video content?", a: "Yes, we have an in-house video production team to create short and long-form content for all platforms." },
+    ],
     customSections: [
       {
         title: "Content Types",
@@ -684,7 +752,13 @@ export const services: Service[] = [
     ],
     industries: ["Retail", "Finance", "Education", "Healthcare"],
     technologies: ["GA4", "Ahrefs", "HubSpot", "Google Ads"],
-    faq: [{ q: "How long to see SEO results?", a: "Typically 3–6 months for competitive keywords." }],
+    faq: [
+      { q: "How long to see SEO results?", a: "Typically 3–6 months for competitive keywords." },
+      { q: "Do you offer paid advertising?", a: "Yes, we manage Google Ads, Facebook Ads, and LinkedIn Ads campaigns with continuous ROI optimization." },
+      { q: "What analytics tools do you use?", a: "We use Google Analytics 4, Google Search Console, Ahrefs, and SEMrush to track performance and optimization." },
+      { q: "Do you offer local SEO?", a: "Yes, we optimize your local presence in Qatar with Google My Business and local citations." },
+      { q: "How much do digital marketing services cost?", a: "Pricing depends on scope and channels, with monthly or project-based models." },
+    ],
     customSections: [
       {
         title: "SEO Services",
@@ -735,7 +809,13 @@ export const services: Service[] = [
     ],
     industries: ["Construction", "Retail", "Government", "Healthcare"],
     technologies: ["HP", "Dell", "Cisco", "Lenovo", "APC"],
-    faq: [{ q: "Do you cover multi-site AMCs?", a: "Yes — from single office to nationwide estates." }],
+    faq: [
+      { q: "Do you cover multi-site AMCs?", a: "Yes — from single office to nationwide estates." },
+      { q: "What is the duration of an AMC?", a: "We offer annual renewable contracts with discounts for multi-year agreements." },
+      { q: "Are spare parts included in the contract?", a: "Yes, spare parts are included for many equipment categories, with free replacement for defective parts." },
+      { q: "How long does it take to respond to a maintenance request?", a: "We offer response within 4 hours for urban sites and 8 hours for remote locations." },
+      { q: "Do you offer periodic health checks?", a: "Yes, we conduct quarterly health checks to prevent issues before they occur." },
+    ],
     customSections: [
       {
         title: "AMC Coverage",
@@ -786,7 +866,13 @@ export const services: Service[] = [
     ],
     industries: ["Finance", "Government", "Healthcare", "Construction"],
     technologies: ["UiPath", "Power Automate", "Zapier"],
-    faq: [{ q: "Do you integrate with SAP?", a: "Yes, plus Oracle, Dynamics, Salesforce and custom systems." }],
+    faq: [
+      { q: "Do you integrate with SAP?", a: "Yes, plus Oracle, Dynamics, Salesforce and custom systems." },
+      { q: "What types of processes can be automated?", a: "We can automate repetitive processes such as data entry, approvals, report generation, and system synchronization." },
+      { q: "How long does it take to implement an automation project?", a: "Typical projects take 4-12 weeks from discovery to full deployment, depending on process complexity." },
+      { q: "What is the expected ROI?", a: "Most clients achieve ROI within 3-6 months through time savings and error reduction." },
+      { q: "Do you offer training on using automation?", a: "Yes, we provide comprehensive training for employees on managing and maintaining automation solutions." },
+    ],
     customSections: [
       {
         title: "Automation Solutions",
@@ -837,7 +923,13 @@ export const services: Service[] = [
     ],
     industries: ["Government", "Finance", "Healthcare", "Oil & Gas"],
     technologies: ["M-Files", "SharePoint", "Kofax", "DocuSign"],
-    faq: [{ q: "Can you migrate legacy archives?", a: "Yes, with OCR, indexing and QA at scale." }],
+    faq: [
+      { q: "Can you migrate legacy archives?", a: "Yes, with OCR, indexing and QA at scale." },
+      { q: "What document management platforms do you support?", a: "We work with M-Files, SharePoint, Alfresco, and DocuWare, plus custom solutions." },
+      { q: "Can you automate workflows?", a: "Yes, we design and implement automated workflows for approvals, reviews, and document issuance." },
+      { q: "How long does document migration take?", a: "It depends on volume, but typical projects take 4-12 weeks from assessment to full deployment." },
+      { q: "Do you offer training on using the system?", a: "Yes, we provide comprehensive training for users and administrators on document management and workflows." },
+    ],
     customSections: [
       {
         title: "Document Management",
@@ -888,7 +980,13 @@ export const services: Service[] = [
     ],
     industries: ["Healthcare"],
     technologies: ["HL7 FHIR", "DICOM", "Epic", "Cerner"],
-    faq: [{ q: "Do you support MOPH standards?", a: "Yes, all solutions align with Qatar MOPH & Sehha requirements." }],
+    faq: [
+      { q: "Do you support MOPH standards?", a: "Yes, all solutions align with Qatar MOPH & Sehha requirements." },
+      { q: "What HIS/EMR systems do you support?", a: "We work with Epic, Cerner, Allscripts, and custom systems, with expertise in integration and migration." },
+      { q: "Do you offer training for medical staff?", a: "Yes, we provide comprehensive training for doctors, nurses, and administrative staff on using the systems." },
+      { q: "How long does healthcare system implementation take?", a: "Typical implementation takes 6-18 months depending on hospital size and requirement complexity." },
+      { q: "Do you offer 24/7 support?", a: "Yes, we provide 24/7 clinical and technical support with a healthcare-specialized team." },
+    ],
     customSections: [
       {
         title: "Healthcare Systems",
