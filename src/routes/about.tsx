@@ -133,10 +133,6 @@ function Story() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-6 left-6 rounded-2xl glass p-4">
-            <div className="text-xs uppercase tracking-widest text-royal">{t('aboutPage.story.dohaHq')}</div>
-            <div className="mt-1 font-display text-lg font-semibold text-ink">{t('aboutPage.story.westBay')}</div>
-          </div>
         </div>
         <div className="order-1 lg:order-2">
           <div className="text-xs uppercase tracking-[0.25em] text-royal">{t('aboutPage.story.label')}</div>
