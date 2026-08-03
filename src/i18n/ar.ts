@@ -93,7 +93,7 @@ export const ar = {
           label: "الأمان أولاً",
           description: "بنية الثقة الصفرية والامتثال بالتصميم.",
         },
-        { icon: "Zap", label: "السرعة", description: "النشر السريع مع عمليات النشر بدون توقف." },
+        { icon: "Zap", label: "السرعة", description: "التنفيذ السريع مع تحديث بدون توقف" },
         {
           icon: "Clock",
           label: "دعم 24/7",
