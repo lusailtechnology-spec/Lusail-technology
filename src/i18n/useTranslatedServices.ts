@@ -908,7 +908,7 @@ const servicesTranslations: Record<string, Record<string, Partial<Service>>> = {
     },
     "healthcare-it": {
       title: "حلول تكنولوجيا المعلومات للرعاية الصحية",
-      short: "HIS و EMR و PACS والبنية التحتية السريرية مصممة لمقدمي الرعاية الصحية الحديثين.",
+      short: "HIS وEMR وPACS والبنية التحتية الطبية مصممة خصيصا لمقدمي الرعاية الصحية الحديثة",
       overview: "نوفر حلول تكنولوجيا المعلومات المتخصصة لقطاع الرعاية الصحية مع الامتثال والأمان.",
       benefits: ["أنظمة HIS/EMR", "تكامل PACS", "امتثال HIPAA", "دعم 24/7"],
       features: [
