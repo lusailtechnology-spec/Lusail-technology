@@ -74,7 +74,7 @@ export const ar = {
       learnMore: "اقرأ قصتنا",
       label: "من نحن",
       established: "تأسست عام 2011",
-      tagline: "هندسة الثقة في كل طبقة من طبقات تكنولوجيا المعلومات",
+      tagline: "الثقة مدمجة في كل طبقة من طبقات حلول تقنية المعلومات لدينا",
       iso27001: "ISO 27001",
       certified: "معتمدة",
       statSatisfaction: "98%",
