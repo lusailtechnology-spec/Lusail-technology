@@ -190,7 +190,7 @@ export const ar = {
       poBox: "صندوق البريد",
       email: "البريد الإلكتروني",
       dohaHq: "مقر الدوحة",
-      westBay: "West Bay",
+      westBay: "BuildingNo.143-ALRayanRoad, Binmahmoud-P.O Box 11401, Doha -Qatar",
     },
     storyCards: {
       securityFirst: "الأمان أولاً",
@@ -492,7 +492,7 @@ export const ar = {
       fastDelivery: "تسليم سريع",
       fastDeliveryDesc: "من النموذج إلى الإنتاج في أسابيع وليس أشهر",
       dohaHq: "المقر الرئيسي في الدوحة",
-      westBay: "West Bay",
+      westBay: "BuildingNo.143-ALRayanRoad, Binmahmoud-P.O Box 11401, Doha -Qatar",
       contactInfo: "معلومات الاتصال",
       tlf: "هاتف",
       fax: "فاكس",
