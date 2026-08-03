@@ -137,7 +137,8 @@ export const en = {
     },
     partners: {
       title: "Our Partners",
-      subtitle: "We partner with the world's leading technology vendors.",
+      subtitle: "Trusted Technology Partners",
+      description: "Trusted by leading organizations across Qatar",
     },
     testimonials: {
       title: "What Our Clients Say",

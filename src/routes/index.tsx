@@ -554,29 +554,34 @@ function Industries() {
 function Partners() {
   const { t } = useTranslation();
   const partners = [
-    { src: "/1%20partner.jpeg", alt: "Partner company one" },
-    { src: "/2%20partner.jpeg", alt: "Partner company two" },
+    { src: "/1 partner.jpeg", alt: "Partner company one" },
+    { src: "/2 partner.jpeg", alt: "Partner company two" },
   ];
   return (
-    <section className="border-y border-ink/10 bg-ivory py-16">
+    <section className="border-y border-ink/10 bg-ivory py-20">
       <div className="container-x">
-        <div className="mx-auto max-w-xl text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.partners.title")}</div>
-          <h3 className="mt-3 font-display text-2xl font-bold text-ink">
+          <h2 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">
             {t("home.partners.subtitle")}
-          </h3>
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            {t("home.partners.description", "Trusted by leading organizations across Qatar")}
+          </p>
         </div>
-        <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:gap-10">
           {partners.map((p) => (
             <div
               key={p.src}
-              className="w-full max-w-sm rounded-3xl border border-ink/10 bg-white p-8 shadow-[var(--shadow-soft)] transition hover:-translate-y-1 hover:border-royal/30 sm:w-auto sm:flex-1"
+              className="group relative overflow-hidden rounded-[28px] border border-ink/10 bg-white p-8 shadow-[var(--shadow-soft)] transition-all hover:-translate-y-1 hover:border-royal/30 hover:shadow-[var(--shadow-glow)] sm:p-10"
             >
-              <img
-                src={p.src}
-                alt={p.alt}
-                className="h-40 w-full object-contain"
-              />
+              <div className="flex items-center justify-center min-h-[200px] sm:min-h-[240px]">
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  className="h-auto w-full max-h-[200px] sm:max-h-[240px] object-contain transition-transform group-hover:scale-105"
+                />
+              </div>
             </div>
           ))}
         </div>
