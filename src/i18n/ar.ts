@@ -160,7 +160,7 @@ export const ar = {
       founded: "تأسست",
       enterpriseClients: "عملاء المؤسسات",
       certifiedEngineers: "مهندسون معتمدون",
-      industryVerticals: "القطاعات الرأسية",
+      industryVerticals: "قطاعات الأعمال",
     },
     mission: {
       label: "المهمة",
@@ -464,7 +464,7 @@ export const ar = {
       founded: "تأسست",
       enterpriseClients: "عملاء المؤسسات",
       certifiedEngineers: "مهندسون معتمدون",
-      industryVerticals: "القطاعات الرأسية",
+      industryVerticals: "قطاعات الأعمال",
     },
     mission: {
       label: "المهمة",
