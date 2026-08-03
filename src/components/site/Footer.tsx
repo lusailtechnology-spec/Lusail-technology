@@ -54,7 +54,7 @@ export function Footer() {
             <div className="mt-6 flex flex-col gap-3 text-sm text-white/80">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
-                {t("footer.address")}
+                <span>Building No.143 - Al Rayan Road, Bin Mahmoud, P.O Box 11401, Doha, Qatar</span>
               </div>
               <a href="tel:+97444791860" className="flex items-center gap-3 hover:text-teal">
                 <Phone className="h-4 w-4 shrink-0 text-teal" /> +974 4479 1860
@@ -62,10 +62,6 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <span className="text-xs uppercase tracking-wider text-white/60">FAX:</span>
                 <span className="text-white/80">+974 4462 2407</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-xs uppercase tracking-wider text-white/60">P.O Box:</span>
-                <span className="text-white/80">11401 Doha, Qatar</span>
               </div>
               <a
                 href="mailto:info@lusailtechnology.com"

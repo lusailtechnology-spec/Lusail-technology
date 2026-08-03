@@ -80,6 +80,17 @@ function ContactPage() {
             <div className="rounded-[28px] border border-ink/10 p-6">
               <div className="flex items-start gap-3">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <div>
+                  <div className="text-[11px] uppercase tracking-widest text-muted-foreground">{t("contact.office.address")}</div>
+                  <div className="mt-1.5 text-sm text-ink">Building No.143 - Al Rayan Road, Bin Mahmoud, P.O Box 11401, Doha, Qatar</div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-[28px] border border-ink/10 p-6">
+              <div className="flex items-start gap-3">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
                   <ShieldAlert className="h-5 w-5" />
                 </div>
                 <div>
