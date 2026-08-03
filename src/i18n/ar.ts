@@ -258,7 +258,7 @@ export const ar = {
       poBox: "صندوق بريد",
       address: "العنوان",
       hours: "الساعات",
-      hoursValue: "الأحد–الخميس · 8:00 – 18:00 (AST)",
+      hoursValue: "الأحد–الخميس · 8:00 – 18:00 (GST)",
     },
     emergency: {
       title: "هل تحتاج إلى دعم طوارئ؟",

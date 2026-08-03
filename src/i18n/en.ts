@@ -266,7 +266,7 @@ export const en = {
       poBox: "P.O Box",
       address: "Address",
       hours: "Hours",
-      hoursValue: "Sun–Thu · 8:00 – 18:00 (AST)",
+      hoursValue: "Sun - Thu - 8:00 - 18:00 (GST)",
     },
     emergency: {
       title: "Emergency support?",

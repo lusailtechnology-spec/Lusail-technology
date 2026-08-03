@@ -553,7 +553,10 @@ function Industries() {
 
 function Partners() {
   const { t } = useTranslation();
-  const logos = ["Cisco", "Microsoft", "Dell", "HP", "Lenovo", "Fortinet", "Ubiquiti", "VMware", "AWS", "Google Cloud", "Adobe", "SonicWall"];
+  const partners = [
+    { src: "/1%20partner.jpeg", alt: "Partner company one" },
+    { src: "/2%20partner.jpeg", alt: "Partner company two" },
+  ];
   return (
     <section className="border-y border-ink/10 bg-ivory py-16">
       <div className="container-x">
@@ -563,13 +566,17 @@ function Partners() {
             {t("home.partners.subtitle")}
           </h3>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-ink/10 sm:grid-cols-3 lg:grid-cols-6">
-          {logos.map((l) => (
+        <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
+          {partners.map((p) => (
             <div
-              key={l}
-              className="grid h-24 place-items-center bg-white transition hover:bg-ivory"
+              key={p.src}
+              className="w-full max-w-sm rounded-3xl border border-ink/10 bg-white p-8 shadow-[var(--shadow-soft)] transition hover:-translate-y-1 hover:border-royal/30 sm:w-auto sm:flex-1"
             >
-              <span className="font-display text-lg font-semibold text-ink/70">{l}</span>
+              <img
+                src={p.src}
+                alt={p.alt}
+                className="h-40 w-full object-contain"
+              />
             </div>
           ))}
         </div>
