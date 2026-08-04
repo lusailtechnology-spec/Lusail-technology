@@ -799,7 +799,7 @@ const servicesTranslations: Record<string, Record<string, Partial<Service>>> = {
       ],
     },
     "automation-smart-it": {
-      title: "Automation & Smart IT",
+      title: "التشغيل الآلي و تكنولوجيا المعلومات الذكية",
       short: "RPA وأتمتة سير العمل وحلول المكاتب الذكية التي تحرر فرقك.",
       overview: "ننظم العمليات وننفذ حلول الأتمتة التي تزيد الإنتاجية وتقلل الأخطاء.",
       benefits: ["أتمتة RPA", "سير العمل الذكي", "تقليل الأخطاء", "زيادة الإنتاجية"],

@@ -34,8 +34,8 @@ const productsTranslations: Record<string, Record<string, Partial<Product>>> = {
     },
     "server-storage-solutions": {
       title: "حلول الخوادم والتخزين",
-      short: "خوادم الرف والبرج والسوبر التقارب مع تخزين مرن من البائعين الرائدين.",
-      overview: "خوادم الرف والبرج والسوبر التقارب مع تخزين مرن من Dell EMC و HPE و NetApp و Pure Storage.",
+      short: "خوادم Rack وTower والبنية فائقة التقارب (Hyperconverged)، مدعومة بحلول تخزين مرنة وعالية الاعتمادية من كبرى الشركات الرائدة.",
+      overview: "خوادم Rack وTower والبنية فائقة التقارب (Hyperconverged)، مدعومة بحلول تخزين مرنة وعالية الاعتمادية من Dell EMC و HPE و NetApp و Pure Storage.",
       features: [
         "معالجات Intel Xeon و AMD EPYC",
         "ذاكرة ECC عالية السعة",
