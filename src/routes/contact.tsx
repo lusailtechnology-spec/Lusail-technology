@@ -139,7 +139,7 @@ function ContactPage() {
                   setError(false);
 
                   const formData = new FormData(e.target);
-                  formData.append("access_key", "70c66e47-333e-4951-9da2-6df57728b8d9");
+                  formData.append("access_key", "c3b640f2-0f5f-42ab-bf8e-075e651dfdc4");
 
                   try {
                     const response = await fetch("https://api.web3forms.com/submit", {
