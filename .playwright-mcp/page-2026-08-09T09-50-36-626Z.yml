@@ -1,0 +1,383 @@
+- generic [ref=f2e2]:
+  - banner [ref=f2e4]:
+    - generic [ref=f2e6]:
+      - link "Lusail Technology" [ref=f2e7] [cursor=pointer]:
+        - /url: /
+        - img "Lusail Technology Logo" [ref=f2e8]
+        - generic [ref=f2e9]: Lusail.Technology
+      - generic [ref=f2e10]:
+        - button "English" [ref=f2e11]: AR
+        - button "Open menu" [ref=f2e12]
+  - generic [ref=f2e15]:
+    - main [ref=f2e16]:
+      - generic [ref=f2e18]:
+        - generic [ref=f2e19]:
+          - generic [ref=f2e20]: Trusted IT partner across Qatar
+          - heading "Empowering Businesses with Innovative IT Solutions." [level=1] [ref=f2e25]
+          - paragraph [ref=f2e26]: Lusail Technology delivers enterprise IT solutions, cybersecurity, networking, cloud infrastructure, software development and digital transformation across Qatar — designed and operated by certified engineers.
+          - generic [ref=f2e27]:
+            - link "Explore Services" [ref=f2e28] [cursor=pointer]:
+              - /url: /services
+            - link "Contact Us" [ref=f2e31] [cursor=pointer]:
+              - /url: /contact
+          - generic [ref=f2e35]:
+            - generic [ref=f2e36]:
+              - generic [ref=f2e37]: 500+
+              - generic [ref=f2e38]: Projects delivered
+            - generic [ref=f2e39]:
+              - generic [ref=f2e40]: 14+
+              - generic [ref=f2e41]: Years in Qatar
+            - generic [ref=f2e42]:
+              - generic [ref=f2e43]: 24/7
+              - generic [ref=f2e44]: NOC & SOC
+        - generic [ref=f2e45]:
+          - generic [ref=f2e47]:
+            - generic [ref=f2e48]: lusail.tech / operations
+            - generic [ref=f2e53]:
+              - generic [ref=f2e54]:
+                - generic [ref=f2e55]:
+                  - generic [ref=f2e56]: Uptime
+                  - generic [ref=f2e57]: 99.99%
+                - generic [ref=f2e58]:
+                  - generic [ref=f2e59]: Tickets
+                  - generic [ref=f2e60]: 0 open
+                - generic [ref=f2e61]:
+                  - generic [ref=f2e62]: Threats
+                  - generic [ref=f2e63]: Blocked
+              - generic [ref=f2e65]:
+                - generic [ref=f2e66]: Network Traffic
+                - generic [ref=f2e67]: ▲ 12.4%
+              - generic [ref=f2e71]:
+                - generic [ref=f2e72]:
+                  - generic [ref=f2e73]: Cloud
+                  - generic [ref=f2e74]: Multi-cloud healthy
+                - generic [ref=f2e75]:
+                  - generic [ref=f2e76]: SOC
+                  - generic [ref=f2e77]: 24/7 Monitoring
+          - generic [ref=f2e78]: Zero-trust enforced
+          - generic [ref=f2e83]: 12ms average latency
+      - generic [ref=f2e88]:
+        - generic [ref=f2e89]: Certified partners
+        - generic [ref=f2e91]:
+          - generic [ref=f2e92]: Cisco
+          - generic [ref=f2e93]: Microsoft
+          - generic [ref=f2e94]: Dell
+          - generic [ref=f2e95]: HP
+          - generic [ref=f2e96]: Lenovo
+          - generic [ref=f2e97]: Fortinet
+          - generic [ref=f2e98]: Ubiquiti
+          - generic [ref=f2e99]: VMware
+          - generic [ref=f2e100]: AWS
+          - generic [ref=f2e101]: Google Cloud
+          - generic [ref=f2e102]: Adobe
+          - generic [ref=f2e103]: SonicWall
+          - generic [ref=f2e104]: Cisco
+          - generic [ref=f2e105]: Microsoft
+          - generic [ref=f2e106]: Dell
+          - generic [ref=f2e107]: HP
+          - generic [ref=f2e108]: Lenovo
+          - generic [ref=f2e109]: Fortinet
+          - generic [ref=f2e110]: Ubiquiti
+          - generic [ref=f2e111]: VMware
+          - generic [ref=f2e112]: AWS
+          - generic [ref=f2e113]: Google Cloud
+          - generic [ref=f2e114]: Adobe
+          - generic [ref=f2e115]: SonicWall
+      - generic [ref=f2e117]:
+        - generic [ref=f2e119]:
+          - generic [ref=f2e120]:
+            - generic [ref=f2e121]: Est. 2011
+            - generic [ref=f2e122]: Engineering trust into every layer of IT
+          - generic [ref=f2e124]:
+            - generic [ref=f2e125]:
+              - generic [ref=f2e129]: ISO 27001
+              - generic [ref=f2e130]: Certified
+            - generic [ref=f2e131]: Partnership
+          - generic [ref=f2e139]:
+            - generic [ref=f2e140]:
+              - generic [ref=f2e141]: 500+
+              - generic [ref=f2e142]: Projects Delivered
+            - generic [ref=f2e143]:
+              - generic [ref=f2e144]: 14+
+              - generic [ref=f2e145]: Years in Qatar
+            - generic [ref=f2e146]:
+              - generic [ref=f2e147]: 98%
+              - generic [ref=f2e148]: Client Satisfaction
+        - generic [ref=f2e149]:
+          - generic [ref=f2e150]: Who we are
+          - heading "A Qatari technology company engineering the digital backbone of Qatar's enterprises." [level=2] [ref=f2e151]
+          - paragraph [ref=f2e152]: Lusail Technology combines vendor expertise, product-grade engineering, and operational discipline to deliver solutions that scale. From strategy to 24/7 operations, we own every layer.
+          - generic [ref=f2e153]:
+            - generic [ref=f2e154]:
+              - generic [ref=f2e158]: Security First
+              - generic [ref=f2e159]: Zero-trust architecture and compliance-by-design.
+            - generic [ref=f2e160]:
+              - generic [ref=f2e163]: Speed
+              - generic [ref=f2e164]: Rapid deployment with zero-downtime rollouts.
+            - generic [ref=f2e165]:
+              - generic [ref=f2e169]: Expertise
+              - generic [ref=f2e170]: 45+ certified engineers across 8 verticals.
+            - generic [ref=f2e171]:
+              - generic [ref=f2e177]: Partnership
+              - generic [ref=f2e178]: Long-term relationships, not transactional deals.
+          - link "Read our story" [ref=f2e179] [cursor=pointer]:
+            - /url: /about
+      - generic [ref=f2e184]:
+        - generic [ref=f2e185]:
+          - generic [ref=f2e186]: Why Lusail
+          - heading "Why Choose Lusail Technology" [level=2] [ref=f2e187]
+        - generic [ref=f2e188]:
+          - generic [ref=f2e195]:
+            - generic [ref=f2e196]: Security First
+            - generic [ref=f2e197]: Zero-trust architecture and compliance-by-design.
+          - generic [ref=f2e203]:
+            - generic [ref=f2e204]: Speed
+            - generic [ref=f2e205]: Rapid deployment with zero-downtime rollouts.
+          - generic [ref=f2e212]:
+            - generic [ref=f2e213]: 24/7 Support
+            - generic [ref=f2e214]: Multilingual NOC with < 15 min SLA.
+          - generic [ref=f2e221]:
+            - generic [ref=f2e222]: Expertise
+            - generic [ref=f2e223]: 45+ certified engineers across 8 verticals.
+          - generic [ref=f2e230]:
+            - generic [ref=f2e231]: Compliance
+            - generic [ref=f2e232]: MOI, QNCC, ISO and industry-specific standards.
+          - generic [ref=f2e241]:
+            - generic [ref=f2e242]: Partnership
+            - generic [ref=f2e243]: Long-term relationships, not transactional deals.
+      - generic [ref=f2e244]:
+        - generic [ref=f2e245]:
+          - generic [ref=f2e246]:
+            - generic [ref=f2e247]: Featured Services
+            - heading "Enterprise-grade solutions engineered for Qatar." [level=2] [ref=f2e248]
+          - link "View all services" [ref=f2e249] [cursor=pointer]:
+            - /url: /services
+        - generic [ref=f2e253]:
+          - link "IT Support IT Support Round-the-clock managed IT support engineered for enterprises in Qatar." [ref=f2e254] [cursor=pointer]:
+            - /url: /services/it-support
+            - img "IT Support" [ref=f2e256]
+            - generic [ref=f2e260]:
+              - generic [ref=f2e261]: IT Support
+              - generic [ref=f2e262]: Round-the-clock managed IT support engineered for enterprises in Qatar.
+          - link "Network Solutions Network Solutions Enterprise LAN, WAN, SD-WAN and wireless designed for reliability and speed." [ref=f2e263] [cursor=pointer]:
+            - /url: /services/network-solutions
+            - img "Network Solutions" [ref=f2e265]
+            - generic [ref=f2e269]:
+              - generic [ref=f2e270]: Network Solutions
+              - generic [ref=f2e271]: Enterprise LAN, WAN, SD-WAN and wireless designed for reliability and speed.
+          - link "Cybersecurity Cybersecurity Zero-trust architectures, SOC-as-a-Service, and continuous threat management." [ref=f2e272] [cursor=pointer]:
+            - /url: /services/cybersecurity
+            - img "Cybersecurity" [ref=f2e274]
+            - generic [ref=f2e278]:
+              - generic [ref=f2e279]: Cybersecurity
+              - generic [ref=f2e280]: Zero-trust architectures, SOC-as-a-Service, and continuous threat management.
+          - link "Cloud Services Cloud Services Cloud migration, FinOps, and multi-cloud operations on AWS, Azure, and Google Cloud." [ref=f2e281] [cursor=pointer]:
+            - /url: /services/cloud-services
+            - img "Cloud Services" [ref=f2e283]
+            - generic [ref=f2e287]:
+              - generic [ref=f2e288]: Cloud Services
+              - generic [ref=f2e289]: Cloud migration, FinOps, and multi-cloud operations on AWS, Azure, and Google Cloud.
+      - generic [ref=f2e291]:
+        - generic [ref=f2e292]:
+          - generic [ref=f2e293]:
+            - generic [ref=f2e294]: Featured Products
+            - heading "Curated technology stack for modern enterprises." [level=2] [ref=f2e295]
+          - link "Browse full catalog" [ref=f2e297] [cursor=pointer]:
+            - /url: /products
+        - generic [ref=f2e301]:
+          - link "Computing Business Laptops & Desktops Business Laptops & Desktops Enterprise-grade workstations engineered for productivity, security and durability." [ref=f2e302] [cursor=pointer]:
+            - /url: /products/business-laptops-desktops
+            - generic [ref=f2e303]: Computing
+            - img "Business Laptops & Desktops" [ref=f2e309]
+            - generic [ref=f2e310]: Business Laptops & Desktops
+            - generic [ref=f2e311]: Enterprise-grade workstations engineered for productivity, security and durability.
+          - link "Servers Server & Storage Solutions Server & Storage Solutions Rack, tower and hyperconverged servers with resilient storage from leading vendors." [ref=f2e312] [cursor=pointer]:
+            - /url: /products/server-storage-solutions
+            - generic [ref=f2e313]: Servers
+            - img "Server & Storage Solutions" [ref=f2e319]
+            - generic [ref=f2e320]: Server & Storage Solutions
+            - generic [ref=f2e321]: Rack, tower and hyperconverged servers with resilient storage from leading vendors.
+          - link "Software Enterprise Software & Hardware Enterprise Software & Hardware Licensing, deployment and support for the platforms your business runs on." [ref=f2e322] [cursor=pointer]:
+            - /url: /products/enterprise-software-hardware
+            - generic [ref=f2e323]: Software
+            - img "Enterprise Software & Hardware" [ref=f2e329]
+            - generic [ref=f2e330]: Enterprise Software & Hardware
+            - generic [ref=f2e331]: Licensing, deployment and support for the platforms your business runs on.
+          - link "Computing Business Laptops & Desktops Business Laptops & Desktops Enterprise-grade workstations engineered for productivity, security and durability." [ref=f2e332] [cursor=pointer]:
+            - /url: /products/business-laptops-desktops
+            - generic [ref=f2e333]: Computing
+            - img "Business Laptops & Desktops" [ref=f2e339]
+            - generic [ref=f2e340]: Business Laptops & Desktops
+            - generic [ref=f2e341]: Enterprise-grade workstations engineered for productivity, security and durability.
+          - link "Servers Server & Storage Solutions Server & Storage Solutions Rack, tower and hyperconverged servers with resilient storage from leading vendors." [ref=f2e342] [cursor=pointer]:
+            - /url: /products/server-storage-solutions
+            - generic [ref=f2e343]: Servers
+            - img "Server & Storage Solutions" [ref=f2e349]
+            - generic [ref=f2e350]: Server & Storage Solutions
+            - generic [ref=f2e351]: Rack, tower and hyperconverged servers with resilient storage from leading vendors.
+          - link "Software Enterprise Software & Hardware Enterprise Software & Hardware Licensing, deployment and support for the platforms your business runs on." [ref=f2e352] [cursor=pointer]:
+            - /url: /products/enterprise-software-hardware
+            - generic [ref=f2e353]: Software
+            - img "Enterprise Software & Hardware" [ref=f2e359]
+            - generic [ref=f2e360]: Enterprise Software & Hardware
+            - generic [ref=f2e361]: Licensing, deployment and support for the platforms your business runs on.
+      - generic [ref=f2e363]:
+        - generic [ref=f2e364]:
+          - generic [ref=f2e365]: Industries We Serve
+          - heading "Deep expertise across Qatar's key sectors." [level=2] [ref=f2e366]
+          - paragraph [ref=f2e367]: Every industry brings unique regulations, workloads and risk. Our teams combine domain fluency with technology depth to deliver outcomes that fit.
+        - generic [ref=f2e368]:
+          - generic [ref=f2e369]:
+            - generic [ref=f2e374]: Healthcare
+            - generic [ref=f2e375]: Enterprise-ready
+          - generic [ref=f2e376]:
+            - generic [ref=f2e380]: Education
+            - generic [ref=f2e381]: Enterprise-ready
+          - generic [ref=f2e382]:
+            - generic [ref=f2e385]: Government
+            - generic [ref=f2e386]: Enterprise-ready
+          - generic [ref=f2e387]:
+            - generic [ref=f2e393]: Construction
+            - generic [ref=f2e394]: Enterprise-ready
+          - generic [ref=f2e395]:
+            - generic [ref=f2e399]: Retail
+            - generic [ref=f2e400]: Enterprise-ready
+          - generic [ref=f2e401]:
+            - generic [ref=f2e405]: Hospitality
+            - generic [ref=f2e406]: Enterprise-ready
+          - generic [ref=f2e407]:
+            - generic [ref=f2e411]: Finance
+            - generic [ref=f2e412]: Enterprise-ready
+          - generic [ref=f2e413]:
+            - generic [ref=f2e417]: Oil & Gas
+            - generic [ref=f2e418]: Enterprise-ready
+      - generic [ref=f2e420]:
+        - generic [ref=f2e421]:
+          - generic [ref=f2e422]: Our Partners
+          - heading "Trusted Technology Partners" [level=2] [ref=f2e423]
+          - paragraph [ref=f2e424]: Trusted by leading organizations across Qatar
+        - generic [ref=f2e425]:
+          - img "Partner company one" [ref=f2e428]
+          - img "Partner company two" [ref=f2e431]
+      - generic [ref=f2e432]:
+        - generic [ref=f2e433]:
+          - generic [ref=f2e434]: What Our Clients Say
+          - heading "Trusted by Qatar's most demanding enterprises." [level=2] [ref=f2e435]
+        - generic [ref=f2e436]:
+          - generic [ref=f2e437]:
+            - paragraph [ref=f2e441]: "\"Lusail transformed our datacenter operations. Uptime jumped to 99.99% within a quarter — their engineers feel like part of our team.\""
+            - generic [ref=f2e442]: CIO, National Retailer
+          - generic [ref=f2e444]:
+            - paragraph [ref=f2e448]: "\"The cybersecurity overhaul was flawless. Zero-trust rolled out across 12 sites with no downtime and clear reporting throughout.\""
+            - generic [ref=f2e449]: Head of IT, Finance Group
+          - generic [ref=f2e451]:
+            - paragraph [ref=f2e455]: "\"From strategy to code, they behave like a modern product company — rare in the region and exactly what we needed.\""
+            - generic [ref=f2e456]: Director, Healthcare Network
+      - generic [ref=f2e460]:
+        - generic [ref=f2e461]:
+          - generic [ref=f2e462]: Let's build
+          - heading "Ready to Transform Your Business?" [level=2] [ref=f2e463]
+          - paragraph [ref=f2e464]: Let's talk about your next project.
+        - generic [ref=f2e465]:
+          - link "Get Started" [ref=f2e466] [cursor=pointer]:
+            - /url: /contact
+          - link "Schedule a Call" [ref=f2e469] [cursor=pointer]:
+            - /url: /services
+    - contentinfo [ref=f2e473]:
+      - generic [ref=f2e474]:
+        - generic [ref=f2e475]:
+          - generic [ref=f2e476]:
+            - generic [ref=f2e477]:
+              - img "Lusail Technology Logo" [ref=f2e478]
+              - generic [ref=f2e479]:
+                - generic [ref=f2e480]: Lusail.Technology
+                - generic [ref=f2e481]: Doha · Qatar
+            - paragraph [ref=f2e482]: Innovating tomorrow's technology today. Enterprise IT, cybersecurity, cloud and software solutions built for Qatar's most demanding organisations.
+            - generic [ref=f2e483]:
+              - generic [ref=f2e484]: Building No.143 - Al Rayan Road, Bin Mahmoud, P.O Box 11401, Doha, Qatar
+              - link "+974 4479 1860" [ref=f2e489] [cursor=pointer]:
+                - /url: tel:+97444791860
+              - generic [ref=f2e492]:
+                - generic [ref=f2e493]: "FAX:"
+                - generic [ref=f2e494]: +974 4462 2407
+              - link "info@lusailtechnology.com" [ref=f2e495] [cursor=pointer]:
+                - /url: mailto:info@lusailtechnology.com
+          - generic [ref=f2e499]:
+            - generic [ref=f2e500]: Company
+            - generic [ref=f2e501]:
+              - link "About" [ref=f2e502] [cursor=pointer]:
+                - /url: /about
+              - link "Services" [ref=f2e503] [cursor=pointer]:
+                - /url: /services
+              - link "Products" [ref=f2e504] [cursor=pointer]:
+                - /url: /products
+              - link "Contact" [ref=f2e505] [cursor=pointer]:
+                - /url: /contact
+          - generic [ref=f2e506]:
+            - generic [ref=f2e507]: Top Services
+            - generic [ref=f2e508]:
+              - link "IT Support" [ref=f2e509] [cursor=pointer]:
+                - /url: /services/it-support
+              - link "Network Solutions" [ref=f2e510] [cursor=pointer]:
+                - /url: /services/network-solutions
+              - link "CCTV Installation" [ref=f2e511] [cursor=pointer]:
+                - /url: /services/cctv-installation
+              - link "Cybersecurity" [ref=f2e512] [cursor=pointer]:
+                - /url: /services/cybersecurity
+              - link "Cloud Services" [ref=f2e513] [cursor=pointer]:
+                - /url: /services/cloud-services
+              - link "Software Development" [ref=f2e514] [cursor=pointer]:
+                - /url: /services/software-development
+          - generic [ref=f2e515]:
+            - generic [ref=f2e516]: Featured Products
+            - generic [ref=f2e517]:
+              - link "Business Laptops & Desktops" [ref=f2e518] [cursor=pointer]:
+                - /url: /products/business-laptops-desktops
+              - link "Server & Storage Solutions" [ref=f2e519] [cursor=pointer]:
+                - /url: /products/server-storage-solutions
+              - link "IT Accessories & Peripherals" [ref=f2e520] [cursor=pointer]:
+                - /url: /products/it-accessories-peripherals
+              - link "Enterprise Software & Hardware" [ref=f2e521] [cursor=pointer]:
+                - /url: /products/enterprise-software-hardware
+              - link "Networking Infrastructure Products" [ref=f2e522] [cursor=pointer]:
+                - /url: /products/networking-infrastructure
+              - link "Storage & Data Management Products" [ref=f2e523] [cursor=pointer]:
+                - /url: /products/storage-data-management
+        - generic [ref=f2e524]:
+          - generic [ref=f2e525]:
+            - generic [ref=f2e526]: Newsletter
+            - generic [ref=f2e527]: Technology insights, delivered monthly.
+          - generic [ref=f2e528]:
+            - textbox "you@company.com" [ref=f2e529]
+            - button "Subscribe" [ref=f2e530]
+        - iframe [ref=f2e535]:
+          - generic [ref=f3e2]:
+            - region "Map" [ref=f3e3]
+            - generic:
+              - generic [ref=f3e4]:
+                - button "Zoom In" [ref=f3e5] [cursor=pointer]
+                - button "Zoom Out" [ref=f3e7] [cursor=pointer]
+              - group [ref=f3e9]:
+                - generic [ref=f3e10]:
+                  - text: ©
+                  - link "OpenStreetMap contributors" [ref=f3e11] [cursor=pointer]:
+                    - /url: /copyright
+                  - text: ♥️
+                  - link "Make a Donation" [ref=f3e12] [cursor=pointer]:
+                    - /url: https://supporting.openstreetmap.org
+                  - text: .
+                  - link "Website and API terms" [ref=f3e13] [cursor=pointer]:
+                    - /url: https://wiki.osmfoundation.org/wiki/Terms_of_Use
+        - generic [ref=f2e536]:
+          - generic [ref=f2e537]: © 2026 Lusail Technology. All rights reserved.
+          - generic [ref=f2e538]:
+            - link "Social link" [ref=f2e539] [cursor=pointer]:
+              - /url: "#"
+            - link "Social link" [ref=f2e544] [cursor=pointer]:
+              - /url: "#"
+            - link "Social link" [ref=f2e547] [cursor=pointer]:
+              - /url: "#"
+            - link "Social link" [ref=f2e551] [cursor=pointer]:
+              - /url: "#"
+  - link "Chat with us on WhatsApp" [ref=f2e554] [cursor=pointer]:
+    - /url: https://wa.me/97440001234
