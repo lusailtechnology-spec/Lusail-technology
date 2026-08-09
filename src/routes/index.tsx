@@ -60,6 +60,7 @@ function Home() {
       <TrustBar />
       <WhoWeAre />
       <WhyUs />
+      <LusailShowcase />
       <FeaturedServices />
       <FeaturedProducts />
       <Industries />
@@ -354,6 +355,20 @@ function WhyUs() {
             ))}
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function LusailShowcase() {
+  return (
+    <section className="container-x py-24">
+      <div className="overflow-hidden rounded-[40px] border border-ink/10 shadow-[var(--shadow-soft)]">
+        <img 
+          src="/lusail-cityscape.jpeg" 
+          alt="Lusail Technology - Doha Cityscape" 
+          className="w-full h-auto object-cover"
+        />
       </div>
     </section>
   );
