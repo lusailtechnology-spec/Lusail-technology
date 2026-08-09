@@ -95,14 +95,18 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "cv11", "ss01";
+    font-weight: 500;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
+    font-weight: 700;
   }
   p, span, a, li, div {
+    font-weight: 500;
   }
   button {
+    font-weight: 600;
   }
 }
 
