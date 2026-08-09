@@ -163,7 +163,7 @@ function RootComponent() {
           <Navbar />
           <ScrollToTop />
           <div className="flex-1 px-2 sm:px-6 lg:px-8 py-6">
-            <div className="bg-white/50 rounded-lg overflow-hidden">
+            <div className="bg-white/30 rounded-lg overflow-hidden">
               <main id="main" className="pt-20 sm:pt-24">
                 <Outlet />
               </main>
