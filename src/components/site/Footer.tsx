@@ -24,7 +24,7 @@ export function Footer() {
   const [subscribed, setSubscribed] = useState(false);
   const [subscribing, setSubscribing] = useState(false);
   return (
-    <footer className="relative mt-24 overflow-hidden bg-ink text-white">
+    <footer className="relative mt-0 overflow-hidden bg-ink text-white">
       <div className="pointer-events-none absolute inset-0 aurora opacity-40" />
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-royal/20 blur-[120px]" />
 
@@ -136,7 +136,7 @@ export function Footer() {
                 setSubscribing(false);
               }
             }}
-            className="flex items-center gap-2 rounded-full bg-white/10 p-1.5"
+            className="flex flex-col gap-2 rounded-3xl bg-white/10 p-3 sm:flex-row sm:items-center sm:gap-2 sm:rounded-full sm:p-1.5"
           >
             {subscribed ? (
               <div className="flex-1 px-4 py-2 text-sm text-teal">
@@ -152,7 +152,7 @@ export function Footer() {
                   className="min-w-0 flex-1 bg-transparent px-4 py-2 text-sm text-white placeholder:text-white/50 outline-none"
                 />
                 <button 
-                  className="btn-royal btn-royal-hover shrink-0 text-sm"
+                  className="btn-royal btn-royal-hover shrink-0 text-sm w-full sm:w-auto"
                   disabled={subscribing}
                 >
                   {subscribing ? "..." : t("footer.subscribe")} <ArrowUpRight className="h-4 w-4" />

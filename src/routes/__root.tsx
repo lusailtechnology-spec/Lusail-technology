@@ -158,14 +158,20 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
-        <ScrollProgress />
-        <Navbar />
-        <ScrollToTop />
-        <main id="main" className="pt-20 sm:pt-24">
-          <Outlet />
-        </main>
-        <Footer />
-        <FloatingActions />
+        <div className="min-h-screen flex flex-col">
+          <ScrollProgress />
+          <Navbar />
+          <ScrollToTop />
+          <div className="flex-1 px-2 sm:px-6 lg:px-8 py-6">
+            <div className="bg-white rounded-lg overflow-hidden">
+              <main id="main" className="pt-20 sm:pt-24">
+                <Outlet />
+              </main>
+              <Footer />
+            </div>
+          </div>
+          <FloatingActions />
+        </div>
       </I18nextProvider>
     </QueryClientProvider>
   );

@@ -82,9 +82,15 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth;
+    background-image: url('/lusail-cityscape.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
   body {
-    background-color: var(--color-background);
+    background-color: transparent;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
