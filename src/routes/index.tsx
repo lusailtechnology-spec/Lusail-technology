@@ -493,7 +493,7 @@ function FeaturedProducts() {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="h-full w-full object-contain p-6"
+                      className="h-full w-full object-cover"
                     />
                   ) : (
                     <Icon className="h-16 w-16 opacity-80" strokeWidth={1.2} />

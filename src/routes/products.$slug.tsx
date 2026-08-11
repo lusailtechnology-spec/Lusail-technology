@@ -143,7 +143,7 @@ function ProductDetail() {
                   <img
                     src={product.image}
                     alt={translatedProduct.title}
-                    className="h-full w-full object-contain p-8"
+                    className="h-full w-full object-cover"
                   />
                 ) : (
                   <Icon className="h-28 w-28 text-white/80 sm:h-36 sm:w-36 lg:h-44 lg:w-44" strokeWidth={1} />

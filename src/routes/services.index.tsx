@@ -98,7 +98,7 @@ function ServicesPage() {
                   <img
                     src={featured.image}
                     alt={featured.title}
-                    className="h-full w-full object-contain p-8"
+                    className="h-full w-full object-cover"
                   />
                 ) : (
                   <FIcon className="h-32 w-32 text-white/70" strokeWidth={1} />

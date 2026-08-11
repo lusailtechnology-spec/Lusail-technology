@@ -140,7 +140,7 @@ function ProductsPage() {
                       <img
                         src={p.image}
                         alt={p.title}
-                        className="h-full w-full object-contain p-6"
+                        className="h-full w-full object-cover"
                       />
                     ) : (
                       <Icon

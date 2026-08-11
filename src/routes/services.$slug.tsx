@@ -106,7 +106,7 @@ function ServiceDetail() {
           <img
             src={translatedService.image}
             alt={translatedService.title}
-            className="h-full w-full object-contain p-8"
+            className="h-full w-full object-cover"
           />
         ) : (
           <Icon
