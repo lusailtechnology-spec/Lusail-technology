@@ -76,7 +76,7 @@ function Hero() {
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 aurora" />
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
-      <div className="container-x relative grid gap-16 pb-24 pt-16 lg:grid-cols-[1.15fr_1fr] lg:pt-24">
+      <div className="container-x relative grid gap-8 pb-20 pt-16 lg:gap-16 lg:grid-cols-[1.15fr_1fr] lg:pt-24">
         <div className="animate-reveal">
           <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs font-medium">
             <span className="grid h-4 w-4 place-items-center rounded-full bg-teal">
@@ -90,22 +90,22 @@ function Hero() {
           <p className="mt-6 max-w-xl hero-description-plate text-lg leading-relaxed">
             {t("home.hero.description")}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/services" className="btn-royal btn-royal-hover">
-              {t("home.hero.exploreServices")} <ArrowRight className="h-4 w-4" />
+          <div className="mt-6 flex flex-wrap gap-2 sm:gap-3">
+            <Link to="/services" className="btn-royal btn-royal-hover text-sm sm:text-base">
+              {t("home.hero.exploreServices")} <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </Link>
-            <Link to="/contact" className="btn-ghost-ink btn-ghost-ink-hover">
-              {t("home.hero.contactUs")} <ArrowUpRight className="h-4 w-4" />
+            <Link to="/contact" className="btn-ghost-ink btn-ghost-ink-hover text-sm sm:text-base">
+              {t("home.hero.contactUs")} <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </Link>
           </div>
-          <div className="mt-10 grid max-w-lg grid-cols-3 divide-x divide-ink/10 rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-4 shadow-sm">
+          <div className="mt-6 sm:mt-10 grid max-w-lg grid-cols-3 divide-x divide-ink/10 rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-3 sm:p-4 shadow-sm">
             <Stat kpi="500+" label={t("home.hero.projectsDelivered")} />
             <Stat kpi="14+" label={t("home.hero.yearsInQatar")} />
             <Stat kpi="24/7" label={t("home.hero.nocSoc")} />
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative hidden lg:block">
           <div className="absolute -inset-6 -z-10 rounded-[40px] bg-gradient-royal opacity-20 blur-3xl" />
           <div className="relative animate-float overflow-hidden rounded-[36px] border border-ink/10 bg-white shadow-[var(--shadow-soft)]">
             <div className="flex items-center gap-1.5 border-b border-ink/5 px-4 py-3">
