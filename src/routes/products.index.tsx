@@ -132,8 +132,8 @@ function ProductsPage() {
                     />
                   </div>
                   <div
-                    className={`my-6 grid flex-1 place-items-center rounded-2xl overflow-hidden ${
-                      feature ? "bg-white/5" : "bg-ivory"
+                    className={`my-6 grid flex-1 place-items-center rounded-2xl overflow-hidden border border-white/10 ${
+                      feature ? "bg-white/5" : "bg-ivory border-transparent"
                     }`}
                   >
                     {p.image ? (

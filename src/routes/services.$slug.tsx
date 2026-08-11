@@ -101,7 +101,7 @@ function ServiceDetail() {
   const Visual = ({ className = "" }: { className?: string }) => (
     <div className={`relative ${className}`}>
       <div className="absolute -inset-6 -z-10 rounded-full bg-gradient-royal opacity-25 blur-3xl" />
-      <div className="grid aspect-square w-full place-items-center rounded-[28px] bg-ink text-white shadow-[var(--shadow-glow)] sm:rounded-[36px] overflow-hidden">
+      <div className="grid aspect-square w-full place-items-center rounded-[28px] bg-ink text-white shadow-[var(--shadow-glow)] sm:rounded-[36px] overflow-hidden border border-white/20">
         {translatedService.image ? (
           <img
             src={translatedService.image}

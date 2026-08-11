@@ -93,7 +93,7 @@ function ServicesPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="grid aspect-square place-items-center rounded-[28px] bg-white/5 backdrop-blur overflow-hidden">
+              <div className="grid aspect-square place-items-center rounded-[28px] bg-white/5 backdrop-blur overflow-hidden border border-white/20">
                 {featured.image ? (
                   <img
                     src={featured.image}

@@ -488,7 +488,7 @@ function FeaturedProducts() {
                   </div>
                   <ArrowUpRight className="h-4 w-4 text-ink/40 transition group-hover:rotate-45 group-hover:text-royal" />
                 </div>
-                <div className="my-6 grid aspect-square place-items-center rounded-2xl bg-gradient-royal text-white overflow-hidden">
+                <div className="my-6 grid aspect-square place-items-center rounded-2xl bg-gradient-royal text-white overflow-hidden border border-white/20">
                   {p.image ? (
                     <img
                       src={p.image}
