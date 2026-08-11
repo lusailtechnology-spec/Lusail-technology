@@ -171,14 +171,14 @@ export function Footer() {
           />
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center">
-          <div>{t("footer.copyright", { year: new Date().getFullYear() })}</div>
+        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-sm md:flex-row md:items-center">
+          <div className="text-white/60">{t("footer.copyright", { year: new Date().getFullYear() })}</div>
           <div className="flex gap-2">
             {[Linkedin, Twitter, Instagram, Facebook].map((Icon, i) => (
               <a
                 key={i}
                 href="#"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/10 transition hover:bg-white/10"
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/20 text-white/60 transition hover:bg-white/10 hover:text-white"
                 aria-label="Social link"
               >
                 <Icon className="h-4 w-4" />

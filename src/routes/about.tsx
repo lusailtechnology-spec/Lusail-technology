@@ -72,7 +72,7 @@ function AboutHero() {
             ["8", t('aboutPage.hero.industryVerticals')],
           ].map(([k, v]) => (
             <div key={v} className="rounded-2xl bg-ink p-4 sm:p-5 text-white">
-              <div className="font-display text-2xl sm:text-3xl font-bold">{k}</div>
+              <div className="font-display text-2xl sm:text-3xl font-bold text-white">{k}</div>
               <div className="mt-1 text-[11px] sm:text-xs uppercase tracking-widest text-white/60">{v}</div>
             </div>
           ))}

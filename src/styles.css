@@ -103,15 +103,15 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     font-weight: 800;
-    color: var(--ink);
+    color: inherit;
   }
   p, span, a, li, div {
     font-weight: 600;
-    color: var(--ink);
+    color: inherit;
   }
   button {
     font-weight: 700;
-    color: #ffffff;
+    color: inherit;
   }
 }
 
