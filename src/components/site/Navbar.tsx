@@ -114,7 +114,11 @@ export function Navbar() {
                   return (
                     <NavigationMenuItem key={item.key}>
                       <NavigationMenuTrigger
-                        className={`bg-transparent text-sm ${isActive("/services") ? "text-royal" : ""}`}
+                        className={`bg-transparent text-sm font-medium hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent transition-colors ${
+                          isActive("/services")
+                            ? "text-royal font-semibold data-[state=open]:text-royal"
+                            : "text-ink hover:text-royal focus:text-royal data-[state=open]:text-royal"
+                        }`}
                       >
                         {t("nav.services")}
                       </NavigationMenuTrigger>
@@ -157,7 +161,11 @@ export function Navbar() {
                   return (
                     <NavigationMenuItem key={item.key}>
                       <NavigationMenuTrigger
-                        className={`bg-transparent text-sm ${isActive("/products") ? "text-royal" : ""}`}
+                        className={`bg-transparent text-sm font-medium hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent transition-colors ${
+                          isActive("/products")
+                            ? "text-royal font-semibold data-[state=open]:text-royal"
+                            : "text-ink hover:text-royal focus:text-royal data-[state=open]:text-royal"
+                        }`}
                       >
                         {t("nav.products")}
                       </NavigationMenuTrigger>
@@ -202,7 +210,11 @@ export function Navbar() {
                       <Link
                         to={item.to}
                         activeOptions={{ exact: item.to === "/" }}
-                        className="rounded-full px-4 py-2 text-sm font-medium text-ink/80 transition hover:text-ink data-[status=active]:text-royal"
+                        className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                          isActive(item.to)
+                            ? "text-royal font-semibold"
+                            : "text-ink hover:text-royal"
+                        }`}
                       >
                         {t(`nav.${item.key}`)}
                       </Link>
