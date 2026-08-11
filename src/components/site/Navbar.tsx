@@ -85,7 +85,7 @@ export function Navbar() {
       <div className="container-x">
         <div
           className={`flex items-center justify-between gap-3 rounded-full px-3 py-1.5 transition-all duration-300 sm:px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center ${
-            scrolled ? "glass shadow-[var(--shadow-soft)]" : "glass"
+            scrolled ? "glass shadow-[var(--shadow-soft)]" : "bg-transparent"
           }`}
         >
           <Link
