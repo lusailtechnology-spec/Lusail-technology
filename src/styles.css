@@ -84,12 +84,6 @@
   * { border-color: var(--color-border); }
   html { 
     scroll-behavior: smooth;
-    background-image: 
-      linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(244, 241, 234, 0.3)),
-      url('/lusail-cityscape.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
   }
   body {
     background-color: transparent;

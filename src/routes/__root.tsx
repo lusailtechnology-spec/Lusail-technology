@@ -158,6 +158,14 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
+        <div 
+          className="fixed inset-0 -z-50 pointer-events-none" 
+          style={{ 
+            backgroundImage: "linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(244, 241, 234, 0.3)), url('/lusail-cityscape.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
+        />
         <div className="min-h-screen flex flex-col">
           <ScrollProgress />
           <Navbar />
