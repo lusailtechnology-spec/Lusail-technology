@@ -114,7 +114,7 @@ function Card({ icon: Icon, label, title, body, tone }: any) {
 function Story() {
   const { t } = useTranslation();
   return (
-    <section className="bg-ivory py-24">
+    <section className="py-24">
       <div className="container-x grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
         <div className="relative order-2 lg:order-1">
           <div className="grid grid-cols-2 gap-3">
@@ -145,7 +145,7 @@ function Story() {
           <p className="mt-3 hero-description-plate leading-relaxed">
             {t('aboutPage.story.description2')}
           </p>
-          <div className="mt-6 rounded-2xl border border-ink/10 bg-white p-4">
+          <div className="mt-6 rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-4">
             <div className="text-xs uppercase tracking-widest text-royal">{t('aboutPage.story.contactInfo')}</div>
             <div className="mt-3 space-y-2 text-sm">
               <div className="flex items-center gap-2">
@@ -216,8 +216,9 @@ function Timeline() {
 function Values() {
   const { t } = useTranslation();
   return (
-    <section className="bg-ink py-24 text-white">
-      <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:items-center">
+    <section className="relative overflow-hidden py-24" style={{ backgroundImage: "url('/lusail-cityscape.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <div className="pointer-events-none absolute inset-0 bg-ink/80 backdrop-blur-[2px]" />
+      <div className="container-x relative grid gap-12 text-white lg:grid-cols-[1fr_1.5fr] lg:items-center">
         <div>
           <div className="text-xs uppercase tracking-[0.25em] text-teal">{t('aboutPage.coreStrengths.title')}</div>
           <h2 className="mt-3 font-display display-2 font-bold">
@@ -274,7 +275,8 @@ function Stats() {
 function Team() {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-ink via-ink/95 to-royal/20 py-20">
+    <section className="relative overflow-hidden py-20" style={{ backgroundImage: "url('/lusail-cityscape.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <div className="pointer-events-none absolute inset-0 bg-ink/80 backdrop-blur-[2px]" />
       <div className="pointer-events-none absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(600px 300px at 20% 20%, rgba(30,86,255,0.5), transparent 70%), radial-gradient(500px 260px at 80% 80%, rgba(15,194,192,0.4), transparent 70%)" }} />
       <div className="container-x relative">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
