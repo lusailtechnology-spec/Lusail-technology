@@ -331,7 +331,7 @@ function WhyUs() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1.5fr]">
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("home.whyUs.label")}</div>
-            <h2 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-bold text-white tracking-tight sm:text-5xl">
               {t("home.whyUs.title")}
             </h2>
           </div>
@@ -649,7 +649,7 @@ function FinalCTA() {
         <div className="relative grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("home.finalCTA.label")}</div>
-            <h2 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-6xl">
+            <h2 className="mt-3 font-display text-4xl font-bold text-white leading-tight sm:text-6xl">
               {t("home.finalCTA.title")}
             </h2>
             <p className="mt-5 max-w-xl text-white/70">

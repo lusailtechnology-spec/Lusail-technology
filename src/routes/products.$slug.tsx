@@ -213,7 +213,7 @@ function ProductDetail() {
                       <th scope="row" className="py-3 pr-4 text-sm font-normal text-white/60">
                         {s.label}
                       </th>
-                      <td className="py-3 text-right text-sm font-medium">{s.value}</td>
+                      <td className="py-3 text-right text-sm font-medium text-white">{s.value}</td>
                     </tr>
                   ))}
                 </tbody>

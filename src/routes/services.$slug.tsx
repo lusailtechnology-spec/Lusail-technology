@@ -199,7 +199,7 @@ function ServiceDetail() {
         <div className="container-x">
           <div className="max-w-xl">
             <p className="text-xs uppercase tracking-[0.25em] text-teal">{t("serviceDetail.ourProcess")}</p>
-            <h2 className="mt-3 font-display display-2 font-bold">
+            <h2 className="mt-3 font-display display-2 font-bold text-white">
               {t("serviceDetail.processTitle")}
             </h2>
           </div>
@@ -213,7 +213,7 @@ function ServiceDetail() {
                 <div className="font-display text-4xl font-bold text-teal/40 sm:text-6xl">
                   0{i + 1}
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold">{step.step}</h3>
+                <h3 className="mt-4 font-display text-lg font-semibold text-white">{step.step}</h3>
                 <p className="mt-2 text-sm text-white/70">{step.detail}</p>
               </div>
             ))}
@@ -435,7 +435,7 @@ function ServiceDetail() {
         <div className="rounded-[28px] p-7 text-white sm:p-10 md:p-14 bg-ink">
           <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
-              <h2 className="font-display display-2 font-bold">
+              <h2 className="font-display display-2 font-bold text-white">
                 {t("serviceDetail.ctaTitle")}
               </h2>
               <p className="mt-3 max-w-lg text-sm text-white/75 sm:text-base">

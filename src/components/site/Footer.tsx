@@ -111,7 +111,7 @@ export function Footer() {
             <div className="text-xs uppercase tracking-[0.25em] text-teal">
               {t("footer.newsletter")}
             </div>
-            <div className="mt-1 font-display text-2xl font-semibold">
+            <div className="mt-1 font-display text-2xl font-semibold text-white">
               {t("footer.newsletterTitle")}
             </div>
           </div>
