@@ -124,8 +124,7 @@ function ProductDetail() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-ivory" style={{ backgroundImage: "url('/lusail-cityscape.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className="absolute inset-0 bg-ivory/85 backdrop-blur-[2px]" />
+      <section className="relative overflow-hidden bg-ivory/60 backdrop-blur-sm">
         <div className="container-x relative pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-20">
           <Breadcrumbs items={[{ label: t("nav.products"), to: "/products" }, { label: translatedProduct.title }]} />
           <div
