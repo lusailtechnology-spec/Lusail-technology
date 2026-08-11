@@ -388,8 +388,8 @@ function FeaturedServices() {
               key={s.slug}
               to="/services/$slug"
               params={{ slug: s.slug }}
-              className={`group relative flex flex-col justify-between overflow-hidden rounded-[32px] border border-ink/10 p-8 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] ${spans[i]} ${
-                tall ? "min-h-[340px] bg-ivory" : "min-h-[280px] bg-white"
+              className={`group relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-ink/10 p-6 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] ${spans[i]} ${
+                tall ? "bg-ivory" : "bg-white"
               }`}
             >
               {tall && (
@@ -400,18 +400,18 @@ function FeaturedServices() {
                   <img
                     src={s.image}
                     alt={s.title}
-                    className="h-12 w-12 rounded-xl object-contain"
+                    className="h-10 w-10 rounded-xl object-contain"
                   />
                 ) : (
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-ink text-white">
+                  <div className="grid h-10 w-10 place-items-center rounded-xl bg-ink text-white">
                     <Icon className="h-5 w-5" />
                   </div>
                 )}
                 <ArrowUpRight className="h-5 w-5 text-ink/40 transition-all group-hover:rotate-45 group-hover:text-royal" />
               </div>
-              <div className="mt-8">
-                <div className="font-display text-2xl font-semibold text-ink">{s.title}</div>
-                <div className="mt-2 max-w-md text-muted-foreground">{s.short}</div>
+              <div className="mt-5">
+                <div className="font-display text-xl font-semibold text-ink">{s.title}</div>
+                <div className="mt-1.5 max-w-md text-sm text-muted-foreground">{s.short}</div>
               </div>
             </Link>
           );
