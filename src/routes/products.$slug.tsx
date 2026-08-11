@@ -124,7 +124,7 @@ function ProductDetail() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-ivory/60 backdrop-blur-sm">
+      <section className="relative overflow-hidden bg-transparent">
         <div className="container-x relative pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-20">
           <Breadcrumbs items={[{ label: t("nav.products"), to: "/products" }, { label: translatedProduct.title }]} />
           <div
