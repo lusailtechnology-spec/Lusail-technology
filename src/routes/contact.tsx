@@ -78,22 +78,22 @@ function ContactPage() {
               </div>
             </div>
             <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-5 sm:p-6 shadow-sm">
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
                   <MapPin className="h-5 w-5" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-[11px] uppercase tracking-widest text-muted-foreground">{t("contact.office.address")}</div>
-                  <div className="mt-1.5 text-sm text-ink">Building No.143 - Al Rayan Road, Bin Mahmoud, P.O Box 11401, Doha, Qatar</div>
+                  <div className="mt-1 text-sm text-ink">Building No.143 - Al Rayan Road, Bin Mahmoud, P.O Box 11401, Doha, Qatar</div>
                 </div>
               </div>
             </div>
             <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-5 sm:p-6 shadow-sm">
-              <div className="flex items-start gap-3">
+              <div className="flex items-center gap-3">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
                   <ShieldAlert className="h-5 w-5" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="font-semibold text-ink">{t("contact.emergency.title")}</div>
                   <div className="mt-1 text-sm text-muted-foreground">
                     {t("contact.emergency.description")}

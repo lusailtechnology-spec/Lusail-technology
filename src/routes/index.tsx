@@ -338,17 +338,17 @@ function WhyUs() {
             {items.map((f, i) => (
               <div
                 key={f.t}
-                className={`group relative bg-ink p-6 transition-all hover:bg-white/5 ${
+                className={`group relative bg-ink p-5 sm:p-6 transition-all hover:bg-white/5 ${
                   i === 0 ? "sm:col-span-2 sm:bg-white/5" : ""
                 }`}
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                   <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/10 text-teal">
                     <f.icon className="h-5 w-5" />
                   </div>
-                  <div>
-                    <div className="font-display text-lg font-semibold">{f.t}</div>
-                    <div className="mt-1 text-sm text-white/70">{f.d}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-display text-base sm:text-lg font-semibold text-white">{f.t}</div>
+                    <div className="mt-1 text-xs sm:text-sm text-white/70">{f.d}</div>
                   </div>
                 </div>
               </div>
