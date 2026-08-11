@@ -139,10 +139,10 @@ function Story() {
           <h2 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">
             {t('aboutPage.story.title')}
           </h2>
-          <p className="mt-5 text-muted-foreground">
+          <p className="mt-5 hero-description-plate leading-relaxed">
             {t('aboutPage.story.description1')}
           </p>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-3 hero-description-plate leading-relaxed">
             {t('aboutPage.story.description2')}
           </p>
           <div className="mt-6 rounded-2xl border border-ink/10 bg-white p-4">
