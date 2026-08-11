@@ -52,7 +52,7 @@ function AboutHero() {
   return (
     <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 aurora" />
-      <div className="container-x relative grid gap-10 py-24 lg:grid-cols-[1.2fr_1fr] lg:items-end">
+      <div className="container-x relative grid gap-10 py-12 sm:py-20 lg:py-24 lg:grid-cols-[1.2fr_1fr] lg:items-end">
         <div className="animate-reveal">
           <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs font-medium">
             {t('aboutPage.hero.badge')}
@@ -98,15 +98,15 @@ function MissionVision() {
 function Card({ icon: Icon, label, title, body, tone }: any) {
   const styles: Record<string, string> = {
     royal: "bg-gradient-royal text-white",
-    ivory: "bg-ivory text-ink",
+    ivory: "bg-ivory text-ink border border-ink/10 shadow-sm",
     ink: "bg-ink text-white",
   };
   return (
-    <div className={`relative overflow-hidden rounded-[28px] p-8 ${styles[tone]}`}>
-      <Icon className="h-6 w-6 opacity-80" />
-      <div className={`mt-6 text-xs uppercase tracking-[0.25em] ${tone === "ivory" ? "text-royal" : "text-white/70"}`}>{label}</div>
-      <div className="mt-2 font-display text-2xl font-semibold">{title}</div>
-      <div className={`mt-3 text-sm ${tone === "ivory" ? "text-muted-foreground" : "text-white/70"}`}>{body}</div>
+    <div className={`relative overflow-hidden rounded-[28px] p-6 sm:p-8 ${styles[tone]}`}>
+      <Icon className={`h-6 w-6 ${tone === "ivory" ? "text-royal" : "opacity-80"}`} />
+      <div className={`mt-6 text-xs uppercase tracking-[0.25em] font-semibold ${tone === "ivory" ? "text-royal" : "text-white/70"}`}>{label}</div>
+      <div className={`mt-2 font-display text-2xl font-semibold ${tone === "ivory" ? "text-ink" : "text-white"}`}>{title}</div>
+      <div className={`mt-3 text-sm leading-relaxed ${tone === "ivory" ? "text-ink/80" : "text-white/80"}`}>{body}</div>
     </div>
   );
 }
