@@ -194,8 +194,8 @@ function Timeline() {
         <div className="absolute left-0 right-0 top-6 hidden h-px bg-ink/10 md:block" />
         <div className="grid gap-8 md:grid-cols-6">
           {items.map((i, idx) => (
-            <div key={i.year} className="relative">
-              <div className="mb-4 flex items-center gap-3">
+            <div key={i.year} className="relative rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-4 shadow-sm">
+              <div className="mb-3 flex items-center gap-3">
                 <div
                   className={`h-3 w-3 rounded-full ${
                     idx === items.length - 1 ? "bg-royal ring-4 ring-royal/20" : "bg-ink"
@@ -204,7 +204,7 @@ function Timeline() {
                 <div className="font-display text-xl font-bold text-ink">{i.year}</div>
               </div>
               <div className="font-semibold text-ink">{i.title}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{i.body}</div>
+              <div className="mt-1 text-sm text-ink/80">{i.body}</div>
             </div>
           ))}
         </div>

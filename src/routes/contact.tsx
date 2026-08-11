@@ -227,7 +227,7 @@ function ContactPage() {
               {t("contactFaq.subtitle")}
             </p>
           </div>
-          <Accordion type="single" collapsible>
+          <Accordion type="single" collapsible className="space-y-3">
             {[
               {
                 q: t("contactFaq.q1"),
@@ -246,11 +246,11 @@ function ContactPage() {
                 a: t("contactFaq.a4"),
               },
             ].map((f, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="border-ink/10">
-                <AccordionTrigger className="text-left font-display text-lg font-semibold text-ink">
+              <AccordionItem key={i} value={`faq-${i}`} className="rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md px-5 shadow-sm overflow-hidden">
+                <AccordionTrigger className="text-left font-display text-lg font-semibold text-ink hover:no-underline">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
+                <AccordionContent className="pb-4 text-sm text-ink/80 leading-relaxed sm:text-base">{f.a}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

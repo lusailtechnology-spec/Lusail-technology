@@ -387,13 +387,13 @@ function ServiceDetail() {
           <h2 className="mt-3 font-display display-3 font-bold text-ink">
             {t("serviceDetail.faqTitle")}
           </h2>
-          <Accordion type="single" collapsible className="mt-8">
+          <Accordion type="single" collapsible className="mt-8 space-y-3">
             {translatedService.faq.map((f, i) => (
-              <AccordionItem key={f.q} value={`item-${i}`} className="border-ink/10">
-                <AccordionTrigger className="min-h-[56px] text-left font-display text-base font-semibold text-ink sm:text-lg">
+              <AccordionItem key={f.q} value={`item-${i}`} className="rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md px-5 shadow-sm overflow-hidden">
+                <AccordionTrigger className="min-h-[56px] text-left font-display text-base font-semibold text-ink sm:text-lg hover:no-underline">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground sm:text-base">
+                <AccordionContent className="pb-4 text-sm text-ink/80 leading-relaxed sm:text-base">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>
