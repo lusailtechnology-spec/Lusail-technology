@@ -84,7 +84,7 @@ export function Navbar() {
     >
       <div className="container-x">
         <div
-          className={`flex items-center justify-between gap-3 rounded-full px-3 transition-all duration-300 sm:px-4 ${
+          className={`flex items-center justify-between gap-3 rounded-full px-3 transition-all duration-300 sm:px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] ${
             scrolled ? "glass py-1.5 shadow-[var(--shadow-soft)]" : "py-2"
           }`}
         >
@@ -107,7 +107,7 @@ export function Navbar() {
             </span>
           </Link>
 
-          <NavigationMenu className="hidden lg:flex">
+          <NavigationMenu className="hidden lg:flex justify-self-center">
             <NavigationMenuList>
               {nav.map((item) => {
                 if (item.key === "services") {
@@ -225,7 +225,7 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden items-center gap-2 lg:flex justify-self-end">
             <LanguageSwitcher />
             <Link to="/contact" className="btn-royal btn-royal-hover text-sm">
               {t("nav.getQuote")}
