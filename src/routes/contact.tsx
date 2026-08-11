@@ -64,8 +64,8 @@ function ContactPage() {
       </section>
 
       <section className="container-x pb-20">
-        <div className="grid gap-6 lg:grid-cols-[1fr_1.3fr] lg:items-start">
-          <aside className="flex flex-col gap-4">
+        <div className="grid gap-6 lg:grid-cols-[1fr_1.3fr]">
+          <aside className="flex flex-col gap-4 justify-between">
             <div className="rounded-[28px] bg-ink p-8 text-white">
               <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("contact.office.label")}</div>
               <div className="mt-3 font-display text-2xl font-semibold">{t("contact.office.location")}</div>
@@ -105,17 +105,9 @@ function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="h-[380px] sm:h-[450px] w-full overflow-hidden rounded-[28px] border border-ink/10 shadow-sm">
-              <iframe
-                title="Lusail Technology location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=51.5100%2C25.3100%2C51.5450%2C25.3400&layer=mapnik"
-                className="h-full w-full"
-                loading="lazy"
-              />
-            </div>
           </aside>
 
-          <div className="h-fit rounded-[28px] bg-white p-8 shadow-[var(--shadow-soft)] md:p-10">
+          <div className="rounded-[28px] bg-white p-8 shadow-[var(--shadow-soft)] md:p-10">
             {sent ? (
               <div className="flex h-full flex-col items-start justify-center">
                 <div className="grid h-14 w-14 place-items-center rounded-full bg-teal/20 text-teal">
@@ -214,6 +206,15 @@ function ContactPage() {
                 </p>
               </form>
             )}
+          </div>
+
+          <div className="col-span-full mt-3 h-[380px] sm:h-[440px] w-full overflow-hidden rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-2 shadow-sm">
+            <iframe
+              title="Lusail Technology location"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=51.5100%2C25.3100%2C51.5450%2C25.3400&layer=mapnik"
+              className="h-full w-full rounded-[22px]"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
