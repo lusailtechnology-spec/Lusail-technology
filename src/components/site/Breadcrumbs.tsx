@@ -4,17 +4,21 @@ import { ChevronRight, Home } from "lucide-react";
 export type Crumb = { label: string; to?: string; params?: Record<string, string> };
 
 export function Breadcrumbs({ items, tone = "light" }: { items: Crumb[]; tone?: "light" | "dark" }) {
-  const muted = tone === "dark" ? "text-white/70" : "text-ink/70";
-  const active = tone === "dark" ? "text-white" : "text-ink font-semibold";
-  const accent = tone === "dark" ? "text-teal" : "text-royal font-semibold";
+  const isDark = tone === "dark";
+  const linkStyle = isDark
+    ? "text-white/80 hover:text-white font-medium"
+    : "text-ink/80 hover:text-royal font-medium";
+  const activeStyle = isDark
+    ? "text-white font-bold"
+    : "text-ink font-bold";
 
   return (
     <nav aria-label="Breadcrumb" className="w-full overflow-x-auto">
-      <ol className={`inline-flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm rounded-full bg-white/85 backdrop-blur-md px-4 py-1.5 border border-ink/10 shadow-sm ${muted}`}>
+      <ol className={`inline-flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm rounded-full ${isDark ? "bg-ink/80 text-white" : "bg-white/85 text-ink"} backdrop-blur-md px-4 py-1.5 border border-ink/10 shadow-sm`}>
         <li className="flex items-center gap-1.5">
           <Link
             to="/"
-            className={`inline-flex items-center gap-1 rounded-md px-1 py-0.5 transition hover:${accent} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-royal`}
+            className={`inline-flex items-center gap-1 rounded-md px-1 py-0.5 transition ${linkStyle} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-royal`}
           >
             <Home className="h-3.5 w-3.5 text-royal" aria-hidden="true" />
             <span>Home</span>
@@ -29,12 +33,12 @@ export function Breadcrumbs({ items, tone = "light" }: { items: Crumb[]; tone?: 
                 <Link
                   to={c.to as never}
                   params={c.params as never}
-                  className={`truncate rounded-md px-1 py-0.5 transition hover:${accent} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-royal`}
+                  className={`truncate rounded-md px-1 py-0.5 transition ${linkStyle} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-royal`}
                 >
                   {c.label}
                 </Link>
               ) : (
-                <span aria-current="page" className={`truncate font-semibold ${active}`}>
+                <span aria-current="page" className={`truncate ${activeStyle}`}>
                   {c.label}
                 </span>
               )}
