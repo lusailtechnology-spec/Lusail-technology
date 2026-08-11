@@ -116,7 +116,7 @@ function ProductsPage() {
                     : "border-ink/10 bg-white/85 backdrop-blur-md shadow-sm"
                 }`}
               >
-                <div className="flex flex-1 flex-col p-7">
+                <div className="flex flex-1 flex-col p-5 sm:p-7">
                   <div className="flex items-start justify-between">
                     <div
                       className={`text-xs uppercase tracking-widest ${

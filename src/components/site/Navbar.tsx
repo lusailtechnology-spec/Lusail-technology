@@ -100,7 +100,7 @@ export function Navbar() {
                 scrolled ? "h-4 w-auto max-w-[50px]" : "h-5 w-auto max-w-[60px]"
               }`}
             />
-            <span className="font-display text-sm font-bold tracking-tight text-ink">
+            <span className="font-display text-xs sm:text-sm font-bold tracking-tight text-ink whitespace-nowrap">
               {t("logo.nameWithDot")}
               <span className="text-teal">{t("logo.dot")}</span>
               {t("logo.technology")}

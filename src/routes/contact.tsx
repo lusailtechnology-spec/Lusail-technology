@@ -66,7 +66,7 @@ function ContactPage() {
       <section className="container-x pb-20">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.3fr]">
           <aside className="flex flex-col gap-4 justify-between">
-            <div className="rounded-[28px] bg-ink p-8 text-white">
+            <div className="rounded-[28px] bg-ink p-5 sm:p-8 text-white">
               <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("contact.office.label")}</div>
               <div className="mt-3 font-display text-2xl font-semibold">{t("contact.office.location")}</div>
               <div className="mt-6 space-y-4 text-sm text-white/80">
@@ -77,7 +77,7 @@ function ContactPage() {
                 <Info icon={Clock} label={t("contact.office.hours")} value={t("contact.office.hoursValue")} />
               </div>
             </div>
-            <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-6 shadow-sm">
+            <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-5 sm:p-6 shadow-sm">
               <div className="flex items-start gap-3">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
                   <MapPin className="h-5 w-5" />
@@ -88,7 +88,7 @@ function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-6 shadow-sm">
+            <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-5 sm:p-6 shadow-sm">
               <div className="flex items-start gap-3">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
                   <ShieldAlert className="h-5 w-5" />
@@ -107,7 +107,7 @@ function ContactPage() {
             </div>
           </aside>
 
-          <div className="rounded-[28px] bg-white p-8 shadow-[var(--shadow-soft)] md:p-10">
+          <div className="rounded-[28px] bg-white p-5 sm:p-8 shadow-[var(--shadow-soft)] md:p-10">
             {sent ? (
               <div className="flex h-full flex-col items-start justify-center">
                 <div className="grid h-14 w-14 place-items-center rounded-full bg-teal/20 text-teal">
