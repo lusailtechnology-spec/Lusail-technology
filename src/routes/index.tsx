@@ -238,12 +238,12 @@ function WhoWeAre() {
       <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div className="relative">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-6">
-            <div className="col-span-1 rounded-[32px] bg-gradient-royal p-6 text-white shadow-[var(--shadow-glow)] sm:col-span-4 sm:aspect-[4/5] sm:p-8 flex flex-col justify-between">
+            <div className="col-span-1 min-h-[200px] rounded-[32px] bg-gradient-royal p-6 text-white shadow-[var(--shadow-glow)] sm:col-span-4 sm:aspect-[4/5] sm:p-8 flex flex-col justify-between">
               <div className="text-xs uppercase tracking-[0.25em] text-white/70">
                 {t("home.whoWeAre.established")}
               </div>
               <div className="mt-6 flex flex-col justify-end sm:mt-auto">
-                <div className="font-display text-2xl font-bold leading-tight sm:text-4xl">
+                <div className="font-display text-2xl font-bold text-white leading-tight sm:text-4xl">
                   {t("home.whoWeAre.tagline")}
                 </div>
               </div>
@@ -251,7 +251,7 @@ function WhoWeAre() {
             <div className="col-span-1 flex flex-col gap-3 sm:col-span-2">
               <div className="rounded-2xl bg-ink p-5 text-white">
                 <BadgeCheck className="h-5 w-5 text-teal" />
-                <div className="mt-4 font-display text-xl font-bold sm:text-2xl">{t("home.whoWeAre.iso27001")}</div>
+                <div className="mt-4 font-display text-xl font-bold text-white sm:text-2xl">{t("home.whoWeAre.iso27001")}</div>
                 <div className="text-xs text-white/60">{t("home.whoWeAre.certified")}</div>
               </div>
               <div className="flex-1 rounded-2xl bg-ivory p-5">
@@ -259,6 +259,7 @@ function WhoWeAre() {
                 <div className="mt-3 font-display text-lg font-bold text-ink break-words sm:text-xl">
                   {whyUsItems[5]?.label}
                 </div>
+                <div className="mt-1 text-xs text-ink/70">{whyUsItems[5]?.description}</div>
               </div>
             </div>
             <div className="col-span-1 rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-5 shadow-sm sm:col-span-6">
@@ -295,10 +296,10 @@ function WhoWeAre() {
               { icon: Cpu, t: whyUsItems[3]?.label, d: whyUsItems[3]?.description },
               { icon: Handshake, t: whyUsItems[5]?.label, d: whyUsItems[5]?.description },
             ].map((f) => (
-              <div key={f.t} className="rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-4 shadow-sm">
+              <div key={f.t ?? f.icon.displayName} className="rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-4 shadow-sm">
                 <f.icon className="h-5 w-5 text-royal" />
                 <div className="mt-3 font-semibold text-ink">{f.t}</div>
-                <div className="text-sm text-muted-foreground">{f.d}</div>
+                <div className="text-sm text-ink/70">{f.d}</div>
               </div>
             ))}
           </div>
