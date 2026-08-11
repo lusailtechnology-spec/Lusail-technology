@@ -216,12 +216,12 @@ function Timeline() {
 function Values() {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden py-24" style={{ backgroundImage: "url('/lusail-cityscape.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute inset-0 bg-ink/80 backdrop-blur-[2px]" />
       <div className="container-x relative grid gap-12 text-white lg:grid-cols-[1fr_1.5fr] lg:items-center">
         <div>
           <div className="text-xs uppercase tracking-[0.25em] text-teal">{t('aboutPage.coreStrengths.title')}</div>
-          <h2 className="mt-3 font-display display-2 font-bold">
+          <h2 className="mt-3 font-display display-2 font-bold text-white">
             {t('aboutPage.coreStrengths.innovation')}
           </h2>
         </div>
@@ -275,7 +275,7 @@ function Stats() {
 function Team() {
   const { t } = useTranslation();
   return (
-    <section className="relative overflow-hidden py-20" style={{ backgroundImage: "url('/lusail-cityscape.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className="relative overflow-hidden py-20">
       <div className="pointer-events-none absolute inset-0 bg-ink/80 backdrop-blur-[2px]" />
       <div className="pointer-events-none absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(600px 300px at 20% 20%, rgba(30,86,255,0.5), transparent 70%), radial-gradient(500px 260px at 80% 80%, rgba(15,194,192,0.4), transparent 70%)" }} />
       <div className="container-x relative">
@@ -319,7 +319,7 @@ function CTA() {
       <div className="rounded-[32px] bg-gradient-royal p-10 text-white md:p-14">
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-center">
           <div>
-            <div className="font-display display-2 font-bold">{t('aboutPage.cta.title')}</div>
+            <div className="font-display display-2 font-bold text-white">{t('aboutPage.cta.title')}</div>
             <div className="mt-3 max-w-lg text-white/80">
               {t('aboutPage.cta.description')}
             </div>

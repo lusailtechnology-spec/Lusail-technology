@@ -324,7 +324,7 @@ function WhyUs() {
     { icon: Handshake, t: whyUsItems[5]?.label, d: whyUsItems[5]?.description },
   ];
   return (
-    <section className="relative overflow-hidden bg-ink py-24 text-white" style={{ backgroundImage: "url('/lusail-cityscape.jpeg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className="relative overflow-hidden py-24 text-white">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/90 to-ink/85" />
       <div className="pointer-events-none absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(600px 300px at 20% 20%, rgba(30,86,255,0.5), transparent 70%), radial-gradient(500px 260px at 80% 80%, rgba(15,194,192,0.4), transparent 70%)" }} />
       <div className="container-x relative">
