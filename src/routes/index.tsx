@@ -208,9 +208,9 @@ function TrustBar() {
   const { t } = useTranslation();
   const logos = ["Cisco", "Microsoft", "Dell", "HP", "Lenovo", "Fortinet", "Ubiquiti", "VMware", "AWS", "Google Cloud", "Adobe", "SonicWall"];
   return (
-    <section className="border-y border-ink/10 bg-ivory/60 py-6">
+    <section className="border-y border-ink/10 py-6">
       <div className="container-x flex items-center gap-6 overflow-hidden">
-        <div className="shrink-0 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+        <div className="shrink-0 text-xs uppercase tracking-[0.25em] text-white/60">
           {t("home.trustBar.certifiedPartners")}
         </div>
         <div className="relative flex flex-1 overflow-hidden">
@@ -439,12 +439,12 @@ function FeaturedProducts() {
   };
 
   return (
-    <section className="bg-ivory py-24">
+    <section className="py-24">
       <div className="container-x">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.featuredProducts.title")}</div>
-            <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+            <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("home.featuredProducts.title")}</div>
+            <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
               {t("home.featuredProducts.subtitle")}
             </h2>
           </div>
@@ -560,14 +560,14 @@ function Partners() {
     { src: "/2 partner.jpeg", alt: "Partner company two" },
   ];
   return (
-    <section className="border-y border-ink/10 bg-ivory py-20">
+    <section className="border-y border-ink/10 py-20">
       <div className="container-x">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.partners.title")}</div>
-          <h2 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">
+          <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("home.partners.title")}</div>
+          <h2 className="mt-3 font-display text-4xl font-bold text-white sm:text-5xl">
             {t("home.partners.subtitle")}
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mt-4 text-white/70">
             {t("home.partners.description", "Trusted by leading organizations across Qatar")}
           </p>
         </div>
@@ -611,8 +611,8 @@ function Testimonials() {
   return (
     <section className="container-x py-24">
       <div className="mb-10 text-center">
-        <div className="text-xs uppercase tracking-[0.25em] text-royal">{t("home.testimonials.title")}</div>
-        <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+        <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("home.testimonials.title")}</div>
+        <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
           {t("home.testimonials.subtitle")}
         </h2>
       </div>
