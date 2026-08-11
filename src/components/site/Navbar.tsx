@@ -84,14 +84,14 @@ export function Navbar() {
     >
       <div className="container-x">
         <div
-          className={`flex items-center justify-between gap-3 rounded-full px-3 transition-all duration-300 sm:px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center ${
-            scrolled ? "glass py-1.5 shadow-[var(--shadow-soft)]" : "py-2"
+          className={`flex items-center justify-between gap-3 rounded-full px-3 py-1.5 transition-all duration-300 sm:px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center ${
+            scrolled ? "glass shadow-[var(--shadow-soft)]" : "glass"
           }`}
         >
           <Link
             to="/"
             aria-label={t("logo.name")}
-            className="flex min-h-[44px] items-center gap-2 pl-1 sm:pl-2"
+            className="flex h-10 items-center gap-2 pl-1 sm:pl-2"
           >
             <img
               src="/Logo.png"
@@ -210,7 +210,7 @@ export function Navbar() {
                       <Link
                         to={item.to}
                         activeOptions={{ exact: item.to === "/" }}
-                        className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                        className={`inline-flex h-10 items-center justify-center rounded-full px-4 text-sm font-medium transition-colors ${
                           isActive(item.to)
                             ? "text-royal font-semibold"
                             : "text-ink hover:text-royal"
@@ -225,9 +225,9 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="hidden items-center gap-2 lg:flex justify-self-end my-auto">
+          <div className="hidden items-center gap-2 lg:flex justify-self-end">
             <LanguageSwitcher />
-            <Link to="/contact" className="btn-royal btn-royal-hover text-sm">
+            <Link to="/contact" className="inline-flex h-10 items-center justify-center gap-1.5 rounded-full bg-gradient-royal px-4 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5">
               {t("nav.getQuote")}
               <ArrowUpRight className="h-4 w-4" />
             </Link>
