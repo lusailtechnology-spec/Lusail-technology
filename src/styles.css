@@ -93,7 +93,7 @@
   }
   body {
     background-color: transparent;
-    color: #ffffff;
+    color: var(--ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "cv11", "ss01";
@@ -103,11 +103,11 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--ink);
   }
   p, span, a, li, div {
     font-weight: 600;
-    color: #ffffff;
+    color: var(--ink);
   }
   button {
     font-weight: 700;

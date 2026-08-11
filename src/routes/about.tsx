@@ -259,11 +259,11 @@ function Stats() {
   ];
   return (
     <section className="container-x py-16 sm:py-20">
-      <div className="grid grid-cols-2 gap-4 rounded-3xl bg-ivory p-6 sm:p-10 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 rounded-3xl bg-white/85 backdrop-blur-md shadow-sm border border-ink/10 p-6 sm:p-10 md:grid-cols-4">
         {items.map(([k, v]) => (
           <div key={v}>
             <div className="font-display text-3xl sm:text-4xl font-bold text-ink md:text-5xl">{k}</div>
-            <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">{v}</div>
+            <div className="mt-1 text-xs uppercase tracking-widest text-ink/70 font-semibold">{v}</div>
           </div>
         ))}
       </div>

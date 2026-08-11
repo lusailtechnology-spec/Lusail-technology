@@ -175,7 +175,7 @@ function ContactPage() {
                   </label>
                   <select
                     name="service_interest"
-                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm outline-none focus:border-royal"
+                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink font-medium outline-none focus:border-royal"
                   >
                     <option value="">{t("contact.form.selectService")}</option>
                     {translatedServices.map((s) => (
@@ -194,7 +194,7 @@ function ContactPage() {
                     rows={5}
                     required
                     placeholder={t("contact.form.messagePlaceholder")}
-                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm outline-none focus:border-royal"
+                    className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink font-medium placeholder:text-ink/50 outline-none focus:border-royal"
                   />
                 </div>
                 <button 
@@ -289,7 +289,7 @@ function Field({ label, name, type = "text", required = false }: any) {
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm outline-none transition focus:border-royal"
+        className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink font-medium placeholder:text-ink/50 outline-none transition focus:border-royal"
       />
     </div>
   );
