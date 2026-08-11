@@ -195,12 +195,16 @@
   gap: 0.5rem;
   padding: 0.85rem 1.25rem;
   border-radius: 999px;
-  border: 1px solid color-mix(in oklab, var(--ink) 20%, transparent);
-  color: var(--ink);
+  background: color-mix(in oklab, white 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in oklab, var(--ink) 25%, transparent);
+  color: var(--ink) !important;
   font-weight: 600;
+  box-shadow: 0 4px 12px color-mix(in oklab, var(--ink) 8%, transparent);
   transition: all 0.2s ease;
 }
-@utility btn-ghost-ink-hover { &:hover { background: var(--ink); color: white; } }
+@utility btn-ghost-ink-hover { &:hover { background: var(--ink) !important; color: white !important; border-color: var(--ink); } }
 
 @keyframes float-slow {
   0%, 100% { transform: translateY(0) rotate(0deg); }
