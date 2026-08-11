@@ -162,7 +162,7 @@ function RootComponent() {
           <ScrollProgress />
           <Navbar />
           <ScrollToTop />
-          <main id="main" className="flex-1 pt-20 sm:pt-24">
+          <main id="main" className="flex-1 pt-28 sm:pt-32">
             <Outlet />
           </main>
           <Footer />

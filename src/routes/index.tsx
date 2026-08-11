@@ -619,14 +619,16 @@ function Testimonials() {
         {items.map((t, i) => (
           <div
             key={i}
-            className={`relative overflow-hidden rounded-3xl border border-ink/10 p-8 ${
+            className={`relative overflow-hidden rounded-3xl border border-ink/10 p-6 sm:p-8 shadow-sm ${
               i === 1 ? "bg-ink text-white lg:-translate-y-6" : "bg-white text-ink"
             }`}
           >
             <Quote className={`h-8 w-8 ${i === 1 ? "text-teal" : "text-royal"}`} />
-            <p className="mt-6 text-lg leading-relaxed">"{t.quote}"</p>
+            <p className={`mt-6 text-base sm:text-lg leading-relaxed font-medium ${i === 1 ? "text-white" : "text-ink"}`}>
+              "{t.quote}"
+            </p>
             <div className="mt-8 border-t border-current/10 pt-4">
-              <div className={`text-sm ${i === 1 ? "text-white/60" : "text-muted-foreground"}`}>
+              <div className={`text-sm font-semibold ${i === 1 ? "text-white/70" : "text-ink/70"}`}>
                 {t.role}
               </div>
             </div>
