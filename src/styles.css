@@ -84,14 +84,16 @@
   * { border-color: var(--color-border); }
   html { 
     scroll-behavior: smooth;
-    background-image: url('/lusail-cityscape.jpeg');
+    background-image: 
+      linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(244, 241, 234, 0.3)),
+      url('/lusail-cityscape.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
   body {
     background-color: transparent;
-    color: var(--color-foreground);
+    color: #ffffff;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "cv11", "ss01";
@@ -101,12 +103,15 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     font-weight: 800;
+    color: #ffffff;
   }
   p, span, a, li, div {
     font-weight: 600;
+    color: #ffffff;
   }
   button {
     font-weight: 700;
+    color: #ffffff;
   }
 }
 
@@ -135,6 +140,18 @@
   backdrop-filter: blur(16px) saturate(140%);
   border: 1px solid color-mix(in oklab, white 10%, transparent);
 }
+
+@utility hero-description-plate {
+  background: color-mix(in oklab, white 65%, transparent);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid color-mix(in oklab, white 40%, transparent);
+  border-radius: 1.25rem;
+  padding: 1rem 1.35rem;
+  box-shadow: 0 10px 30px -10px color-mix(in oklab, var(--ink) 12%, transparent);
+  color: var(--ink) !important;
+}
+
 
 @utility grid-bg {
   background-image:

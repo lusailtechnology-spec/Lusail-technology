@@ -56,7 +56,7 @@ function ServicesPage() {
             <h1 className="mt-6 font-display display-1 font-bold text-ink">
               {t("services.index.title")}, <span className="text-gradient">{t("services.index.titleHighlight")}</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-muted-foreground">
+            <p className="mt-5 max-w-xl hero-description-plate text-lg leading-relaxed">
               {t("services.index.description")}
             </p>
           </div>

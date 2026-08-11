@@ -87,7 +87,7 @@ function Hero() {
           <h1 className="mt-6 font-display display-1 font-bold text-ink">
             {t("home.hero.title")}
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-xl hero-description-plate text-lg leading-relaxed">
             {t("home.hero.description")}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -285,7 +285,7 @@ function WhoWeAre() {
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
             {t("home.whoWeAre.subtitle")}
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-xl hero-description-plate text-lg leading-relaxed">
             {t("home.whoWeAre.description")}
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">

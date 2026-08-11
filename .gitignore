@@ -33,3 +33,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Antigravity & Tooling
+antigravity_logs.md
+.agents/
+.vscode/
+

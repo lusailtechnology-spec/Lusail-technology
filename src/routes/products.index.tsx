@@ -65,7 +65,7 @@ function ProductsPage() {
               <h1 className="mt-6 font-display display-1 font-bold text-ink">
                 {t("nav.products")} <span className="text-gradient">{t("products.index.titleHighlight")}</span>
               </h1>
-              <p className="mt-5 max-w-xl text-lg text-muted-foreground">
+              <p className="mt-5 max-w-xl hero-description-plate text-lg leading-relaxed">
                 {t("products.index.description")}
               </p>
             </div>

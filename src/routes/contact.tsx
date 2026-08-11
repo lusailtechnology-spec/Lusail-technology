@@ -56,7 +56,7 @@ function ContactPage() {
             <h1 className="mt-6 font-display display-1 font-bold text-ink">
               {t("contact.hero.title")}
             </h1>
-            <p className="mt-5 text-lg text-muted-foreground">
+            <p className="mt-5 max-w-xl hero-description-plate text-lg leading-relaxed">
               {t("contact.hero.description")}
             </p>
           </div>

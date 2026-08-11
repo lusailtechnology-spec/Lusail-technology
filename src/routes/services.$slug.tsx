@@ -144,7 +144,7 @@ function ServiceDetail() {
               <h1 className="font-display display-1 font-bold text-ink">
                 {translatedService.title}
               </h1>
-              <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
+              <p className="mt-5 max-w-xl hero-description-plate text-base sm:text-lg leading-relaxed">
                 {translatedService.overview}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">

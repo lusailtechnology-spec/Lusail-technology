@@ -60,7 +60,7 @@ function AboutHero() {
           <h1 className="mt-6 font-display display-1 font-bold text-ink">
             {t('aboutPage.hero.title')}
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+          <p className="mt-6 max-w-xl hero-description-plate text-lg leading-relaxed">
             {t('aboutPage.hero.description')}
           </p>
         </div>
