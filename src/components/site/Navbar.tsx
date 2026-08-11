@@ -84,7 +84,7 @@ export function Navbar() {
     >
       <div className="container-x">
         <div
-          className={`flex items-center justify-between gap-3 rounded-full px-3 transition-all duration-300 sm:px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] ${
+          className={`flex items-center justify-between gap-3 rounded-full px-3 transition-all duration-300 sm:px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center ${
             scrolled ? "glass py-1.5 shadow-[var(--shadow-soft)]" : "py-2"
           }`}
         >
@@ -100,14 +100,14 @@ export function Navbar() {
                 scrolled ? "h-4 w-auto max-w-[50px]" : "h-5 w-auto max-w-[60px]"
               }`}
             />
-            <span className="font-display text-sm font-bold tracking-tight text-ink pt-0.5">
+            <span className="font-display text-sm font-bold tracking-tight text-ink">
               {t("logo.nameWithDot")}
               <span className="text-teal">{t("logo.dot")}</span>
               {t("logo.technology")}
             </span>
           </Link>
 
-          <NavigationMenu className="hidden lg:flex justify-self-center">
+          <NavigationMenu className="hidden lg:flex justify-self-center items-center">
             <NavigationMenuList>
               {nav.map((item) => {
                 if (item.key === "services") {
@@ -225,7 +225,7 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <div className="hidden items-center gap-2 lg:flex justify-self-end">
+          <div className="hidden items-center gap-2 lg:flex justify-self-end my-auto">
             <LanguageSwitcher />
             <Link to="/contact" className="btn-royal btn-royal-hover text-sm">
               {t("nav.getQuote")}
