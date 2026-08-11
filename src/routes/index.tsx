@@ -98,7 +98,7 @@ function Hero() {
               {t("home.hero.contactUs")} <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="mt-12 grid max-w-lg grid-cols-3 divide-x divide-ink/10 border-y border-ink/10 py-6">
+          <div className="mt-10 grid max-w-lg grid-cols-3 divide-x divide-ink/10 rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-4 shadow-sm">
             <Stat kpi="500+" label={t("home.hero.projectsDelivered")} />
             <Stat kpi="14+" label={t("home.hero.yearsInQatar")} />
             <Stat kpi="24/7" label={t("home.hero.nocSoc")} />
@@ -237,39 +237,39 @@ function WhoWeAre() {
     <section className="container-x py-24">
       <div className="grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div className="relative">
-          <div className="grid grid-cols-6 gap-3 max-[400px]:grid-cols-1">
-            <div className="col-span-4 aspect-[4/5] rounded-[32px] bg-gradient-royal p-8 text-white shadow-[var(--shadow-glow)] max-[400px]:col-span-1 max-[400px]:aspect-auto max-[400px]:min-h-[200px]">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-6">
+            <div className="col-span-1 rounded-[32px] bg-gradient-royal p-6 text-white shadow-[var(--shadow-glow)] sm:col-span-4 sm:aspect-[4/5] sm:p-8 flex flex-col justify-between">
               <div className="text-xs uppercase tracking-[0.25em] text-white/70">
                 {t("home.whoWeAre.established")}
               </div>
-              <div className="mt-auto flex h-full flex-col justify-end">
-                <div className="font-display text-4xl font-bold leading-tight max-[400px]:text-2xl">
+              <div className="mt-6 flex flex-col justify-end sm:mt-auto">
+                <div className="font-display text-2xl font-bold leading-tight sm:text-4xl">
                   {t("home.whoWeAre.tagline")}
                 </div>
               </div>
             </div>
-            <div className="col-span-2 flex flex-col gap-3 max-[400px]:col-span-1 max-[400px]:flex-row">
-              <div className="aspect-square rounded-2xl bg-ink p-4 text-white max-[400px]:aspect-auto max-[400px]:flex-1">
+            <div className="col-span-1 flex flex-col gap-3 sm:col-span-2">
+              <div className="rounded-2xl bg-ink p-5 text-white">
                 <BadgeCheck className="h-5 w-5 text-teal" />
-                <div className="mt-6 font-display text-2xl font-bold max-[400px]:text-xl">{t("home.whoWeAre.iso27001")}</div>
+                <div className="mt-4 font-display text-xl font-bold sm:text-2xl">{t("home.whoWeAre.iso27001")}</div>
                 <div className="text-xs text-white/60">{t("home.whoWeAre.certified")}</div>
               </div>
-              <div className="flex-1 rounded-2xl bg-ivory p-4 max-[400px]:flex-1">
+              <div className="flex-1 rounded-2xl bg-ivory p-5">
                 <Handshake className="h-5 w-5 text-royal" />
-                <div className="mt-4 font-display text-xl font-bold text-ink break-words max-[400px]:text-lg">
+                <div className="mt-3 font-display text-lg font-bold text-ink break-words sm:text-xl">
                   {whyUsItems[5]?.label}
                 </div>
               </div>
             </div>
-            <div className="col-span-6 rounded-2xl border border-ink/10 p-5 max-[400px]:col-span-1">
-              <div className="grid grid-cols-3 gap-4 max-[400px]:grid-cols-1">
+            <div className="col-span-1 rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-5 shadow-sm sm:col-span-6">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
                   [t("home.whoWeAre.statProjects"), t("home.whoWeAre.statProjectsLabel")],
                   [t("home.whoWeAre.statExperience"), t("home.whoWeAre.statExperienceLabel")],
                   [t("home.whoWeAre.statSatisfaction"), t("home.whoWeAre.statSatisfactionLabel")],
                 ].map(([k, v]) => (
                   <div key={v}>
-                    <div className="font-display text-2xl font-bold text-ink max-[400px]:text-xl">{k}</div>
+                    <div className="font-display text-2xl font-bold text-ink">{k}</div>
                     <div className="text-xs uppercase tracking-widest text-muted-foreground">
                       {v}
                     </div>
@@ -295,7 +295,7 @@ function WhoWeAre() {
               { icon: Cpu, t: whyUsItems[3]?.label, d: whyUsItems[3]?.description },
               { icon: Handshake, t: whyUsItems[5]?.label, d: whyUsItems[5]?.description },
             ].map((f) => (
-              <div key={f.t} className="rounded-2xl border border-ink/10 p-4">
+              <div key={f.t} className="rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-4 shadow-sm">
                 <f.icon className="h-5 w-5 text-royal" />
                 <div className="mt-3 font-semibold text-ink">{f.t}</div>
                 <div className="text-sm text-muted-foreground">{f.d}</div>

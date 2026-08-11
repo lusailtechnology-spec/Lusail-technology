@@ -184,7 +184,7 @@ function ProductDetail() {
       {/* FEATURES + SPECS */}
       <section className="container-x py-12 sm:py-16">
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.2fr_1fr]">
-          <div className="rounded-[24px] border border-ink/10 p-6 sm:p-8">
+          <div className="rounded-[24px] border border-ink/10 bg-white/85 backdrop-blur-md p-6 sm:p-8 shadow-sm">
             <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("productDetail.productFeatures")}</p>
             <h2 className="mt-3 font-display display-3 font-semibold text-ink">
               {t("productDetail.engineeredForEnterprise")}

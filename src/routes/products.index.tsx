@@ -114,7 +114,7 @@ function ProductsPage() {
                 className={`group relative flex flex-col overflow-hidden rounded-[28px] border transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] ${
                   feature
                     ? "border-transparent bg-ink text-white md:col-span-2 md:row-span-2"
-                    : "border-ink/10 bg-white"
+                    : "border-ink/10 bg-white/85 backdrop-blur-md shadow-sm"
                 }`}
               >
                 <div className="flex flex-1 flex-col p-7">

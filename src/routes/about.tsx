@@ -64,16 +64,16 @@ function AboutHero() {
             {t('aboutPage.hero.description')}
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
           {[
             ["2011", t('aboutPage.hero.founded')],
             ["120+", t('aboutPage.hero.enterpriseClients')],
             ["45+", t('aboutPage.hero.certifiedEngineers')],
             ["8", t('aboutPage.hero.industryVerticals')],
           ].map(([k, v]) => (
-            <div key={v} className="rounded-2xl bg-ink p-5 text-white">
-              <div className="font-display text-3xl font-bold">{k}</div>
-              <div className="mt-1 text-xs uppercase tracking-widest text-white/60">{v}</div>
+            <div key={v} className="rounded-2xl bg-ink p-4 sm:p-5 text-white">
+              <div className="font-display text-2xl sm:text-3xl font-bold">{k}</div>
+              <div className="mt-1 text-[11px] sm:text-xs uppercase tracking-widest text-white/60">{v}</div>
             </div>
           ))}
         </div>
@@ -258,11 +258,11 @@ function Stats() {
     ["8", t('aboutPage.stats.industriesServed')],
   ];
   return (
-    <section className="container-x py-20">
-      <div className="grid grid-cols-2 gap-6 rounded-3xl bg-ivory p-10 md:grid-cols-4">
+    <section className="container-x py-16 sm:py-20">
+      <div className="grid grid-cols-2 gap-4 rounded-3xl bg-ivory p-6 sm:p-10 md:grid-cols-4">
         {items.map(([k, v]) => (
           <div key={v}>
-            <div className="font-display text-4xl font-bold text-ink md:text-5xl">{k}</div>
+            <div className="font-display text-3xl sm:text-4xl font-bold text-ink md:text-5xl">{k}</div>
             <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">{v}</div>
           </div>
         ))}

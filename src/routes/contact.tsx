@@ -77,7 +77,7 @@ function ContactPage() {
                 <Info icon={Clock} label={t("contact.office.hours")} value={t("contact.office.hoursValue")} />
               </div>
             </div>
-            <div className="rounded-[28px] border border-ink/10 p-6">
+            <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-6 shadow-sm">
               <div className="flex items-start gap-3">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
                   <MapPin className="h-5 w-5" />
@@ -88,7 +88,7 @@ function ContactPage() {
                 </div>
               </div>
             </div>
-            <div className="rounded-[28px] border border-ink/10 p-6">
+            <div className="rounded-[28px] border border-ink/10 bg-white/85 backdrop-blur-md p-6 shadow-sm">
               <div className="flex items-start gap-3">
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-royal/10 text-royal">
                   <ShieldAlert className="h-5 w-5" />

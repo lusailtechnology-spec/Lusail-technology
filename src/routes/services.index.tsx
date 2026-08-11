@@ -123,7 +123,7 @@ function ServicesPage() {
                 className={`group relative flex flex-col overflow-hidden rounded-[24px] border p-7 transition-all hover:-translate-y-1 ${
                   dark
                     ? "border-transparent bg-ivory"
-                    : "border-ink/10 bg-white hover:border-royal/30"
+                    : "border-ink/10 bg-white/85 backdrop-blur-md hover:border-royal/30 shadow-sm"
                 }`}
               >
                 <div className="flex items-start justify-between">

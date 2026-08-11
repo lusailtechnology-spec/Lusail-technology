@@ -180,7 +180,7 @@ function ServiceDetail() {
               ))}
             </ul>
           </div>
-          <div className="rounded-[24px] border border-ink/10 p-6 sm:p-8">
+          <div className="rounded-[24px] border border-ink/10 bg-white/85 backdrop-blur-md p-6 sm:p-8 shadow-sm">
             <p className="text-xs uppercase tracking-[0.25em] text-royal">{t("serviceDetail.keyFeatures")}</p>
             <h2 className="mt-3 font-display display-3 font-semibold text-ink">{t("serviceDetail.whatsIncluded")}</h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
