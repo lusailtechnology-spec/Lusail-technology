@@ -150,7 +150,7 @@ function Story() {
             <div className="mt-3 space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <span className="font-semibold text-ink">{t('aboutPage.story.tlf')}:</span>
-                <span className="text-muted-foreground">+974 4479 1860</span>
+                <span className="text-muted-foreground">+974 7124 7750</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-semibold text-ink">{t('aboutPage.story.fax')}:</span>

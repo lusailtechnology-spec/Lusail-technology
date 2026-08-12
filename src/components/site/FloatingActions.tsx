@@ -17,7 +17,7 @@ export function FloatingActions() {
   return (
     <div className="pointer-events-none fixed bottom-6 right-6 z-40">
       <a
-        href="https://wa.me/97440001234"
+        href="https://wa.me/97471247750"
         target="_blank"
         rel="noreferrer"
         className="pointer-events-auto grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[var(--shadow-glow)] transition hover:scale-105"

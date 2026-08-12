@@ -70,7 +70,7 @@ function ContactPage() {
               <div className="text-xs uppercase tracking-[0.25em] text-teal">{t("contact.office.label")}</div>
               <div className="mt-3 font-display text-2xl font-semibold">{t("contact.office.location")}</div>
               <div className="mt-6 space-y-4 text-sm text-white/80">
-                <Info icon={Phone} label={t("contact.office.phone")} value="+974 4479 1860" href="tel:+97444791860" />
+                <Info icon={Phone} label={t("contact.office.phone")} value="+974 7124 7750" href="tel:+97471247750" />
                 <Info icon={Mail} label={t("contact.office.email")} value="info@lusailtechnology.com" href="mailto:info@lusailtechnology.com" />
                 <Info icon={Clock} label={t("contact.office.fax")} value="+974 4462 2407" />
                 <Info icon={Clock} label={t("contact.office.poBox")} value="11401 Doha, Qatar" />

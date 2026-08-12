@@ -56,9 +56,9 @@ export function Footer() {
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
                 <span className="text-white/80 leading-relaxed">Building No.143 - Al Rayan Road, Bin Mahmoud, P.O Box 11401, Doha, Qatar</span>
               </div>
-              <a href="tel:+97444791860" className="flex items-center gap-3 group">
+              <a href="tel:+97471247750" className="flex items-center gap-3 group">
                 <Phone className="h-4 w-4 shrink-0 text-teal" />
-                <span className="text-white/80 group-hover:text-teal transition-colors">+974 4479 1860</span>
+                <span className="text-white/80 group-hover:text-teal transition-colors">+974 7124 7750</span>
               </a>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-white/30" />
