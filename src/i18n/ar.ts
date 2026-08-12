@@ -79,9 +79,9 @@ export const ar = {
       certified: "معتمدة",
       statSatisfaction: "98%",
       statSatisfactionLabel: "رضا العملاء",
-      statExperience: "14+",
+      statExperience: "1+",
       statExperienceLabel: "سنوات في قطر",
-      statProjects: "500+",
+      statProjects: "10+",
       statProjectsLabel: "المشاريع المنجزة",
     },
     whyUs: {

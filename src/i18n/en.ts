@@ -80,9 +80,9 @@ export const en = {
       certified: "Certified",
       statSatisfaction: "98%",
       statSatisfactionLabel: "Client Satisfaction",
-      statExperience: "14+",
+      statExperience: "1+",
       statExperienceLabel: "Years in Qatar",
-      statProjects: "500+",
+      statProjects: "10+",
       statProjectsLabel: "Projects Delivered",
     },
     whyUs: {

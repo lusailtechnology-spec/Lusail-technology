@@ -97,10 +97,10 @@ export function Navbar() {
               src="/Logo.png"
               alt="Lusail Technology Logo"
               className={`object-contain transition-all duration-300 ${
-                scrolled ? "h-6 w-auto max-w-[75px]" : "h-8 w-auto max-w-[100px]"
+                scrolled ? "h-7 w-auto max-w-[85px]" : "h-10 w-auto max-w-[120px]"
               }`}
             />
-            <span className="font-display text-base sm:text-lg font-bold tracking-tight text-ink whitespace-nowrap mt-1">
+            <span className="font-display text-lg sm:text-xl font-bold tracking-tight text-ink whitespace-nowrap mt-1">
               {t("logo.nameWithDot")}
               <span className="text-teal">{t("logo.dot")}</span>
               {t("logo.technology")}

@@ -99,97 +99,13 @@ function Hero() {
             </Link>
           </div>
           <div className="mt-6 sm:mt-10 grid max-w-lg grid-cols-3 divide-x divide-ink/10 rounded-2xl border border-ink/10 bg-white/85 backdrop-blur-md p-3 sm:p-4 shadow-sm">
-            <Stat kpi="500+" label={t("home.hero.projectsDelivered")} />
-            <Stat kpi="14+" label={t("home.hero.yearsInQatar")} />
+            <Stat kpi="10+" label={t("home.hero.projectsDelivered")} />
+            <Stat kpi="1+" label={t("home.hero.yearsInQatar")} />
             <Stat kpi="24/7" label={t("home.hero.nocSoc")} />
           </div>
         </div>
 
-        <div className="relative hidden lg:block">
-          <div className="absolute -inset-6 -z-10 rounded-[40px] bg-gradient-royal opacity-20 blur-3xl" />
-          <div className="relative animate-float overflow-hidden rounded-[36px] border border-ink/10 bg-white shadow-[var(--shadow-soft)]">
-            <div className="flex items-center gap-1.5 border-b border-ink/5 px-4 py-3">
-              <div className="h-2.5 w-2.5 rounded-full bg-ink/10" />
-              <div className="h-2.5 w-2.5 rounded-full bg-ink/10" />
-              <div className="h-2.5 w-2.5 rounded-full bg-royal" />
-              <div className="ml-3 text-xs text-muted-foreground">
-                {t("home.hero.browserUrl")}
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { label: t("home.hero.uptime"), value: "99.99%", tone: "text-teal" },
-                  { label: t("home.hero.tickets"), value: "0 open", tone: "text-royal" },
-                  { label: t("home.hero.threats"), value: t("home.hero.blocked"), tone: "text-ink" },
-                ].map((k) => (
-                  <div key={k.label} className="rounded-2xl bg-ivory p-4">
-                    <div className="text-[11px] uppercase tracking-widest text-muted-foreground">
-                      {k.label}
-                    </div>
-                    <div className={`mt-1 font-display text-xl font-bold ${k.tone}`}>
-                      {k.value}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 rounded-2xl border border-ink/10 p-4">
-                <div className="mb-3 flex items-center justify-between">
-                  <div className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                    {t("home.hero.networkTraffic")}
-                  </div>
-                  <div className="text-xs text-teal">▲ 12.4%</div>
-                </div>
-                <svg viewBox="0 0 300 90" className="h-24 w-full">
-                  <defs>
-                    <linearGradient id="lg" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stopColor="#1E56FF" stopOpacity="0.4" />
-                      <stop offset="100%" stopColor="#1E56FF" stopOpacity="0" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M0 70 L30 60 L60 65 L90 40 L120 50 L150 30 L180 45 L210 20 L240 35 L270 15 L300 25 L300 90 L0 90 Z"
-                    fill="url(#lg)"
-                  />
-                  <path
-                    d="M0 70 L30 60 L60 65 L90 40 L120 50 L150 30 L180 45 L210 20 L240 35 L270 15 L300 25"
-                    fill="none"
-                    stroke="#1E56FF"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </div>
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl bg-ink p-4 text-white">
-                  <div className="text-xs uppercase tracking-widest text-white/60">
-                    {t("home.hero.cloud")}
-                  </div>
-                  <div className="mt-1 font-display text-lg font-semibold">
-                    {t("home.hero.multiCloudHealthy")}
-                  </div>
-                </div>
-                <div className="rounded-2xl bg-gradient-royal p-4 text-white">
-                  <div className="text-xs uppercase tracking-widest text-white/70">
-                    SOC
-                  </div>
-                  <div className="mt-1 font-display text-lg font-semibold">
-                    {t("home.hero.monitoring")}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="absolute -right-6 -top-6 hidden rotate-6 rounded-2xl bg-white p-3 shadow-[var(--shadow-soft)] md:block">
-            <div className="flex items-center gap-2 text-xs font-semibold text-ink">
-              <ShieldCheck className="h-4 w-4 text-teal" /> {t("home.hero.zeroTrust")}
-            </div>
-          </div>
-          <div className="absolute -bottom-6 -left-6 hidden -rotate-3 rounded-2xl bg-white p-3 shadow-[var(--shadow-soft)] md:block">
-            <div className="flex items-center gap-2 text-xs font-semibold text-ink">
-              <Zap className="h-4 w-4 text-royal" /> {t("home.hero.latency")}
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );

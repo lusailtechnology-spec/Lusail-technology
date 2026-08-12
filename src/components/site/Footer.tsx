@@ -35,10 +35,10 @@ export function Footer() {
               <img
                 src="/Logo.png"
                 alt="Lusail Technology Logo"
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
               <div>
-                <div className="font-display text-3xl font-bold mt-1">
+                <div className="font-display text-2xl font-bold mt-1">
                   {t("logo.nameWithDot")}
                   <span className="text-teal">{t("logo.dot")}</span>
                   {t("logo.technology")}
