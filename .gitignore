@@ -39,3 +39,6 @@ antigravity_logs.md
 .agents/
 .vscode/
 
+# Local tokens and secrets
+.devin/github-token.txt
+
