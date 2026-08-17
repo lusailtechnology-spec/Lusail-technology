@@ -161,7 +161,7 @@ function RootComponent() {
         <div 
           className="fixed inset-0 -z-50 pointer-events-none" 
           style={{ 
-            backgroundImage: "linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(244, 241, 234, 0.3)), url('/lusail-cityscape.jpeg')",
+            backgroundImage: "linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(244, 241, 234, 0.3)), url('/lusail bg.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}
